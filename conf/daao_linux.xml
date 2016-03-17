@@ -1,0 +1,30 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+
+<Context path="/daao" docBase="/users/WorkSpace/daao/web" reloadable="true" debug="0">
+
+	<Manager className="org.apache.catalina.session.PersistentManager">
+		<Store className="org.apache.catalina.session.FileStore"/>
+	</Manager>
+
+	<Resource 
+			name="jdbc/daao" 
+			auth="Container"
+			type="javax.sql.DataSource"
+			driverClassName="org.postgresql.Driver"
+			url="jdbc:postgresql://localhost/daao"
+			username="daaouser" 
+			password="123"
+			maxActive="100"
+			maxIdle="30"
+			maxWait="10000"
+			validationQuery="select now()"
+	/>
+
+	<Environment 
+			name="configure" 
+			type="java.lang.String"
+			value="/users/WorkSpace/daao/conf/daao.conf"
+			override="false"
+	/>
+
+</Context>

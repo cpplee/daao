@@ -1,0 +1,5 @@
+
+3、添加信息的operation中添加t_information_result信息
+
+
+6、图表搜索，

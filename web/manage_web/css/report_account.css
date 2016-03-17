@@ -1,0 +1,121 @@
+﻿/*无关样式，请删除*/
+
+body {
+    padding: 20px;
+    background-color: #ebebeb;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+.content {
+    background-color: #fff;
+    height: 450px;
+    padding: 200px 200px;
+}
+
+/*模态对话框样式*/
+
+.modal-revenue-export {
+    width: 730px;
+}
+.modal-revenue-content {
+    padding: 0 0;
+}
+.modal-revenue-left {
+    width: 380px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-right: 1px solid #e5e5e5;
+    display: inline-block;
+}
+.modal-revenue-right {
+    padding-top: 3px;
+    padding-bottom: 8px;
+    width: 348px;
+    display: inline-block;
+}
+.key-revenue-export {
+    display: block;
+    width: 110px;
+    text-align: right;
+}
+
+/*左边输入框高度*/
+/*#from-date-revexp,
+#to-date-revexp,*/
+#room-class-revexp,
+#individuals-revexp,
+#min-revenue-revexp,
+#min-nights-revexp,
+#country-code-revexp,
+#from-postal-revexp,
+#to-postal-revexp,
+#industry-code-revexp,
+#account-type-revexp,
+#currency-code-revexp,
+#owner-revexp,
+#business-segment-revexp {
+    /*height: 25px;*/
+    width: 224px;
+    /*padding: 3px 5px;*/
+    /*margin-bottom: 3px;*/
+}
+
+.modal-revenue-left td+ td {
+    padding-top: 5px;
+}
+
+ul.profile-category-revexp {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+ul.profile-category-revexp > li {
+    display: inline-block;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    width: 100px;
+}
+
+ul.display-revexp {
+    padding-left: 15px;
+}
+
+ul.display-revexp > li {
+    display: inline-block;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    width: 150px;
+}
+
+
+
+.rollup-master-statistics-revexp,
+.include-legacy-statistics-revexp {
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+#from-date-revexp,
+#to-date-revexp {
+    background-color: #fff;
+    /*cursor: pointer;*/
+}
+
+div.print-options-revexp {
+    border-top:1px solid #eee;
+    padding-top: 10px;
+}
+
+ul.print-options-revexp > li{
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 5px;
+}
+
+#copies-revexp,
+#sort-order-revexp,
+#top-revexp {
+    width: 100px;
+    height: 28px;
+}

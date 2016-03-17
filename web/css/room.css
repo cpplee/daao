@@ -1,0 +1,36 @@
+﻿.list-condition
+{
+	width:150px;
+	float:left;
+}
+.img-position
+{
+	
+	/*margin-left: 130px;*/
+	
+}
+.bx-prev
+{
+	margin-left:130px;
+}
+.bx-next
+{
+	margin-right:117px;
+}
+img{
+	display:block;
+	margin:0 auto;
+	width: 650px;
+}
+
+.content{
+	letter-spacing: 2px;
+	line-height: 130%;
+}
+.titlename{
+	padding-bottom:13px;
+	border-bottom:1px solid #CCCCFF;
+}
+.titlefont{
+	font-weight: bold;
+}

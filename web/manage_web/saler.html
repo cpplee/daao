@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>销售人员主页</title>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/saler.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">销售管理</li>
+            <li class="active">销售人员主页</li>
+        </ol>
+    </div>
+
+
+    <div class="hotel-table-info-content">
+
+        <div id="container" style="height:500px;margin: 30px 30px">
+
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default panel-info panel-style">
+                <div class="panel-heading">
+                    <h3 class="panel-title">销售人员信息</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-md-2 panel-flag">酒店名称 :</div>
+                            <div class="col-md-4 form-group">
+                                <div class="input-group">
+                                    <input id="hotelname" name="hotel" disabled type="text" class="form-control"
+                                           placeholder="酒店名称"
+                                           aria-describedby="hotel" style="width: 270px">
+                                <span class="input-group-addon" id="hotel">
+                                    <span class="glyphicon glyphicon-home" style="height: 20px"
+                                          aria-hidden="true"></span>
+                                </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 panel-flag">销售人员姓名:</div>
+                            <div class="col-md-4 form-group">
+                                <div class="input-group">
+                                    <input name="saler" id="salername" disabled type="text" class="form-control"
+                                           placeholder="销售人员姓名"
+                                           aria-describedby="name" style="width: 270px">
+                                <span class="input-group-addon" id="name">
+                                    <span class="glyphicon glyphicon-user" style="height: 20px"
+                                          aria-hidden="true"></span>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row other-part">
+                            <div class="col-md-2 panel-flag">销售人员代码 :</div>
+                            <div class="col-md-4 form-group">
+                                <div class="input-group">
+                                    <input id="salercode" name="code" disabled type="text" class="form-control"
+                                           placeholder="销售人员代码"
+                                           aria-describedby="code" style="width: 270px">
+                                <span class="input-group-addon" id="code">
+                                    <span class="glyphicon glyphicon-barcode" style="height: 20px"
+                                          aria-hidden="true"></span>
+                                </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 panel-flag">销售人员级别:</div>
+                            <div class="col-md-4 form-group">
+                                <div class="input-group">
+                                    <input id="level" name="level" disabled type="text" class="form-control"
+                                           placeholder="销售人员级别"
+                                           aria-describedby="level" style="width: 270px">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-hand-up" style="height: 20px"
+                                          aria-hidden="true"></span>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row other-part">
+                            <div class="col-md-2 panel-flag">销售人员职位:</div>
+                            <div class="col-md-4 form-group">
+                                <div class="input-group">
+                                    <input id="position" name="position" disabled type="text" class="form-control"
+                                           placeholder="销售人员职位"
+                                           aria-describedby="level" style="width: 270px">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-heart" style="height: 20px"
+                                          aria-hidden="true"></span>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <form id="month-summar">
+            <div class="row">
+                <div class="panel panel-default panel-success panel-style">
+                    <div class="panel-heading"><h3 class="panel-title">客房生意统计信息</h3></div>
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th></th>
+                            <th>商务客户总数</th>
+                            <th>本月房晚量</th>
+                            <th>平均房价</th>
+                            <th>本月产出房间收入</th>
+                            <th>本年产出房间收入</th>
+                        </tr>
+                        <tr>
+                            <td>核心客户</td>
+                            <td><span name="coreAccount"></span></td>
+                            <td><span name="coreAccountRoomNight"></span></td>
+                            <td><span name="coreAccountRoomPrice"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>忠实客户</td>
+                            <td><span name="nicheAccount"></span></td>
+                            <td><span name="nicheAccountRoomNight"></span></td>
+                            <td><span name="nicheAccountRoomPrice"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>潜力客户</td>
+                            <td><span name="prosAccount"></span></td>
+                            <td><span name="prosAccountRoomNight"></span></td>
+                            <td><span name="prospAccountRoomPrice"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>潜在客户</td>
+                            <td><span name="suspectAccount"></span></td>
+                            <td><span name="suspectAccountRoomNight"></span></td>
+                            <td><span name="suspectAccountRoomPrice"></span></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="row">
+            <div class="panel panel-default panel-success panel-style">
+                <div class="panel-heading"><h3 class="panel-title">宴会/会议生意统计信息</h3></div>
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th></th>
+                        <th>商务客户总数</th>
+                        <th>本月宴会/会议量</th>
+                        <th>平均价格</th>
+                        <th>本月产出宴会/会议收入</th>
+                        <th>本年产出宴会/会议收入</th>
+                    </tr>
+                    <tr>
+                        <td>核心客户</td>
+                        <td><span name="coreAccount"></span></td>
+                        <td><span name="coreAccountBanquet"></span></td>
+                        <td><span name="coreAccountBanquetPrice"></span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>忠实客户</td>
+                        <td><span name="nicheAccount"></span></td>
+                        <td><span name="nicheAccountBanquet"></span></td>
+                        <td><span name="nicheAccountBanquetPrice"></span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>潜力客户</td>
+                        <td><span name="prosAccount"></span></td>
+                        <td><span name="prosAccountBanquet"></span></td>
+                        <td><span name="prosAccountBanquetPrice"></span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>潜在客户</td>
+                        <td><span name="suspectAccount"></span></td>
+                        <td><span name="suspectAccountBanquet"></span></td>
+                        <td><span name="suspectAccountBanquetPrice"></span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default panel-success panel-style">
+                <div class="panel-heading"><h3 class="panel-title">餐饮生意统计信息</h3></div>
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th></th>
+                        <th>商务客户总数</th>
+                        <th>本月餐饮量</th>
+                        <th>平均价格</th>
+                        <th>本月产出餐饮收入</th>
+                        <th>本年产出餐饮收入</th>
+                    </tr>
+                    <tr>
+                        <td>核心客户</td>
+                        <td><span name="coreAccount"></span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>忠实客户</td>
+                        <td><span name="nicheAccount"></span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>潜力客户</td>
+                        <td><span name="prosAccount"></span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>潜在客户</td>
+                        <td><span name="suspectAccount"></span></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default panel-success panel-style">
+                <div class="panel-heading"><h3 class="panel-title">其他收入项目统计信息</h3></div>
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th></th>
+                        <th>其他收入项目</th>
+                        <th>日期/收入</th>
+                        <th>月累计</th>
+                        <th>年累计</th>
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/saler_validate.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script src="js/saler.js"></script>
+<script src="../script/echarts-all.js"></script>
+</body>
+</html>

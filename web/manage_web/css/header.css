@@ -1,0 +1,65 @@
+﻿body {
+  padding: 0;
+  margin: 0;
+/*  background-color: #ebebeb;*/
+/*  height: 75px;*/
+  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+
+.navi {
+  background-color: #2F2F2F;
+  height: 60px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.top-left {
+  padding-left: 40px;
+  width: 650px;
+  height: 90px;
+  float: left;
+  font-size: 21px;
+  color: #ccc;
+  /*font-family: arial,"Hiragino Sans GB","Microsoft Yahei Light",sans-serif;*/
+}
+
+.logo-top {
+  display: inline-block;
+  padding-top: 2px;
+  vertical-align: top;
+}
+
+.title-top {
+  padding-top: 25px;
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.top-right {
+  width: 300px;
+  height: 20px;
+  float: right;
+  display: inline-block;
+}
+
+.button-right {
+  float: right;
+  margin-right:10px;
+  font-size: 14px;
+}
+.button-right > button {
+  margin-right: 3px;
+  background-color: #eee;
+}
+.button-right > button:hover {
+  margin-right: 3px;
+  background-color: #333;
+  color: #f5f5f5;
+}
+#logo {
+    width:120px;
+    margin-top:-12px;
+}
+#user-logo {
+  margin-top: 10px;
+  width: 45px;
+}

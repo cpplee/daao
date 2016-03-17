@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>酒店信息录入</title>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/booking_room.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/booking_room.js"></script>
+</head>
+<body onload="pageLoad();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">销售管理</li>
+            <li class="active">销售人员主页</li>
+        </ol>
+    </div>
+
+
+    <div class="table-container">
+        <div class="table-name">
+            <div class="title" id="title">房间订单</div>
+        </div>
+        <form id="room-form">
+        <div class="table-result">
+            <div class="container-fluid" style="border-bottom: 1px solid #AAAAAA">
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">公司名称：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomcompanyname"
+                                   name="roomcompanyname"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-pencil"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 flag-set">联系人名称：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control"
+                                   id="roomContactName" name="roomContactName">
+											<span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-user"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">酒店名称：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomHotelName"
+                                   name="roomHotelName"> <span class="input-group-addon">
+												<span class="glyphicon glyphicon-pencil"></span>
+										</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">房间订单号：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomBookingNum"
+                                   name="roomBookingNum"> <span
+                                class="input-group-addon"><span
+                                class="glyphicon glyphicon-copyright-mark"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">房间号：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomId"
+                                   name="roomId"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-copyright-mark"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">房间数量：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomNum"
+                                   name="roomNum"> <span class="input-group-addon">
+												<span class="glyphicon glyphicon-plus-sign"></span>
+										</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">入住时间：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group date div-from-date-revexp">
+                            <input type="text" class="form-control" id="roomArrive" 
+                                   name="roomArrive"> <span
+                                class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar"
+                                id="show-from-date-revexp"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">离开时间：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group date div-to-date-revexp">
+                            <input type="text" class="form-control" id="roomDepart" 
+                                   name="roomDepart"> <span
+                                class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar"
+                                id="show-to-date-revexp"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">房间类型：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomHouseMthd"
+                                   name="roomHouseMthd"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-saved"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">房间均价：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomAvgRate"
+                                   name="roomAvgRate"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-usd"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">订单类型：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomType" name="roomType">
+											<span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-saved"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">订单状态：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomStatus"
+                                   name="roomStatus"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-unchecked"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">预订方式：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomBookType"
+                                   name="roomBookType"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-info-sign"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">佣金：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomComm" name="roomComm">
+											<span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-usd"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set" style="padding-left:0px;">资料提供截止时间：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomCutoff" 
+                                   name="roomCutoff"><span
+                                class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 flag-set">市场段：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="marketSeg"
+                                   name="marketSeg"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-globe"></span></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">是否已处理？</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <label class="radio-inline"> <input type="radio"
+                                                                name="roomConfirmation" value="true" checked> 是 </label> <label
+                                class="radio-inline"> <input type="radio"
+                                                             name="roomConfirmation" value="false"> 否 </label>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">协议代码：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control"id="roomResId" name="roomResId"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-barcode"></span></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row new-row" style="margin-bottom: 20px">
+                    <div class="col-md-2 flag-set">赠送房晚：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="roomComps"
+                                   name="roomComps"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-gift"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button type="button" class="btn btn-default" style="margin-right: 20px">重置</button>
+                <button type="button" class="btn btn-success" onclick="onSubmit();">提交</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script type="text/javascript">
+    $('.div-from-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        format:'yyyy-mm-dd',
+        forceParse: 0,
+        showMeridian: 0
+    });
+   
+
+    $('.div-to-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        format:'yyyy-mm-dd',
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+        showMeridian: 0
+    });
+  
+</script>
+<script src="js/validate.js"></script>
+<script src="js/bookingroom_validate.js"></script>
+</body>
+</html>

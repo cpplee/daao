@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>房间预订审核</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/book_room_verify.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/table_list.js"></script>
+	<script type="text/javascript">
+		$import("rpc.js");
+		$import("html/format.js");
+</script>
+</head>
+<body onload="pageLoad();">
+
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li>销售管理</li>
+            <li>酒店预订审核</li>
+        </ol>
+    </div>
+
+    <div class="table-container">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                酒店预订状态审核
+            </div>
+            <div class="panle-body">
+                <form  action="#" id="room-form">
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">开始时间：</span>
+
+                          <div class="input-group date div-from-start-date-revexp"  >
+                                <input type="text" class="form-control date-select" id="arriveTime" >
+                               <span
+                                class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar"
+                                id="show-from-date-revexp"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">结束时间：</span>
+
+                            <div  class="input-group date div-to-end-date-revexp" >
+                                <input type="text" class="form-control date-select" id="leaveTime" >
+                                <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar" id="show-to-date-revexp"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">预定人姓名：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="bookName" name="bookName">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">手机号码：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="bookPhone" name="bookPhone">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row new-row">
+  
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">参加人数：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="personNum" name="personNum">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">房间数量：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="roomNum" name="roomNum">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">价格：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="rate" name="rate">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">证件类型：</span>
+
+                            <div class="input-group">
+                                <select name="bookCerType" id="bookCerType" class="form-control">
+                                    <option value="护照">护照</option>
+                                    <option value="身份证">身份证</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">证件号码：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="bookCerNumber" name="bookCerNumber">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span" >备注：</span>
+
+                            <div class="input-group">
+                                <textarea id="tips" name="tips" cols="30" rows="5">
+
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">审核状态:</span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="status" name="status">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="item-submit" style="margin-bottom: 20px;">
+                <div class="form-group">
+                    <button class="btn btn-success" onclick="onSubmit();">提交</button>
+                    <button class="btn btn-default" onclick="goUrl();">取消</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="js/book_room_verify.js"></script>
+<script type="text/javascript">
+    $('.div-from-start-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        minView: 2,
+        startView: 2,     
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        format:'yyyy-mm-dd',
+        showMeridian: 0
+    });
+ 
+    $('.div-to-end-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        autoclose: 1,
+        minView: 2,
+        startView: 2,
+        todayHighlight: 1,
+        startView: 2,
+        format:'yyyy-mm-dd',
+        forceParse: 0,
+        showMeridian: 0
+    });
+ 
+</script>
+</body>
+</html>

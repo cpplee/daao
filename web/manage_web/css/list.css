@@ -1,0 +1,155 @@
+﻿body {
+	padding: 20px;
+	background-color: #ebebeb;
+	font-family: '微软雅黑', '宋体', Arial;
+}
+
+.menu-content {
+	border-radius: 5px;
+	border: solid;
+  	border-color:#888888;
+ 	border-width: 1px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.road-nav {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	background-color: #5CC5FC;
+	border: 1px solid #ddd;
+}
+
+.road-nav>ol {
+	background-color: transparent;
+	margin-bottom: 0;
+}
+
+.table-container {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	margin-top: -1px;
+	padding: 15px;
+}
+
+.table-name {
+	padding: 7px 15px;
+	margin-top: 15px;
+	background-color: #3D3B3B;
+	/*font-weight: bold;*/
+	font-size: 17px;
+	border: 1px solid #ddd;
+}
+.table-name > button{
+	margin-left:3px;
+}
+.title{
+	display:inline-block;	
+}
+
+.table-result {
+	margin-top: -1px;
+	padding: 15px 30px;
+	border: 1px solid #ddd;
+}
+
+#page_input {
+	width: 120px;
+}
+
+.pagenavi {
+	width: 500px;
+}
+
+.table th {
+	text-align: center;
+}
+
+.table td {
+	text-align: center;
+	font-family: '微软雅黑', '宋体', Arial;
+	font-size: 13px;
+}
+
+.table-control {
+	padding: 15px;
+	display: inline-block;
+}
+
+.input-go-page {
+	display: inline-block;
+	margin-left: 100px;
+}
+
+.input-page {
+	display: inline-block;
+	vertical-align: top;
+	width: 120px;
+	height: 30px;
+}
+
+#input-page {
+	border-radius: 0px;
+}
+
+.pagination {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px;
+}
+
+.go-page {
+	display: inline-block;
+	margin-left: -4px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.whole-page {
+	margin-left: -5px;
+	display: inline-block;
+	height: 30px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 6px 10px;
+	border-radius: 0;
+	font-size: 12px;
+	background-color: #f5f5f5;
+}
+
+.input-sm {
+	width: 150px;
+	height: 24px;
+	display: inline-block;
+}
+
+.btn-na {
+	width: 40px;
+	height: 20px;
+	font-size: 12px;
+	padding-top: 0px;
+	padding-left: 7px;
+	color: #fff;
+	background-color: #8c8c8c;
+	border-color: #8c8c8c;
+}
+
+.btn-na:hover{
+	background-color: transparent;
+}
+
+.breadcrumb > .active 
+{
+	color : #050505;
+}
+
+.title
+{
+	color: #eaeaea;
+}
+
+.addbutton-style
+{
+	margin-left:260px;
+}

@@ -1,0 +1,225 @@
+
+body
+{
+    width: 1100px;
+    height: 900px;
+    font-family:"微软雅黑";
+    font-size: 14px;
+    color: #0f0f0f;
+    background-color: #ebebeb;
+    padding-left: 20px;
+
+}
+.hotel-info
+{
+    width: 1099px;
+    height: auto;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    border: solid  rgb(136, 136, 136)  1px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    background-color:#fff;
+}
+.info-title
+{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #5C9BFC;
+    border: 1px solid #ddd;
+    width: 1099px;
+    height: 36px;
+}
+.info-title ol
+{
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+.breadcrumb > .active
+{
+    color: #0f0f0f;
+}
+.hotel-table-info
+{
+    width:1070px;
+    height:auto;
+    border: 1px;
+    padding: 15px;
+    padding-top: 5px;
+}
+
+.hotel-table-info-content
+{
+    width: 1070px;
+    height:auto;
+
+    border-top-width: 0px;
+
+}
+
+ul.nav-tabs{
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+ul.nav-tabs li{
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+ul.nav-tabs li:first-child{
+    border-top: none;
+}
+ul.nav-tabs li a{
+    margin: 0;
+    padding: 5px 16px;
+    border-radius: 0;
+}
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+    color: #fff;
+    background: #0088cc;
+    border: 1px solid #0088cc;
+}
+ul.nav-tabs li:first-child a{
+    border-radius: 4px 4px 0 0;
+}
+ul.nav-tabs li:last-child a{
+    border-radius: 0 0 4px 4px;
+}
+ul.nav-tabs.affix{
+    top: 30px; /* Set the top position of pinned element */
+}
+
+.hotel-info-title-style
+{
+    height: 40px;
+    background-color:#5CC5FC;
+    width: 710px;
+    padding-top: 8px;
+    border: 1px solid #ccc;
+}
+
+.title-name
+{
+    color: #fff;
+    font-size: 17px;
+    font-family: "微软雅黑 宋体 Arial";
+    font-weight: bold;
+    margin-left: 8px;
+}
+.hotelinfo-content
+{
+    width: 710px;
+    border: 1px solid #ccc;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}
+.inside-style
+{
+    padding-top: 20px;
+
+}
+.inside-flag-style
+{
+    font-size: 14px;
+    text-align: right;
+
+}
+.input-length
+{
+    width: 300px;
+    margin-left: 10px;
+}
+
+.last-style
+{
+    padding-bottom:15px;
+}
+.necessary-flag
+{
+    font-size: 19px;
+    color: red;
+}
+.input-small
+{
+    width: 80px;
+}
+.number-flag
+{
+    font-size: 18px;
+    padding-right: 10px;
+}
+.number-flag-left
+{
+    padding-right: 0px;
+    margin-left: 10px;
+}
+
+.other-part
+{
+    margin-top: 15px;
+}
+.check-box-style
+{
+    width: 15px;
+    height: 15px;
+}
+.check-box-decription
+{
+    font-size: 14px;
+    font-family: "微软雅黑", Tahoma, Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.text-field
+{
+    width: 340px;
+    height: 150px;
+    overflow: scroll;
+}
+
+th{
+    text-align:center;
+}
+td{   text-align:center;
+}
+.text-box-style
+{
+    width: 80px;
+    height: 30px;
+}
+
+.ul-style
+{
+    padding-left: 25px;
+}
+.radio-style
+{
+    padding-left: 23px;
+}
+
+.select-style
+{
+    padding-left: 23px;
+}
+.textarea-style
+{
+    padding-left: 23px;
+}
+
+.table-set{
+    border: 2px solid rgba(0,0,0,0.5);
+    margin: 50px 10px 50px 30px;
+    font-size: 10px;
+
+}
+.input-set{
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    text-indent: 5px;
+}

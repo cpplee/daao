@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>达奥网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="initial-scale=1; maximum-scale=1">-->
+
+    <link rel="stylesheet" type="text/css" href="css/theme-style.css">
+    <link rel="stylesheet" href="css/ie.style.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/progress_bar.css">
+    <link rel="stylesheet" href="css/page.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/font-awesome-ie7.css">
+    <![endif]-->
+
+    <script src="js/vendor/modernizr.js"></script>
+    <!--[if IE 8]>
+    <script src="js/vendor/less-1.3.3.js"></script><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <script src="js/vendor/less.js"></script>
+    <script type="text/javascript" src="script/common.js"></script>
+    <script type="text/javascript" src="script/table_list.js"></script>
+
+    <!--<![endif]-->
+</head>
+<body  onload="pageLoad();">
+
+
+<header id="header">
+    <div class="header-top-row">
+        <div class="container">
+            <div class="header-quick-call pull-left">
+                <i class="icon-mobile-phone icon-2x"></i> <span>联系电话: <mark>(000)400
+                800 0000
+            </mark></span>
+            </div>
+           
+     <div class="header-socials pull-right" id="contralLoginRegister">
+              <!--   <a href="login.html"> <span>登陆</span></a><a href="register.html"> <span>注册</span> </a>  --> 
+            </div>
+            <!-- /header-socials -->
+            <div class="header-search-form">
+                <div class="header-search-form-button">
+                    <i class="icon-search"></i>
+                </div>
+                <form>
+                    <input type="text" class="header-search-form-input"
+                           placeholder="Search...">
+                </form>
+            </div>
+            <!-- /header-search-form -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /header-top-row -->
+
+    <div class="header-main-menu">
+        <div class="container">
+            <a href="index.html" class="header-logo pull-left"></a>
+
+            <div class="top-navigation pull-right">
+                <a class="toggleMenu" href="#"><i class="icon-reorder"></i></a>
+                <ul class="nav">
+                    <li><a href="index.html#hotel_section">酒店</a></li>
+                    <li><a href="banquet.html#banquet_section">宴会/会议</a></li>
+                    <li><a href="restaurant.html#restaurant_section">餐饮</a></li>
+                    <li><a href="specialty-store.html#special-store_section">专门店</a></li>
+                    <li><a href="vip_basicinfo.html">会员专区</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /header-main-menu -->
+</header>
+
+<section>
+    <div class="sub-header">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="#">主页</a></li>
+                <li class="active">个人主页</li>
+            </ul>
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h3>个人主页</h3>
+
+                        <p></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container block">
+    <div class="row">
+        <div class="span2 sidebar">
+            <div class="block-header">
+                <h2>个人主页</h2>
+            </div>
+            <ul class="nav nav-stacked">
+                <li><a href="vip_basicinfo.html#p1">基本信息</a></li>
+                <li class="active" id="customerli"><a href="vip_frequenterinfo.html#p2" id="customer" onclick="pageLoad();">常客信息</a></li>
+                <li><a href="vip_consumingrecord.html#p3" onclick="bookRoomList();">消费记录</a></li>
+                <li><a href="vip_agreelist.html#p4" id="agreelist" onclick="agreeList();">协议列表</a></li>
+                <li><a href="vip_inquiryfunction.html#p5">询价功能</a></li>
+            </ul>
+        </div>
+
+        <div class="tab-pane" id="p2">
+            <div class="span1"></div>
+            <div class="span10">
+                <h3>请填写常客信息</h3>
+
+                <div class="divider-line" style="width: 968px;margin-left: 0px"></div>
+
+                <div class="panel-container" id="show-person">
+
+                    <div class="panel-header">
+                        <span style="color: white;font-size: 16px;padding: 7px 10px">常客信息</span>
+                        <button type="button" class="btn-nb"
+                                style="margin-left: 720px;margin-right: 15px" id="edit-person4">
+                            <span><i class="icon-ok"></i></span>&nbsp;新增
+                        </button>
+                        <button type="button" class="btn-nb">
+                            <span><i class="icon-remove-circle"></i></span>&nbsp;删除
+                        </button>
+                    </div>
+
+                    <div class="panel-body" style="padding: 15px 16px 15px 0px">
+                        <table class="table-set2" style="margin:50px 0px 30px 15px;width: 100%" id="container_div">
+                            <tr>
+                                <th><input type="checkbox"/></th>
+                                <th>序号</th>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>生日</th>
+                                <th>证件类型</th>
+                                <th>证件号码</th>
+                                <th>公司名称</th>
+                                <th>联系电话</th>
+                                <th>会员信息</th>
+                                <th>是否预定</th>
+                                <th>操作</th>
+                            </tr>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="page"></div>
+                </div>
+
+
+                <!---------------------------------显示详情-------------------------------------------------->
+                <div class="panel-container" id="detail-person" style="display: none;">
+                    <div class="panel-header">
+                        <span style="color: white;font-weight: bold;font-size: 16px;padding: 7px 10px">常客信息</span>
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="divider-line" style="display: inline-block"></div>
+                        <span class="divider-line-span">常客基本信息 </span>
+
+
+                        <div class="row new-info-row">
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">您的姓名：</span> <input type="text"
+                                                                                class="vip-info-input" placeholder="姓名"
+                                                                                value="张三" id="readcontactName"
+                                                                                readonly="readonly"/>
+                            </div>
+
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">您的性别：</span>
+
+                                <div class="form-inline">
+                                    <label style="padding: 2px 10px"> <input type="radio"
+                                                                             name="readsexRadio" id="readsexRadio1"
+                                                                             value="readsexRadio1" checked="checked"
+                                                                             readonly="readonly"> 男
+                                    </label> <label style="padding: 0px 10px"> <input
+                                        type="radio" name="readsexRadio" id="readsexRadio2"
+                                        value="readsexRadio2" readonly="readonly"> 女
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-info-row">
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">出生日期：</span>
+
+                                <div class="input-append date" id="dp2"
+                                     data-date-format="yyyy-mm-dd">
+                                    <input class="vip-info-input"
+                                           style="height: 24px;width: 214px" type="text"
+                                           value="1994-01-02" id="readdob" readonly name="readdob"><span class="add-on"
+                                                                                                         style="height: 24px;margin-bottom: 2px"><i
+                                        class="icon-th"></i></span>
+                                </div>
+                            </div>
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">公司名称：</span> <input type="text"
+                                                                                class="vip-info-input"
+                                                                                placeholder="公司名称" value="四川大学"
+                                                                                id="readcontactCompanyName" readonly/>
+                            </div>
+                        </div>
+
+                        <div class="row new-info-row">
+                            <div class="span4" style="margin-left:0px">
+                                <span class="vip-info-span">证件种类：</span> <select
+                                    class="vip-info-input" style="width: 254px" id="readcontactCertificate" readonly>
+                                <option selected="selected" value="身份证">身份证</option>
+                                <option value="护照">护照</option>
+                                <option value="其他">其他</option>
+                            </select>
+                            </div>
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">证件号码：</span> <input type="text"
+                                                                                class="vip-info-input"
+                                                                                placeholder="证件号码"
+                                                                                value="568974588745520036"
+                                                                                id="readcontactCerNum" readonly/>
+                            </div>
+                        </div>
+
+                        <div class="row new-info-row">
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">联系电话：</span> <input type="text"
+                                                                                class="vip-info-input"
+                                                                                placeholder="联系电话" value="18745965874"
+                                                                                id="readcontactPhone" readonly/>
+                            </div>
+
+                        </div>
+
+                        <div class="divider-line" style="display: inline-block"></div>
+                        <span class="divider-line-span">会员信息 </span>
+
+
+                        <div class="row new-info-row">
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">酒店集团：</span> <input type="text"
+                                                                                class="vip-info-input"
+                                                                                placeholder="酒店集团" value="达赖酒店"
+                                                                                id="readcontactHotelName" readonly/>
+                            </div>
+                            <div class="span4" style="margin-left:0px">
+                                <span class="vip-info-span">会员级别：</span> <select
+                                    class="vip-info-input" style="width:254px" id="readcontactMemLevel" readonly>
+                                <option value="金卡">金卡</option>
+                                <option value="白金卡">白金卡</option>
+                                <option value="钻石卡" selected="selected">钻石卡</option>
+                                <option value="银卡">银卡</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="row new-info-row">
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">会员卡号：</span> <input type="text"
+                                                                                class="vip-info-input"
+                                                                                placeholder="会员卡号" value="1313127182"
+                                                                                id="readcontactMemNum" readonly/>
+                            </div>
+                            <div class="span4" style="margin-left: 0px">
+                                <span class="vip-info-span">积分规则：</span>
+                                <textarea name="contactPointStatus" id="contactPointStatus" cols="30" rows="10"
+                                          placeholder="请填写您会员信息的积分规则" readonly class="textarea-sty"></textarea>
+                            </div>
+
+                        </div>
+
+                        <div class="row new-info-row">
+                            <button type="button" class="btn btn-default pull-right"
+                                    id="backToTop" onclick="goUrl();">返回
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!---------------------------------编辑-------------------------------------------------->
+                <div class="panel-container" id="edit-person"
+                     style="display: none">
+                    <form id="addcontact-form">
+                        <div class="panel-header">
+								<span
+                                        style="color: white;font-weight: bold;font-size: 16px;padding: 7px 10px">编辑常客信息</span>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="divider-line" style="display: inline-block"></div>
+                            <span class="divider-line-span">编辑常客基本信息 </span>
+
+
+                            <div class="row new-info-row">
+
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">您的姓名：</span> <input type="text"
+                                                                                    class="vip-info-input"
+                                                                                    placeholder="姓名" id="contactName"
+                                                                                    name="contactName"/>
+                                </div>
+
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">您的性别：</span>
+
+                                    <div class="form-inline">
+                                        <label style="padding: 2px 10px"> <input type="radio"
+                                                                                 name="contactSex" id="contactsexRadio1"
+                                                                                 value="男"> 男
+                                        </label> <label style="padding: 0px 10px"> <input
+                                            type="radio" name="contactSex" id="contactsexRadio2"
+                                            value="女"> 女
+                                    </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row new-info-row">
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">出生日期：</span>
+
+                                    <div class="input-append date" id="dp3"
+                                         data-date-format="yyyy-mm-dd">
+                                        <input class="vip-info-input"
+                                               style="height: 24px;width: 214px" type="text"
+                                               value="2015-04-12" id="contactDob" name="contactDob"><span
+                                            class="add-on"
+                                            style="height: 24px;margin-bottom: 2px"><i
+                                            class="icon-th"></i></span>
+                                    </div>
+                                </div>
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">公司名称：</span> <input type="text"
+                                                                                    class="vip-info-input"
+                                                                                    placeholder="公司名称"
+                                                                                    id="contactCompanyName"
+                                                                                    name="contactCompanyName"/>
+                                </div>
+                            </div>
+
+                            <div class="row new-info-row">
+                                <div class="span4" style="margin-left:0px">
+                                    <span class="vip-info-span">证件种类：</span> <select
+                                        class="vip-info-input" style="width: 254px" id="contactCertificate"
+                                        name="contactCertificate">
+                                    <option value="身份证">身份证</option>
+                                    <option value="护照">护照</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                                </div>
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">证件号码：</span> <input type="text"
+                                                                                    class="vip-info-input"
+                                                                                    placeholder="证件号码"
+                                                                                    id="contactCerNum"
+                                                                                    name="contactCerNum"/>
+                                </div>
+                            </div>
+
+                            <div class="row new-info-row">
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">联系电话：</span> <input type="text"
+                                                                                    class="vip-info-input"
+                                                                                    placeholder="联系电话" id="contactPhone"
+                                                                                    name="contactPhone"/>
+                                </div>
+
+                            </div>
+
+                            <div class="divider-line" style="display: inline-block"></div>
+                            <span class="divider-line-span">编辑会员信息 </span>
+
+
+                            <div class="row new-info-row">
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">酒店集团：</span> <input type="text"
+                                                                                    class="vip-info-input"
+                                                                                    placeholder="酒店集团"
+                                                                                    id="contactHotelName"
+                                                                                    name="contactHotelName"/>
+                                </div>
+                                <div class="span4" style="margin-left:0px">
+                                    <span class="vip-info-span">会员级别：</span> <select
+                                        class="vip-info-input" style="width: 254px" id="contactMemLevel"
+                                        name="contactMemLevel">
+                                    <option value="金卡">金卡</option>
+                                    <option value="白金卡">白金卡</option>
+                                    <option value="钻石卡">钻石卡</option>
+                                    <option value="银卡">银卡</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <div class="row new-info-row">
+                                <div class="span4" style="margin-left: 0px">
+                                    <span class="vip-info-span">会员卡号：</span> <input type="text"
+                                                                                    class="vip-info-input"
+                                                                                    placeholder="会员卡号"
+                                                                                    id="contactMemNum"
+                                                                                    name="contactMemNum"/>
+                                </div>
+                                <div class="span4" style="margin-left:0px">
+                                    <span class="vip-info-span">积分规则</span>
+										<textarea class="textarea-type"
+                                                  style="width: 238px;margin-left: 5px" id="contactPointStatus"
+                                                  name="contactPointStatus"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="row new-info-row">
+                                <button type="submit" class="btn btn-default pull-right">重置</button>
+                                <button type="submit" class="btn btn-success pull-right"
+                                        id="submit-person" style="margin: 0px 30px" onclick="onamccSubmit();">提交
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-copy color-scheme-2"></div>
+</footer>
+
+<div class="holder"></div>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/jquery.easing.1.3.js"></script>
+<script src="js/vendor/bootstrap.js"></script>
+<script src="js/vendor/holder.js"></script>
+<script src="js/vendor/jquery.magnific-popup.js"></script>
+<script src="js/vendor/jquery.grid.js"></script>
+<script src="js/vendor/jquery.bxslider.min.js"></script>
+<script src="js/vendor/jquery.flexisel.js"></script>
+<script src="js/vendor/jquery.quicksand.js"></script>
+<script src="js/vendor/jquery.transit.js"></script>
+<script src="js/vendor/parallax.js"></script>
+<script src="js/vendor/jquery.jPages.js"></script>
+<script src="js/vendor/bootstrap-datepicker.js"></script>
+<script src="js/vendor/jquery.formstyler.js"></script>
+<script src="js/vendor/jquery.cookie.js"></script>
+<script src="js/responsive-navbar.js"></script>
+<!--  <script src="js/personal.js"></script>-->
+<script type="text/javascript" src="js/list-persion.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript" src="js/page.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+
+        $('.progressbar')
+                .each(
+                function () {
+                    var t = $(this), dataperc = t.attr('data-perc'), barperc = Math
+                            .round(dataperc * 5.56);
+                    t.find('.bar').animate({
+                        width: barperc
+                    }, dataperc * 25);
+                    t.find('.label').append(
+                            '<div class="perc"></div>');
+
+                    function perc() {
+                        var length = t.find('.bar').css('width'), perc = Math
+                                .round(parseInt(length) / 5.56), labelpos = (parseInt(length) - 2);
+                        t.find('.label').css('left', labelpos);
+                        t.find('.perc').text(perc + '%');
+                    }
+
+                    perc();
+                    setInterval(perc, 0);
+                });
+
+    });
+</script>
+
+
+<!--Here will be Google Analytics code from BoilerPlate-->
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>销售人员信息</title>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/completeSalerInfo.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">销售管理</li>
+            <li class="active">销售人员信息</li>
+        </ol>
+    </div>
+    <div class="table-container">
+
+        <div class="table-name">
+            <div class="title" id="title">完善销售人员信息</div>
+        </div>
+        <div class="table-result">
+            <div class="row row-set" style="margin-top: 30px">
+                <div class="col-md-2 ">
+                    <span class="span-value-set">销售人员姓名：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                    <input type="text" class="form-control" id="salerName" name="salerName" placeholder="销售人员姓名"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-edit"></span></span>
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-left: 50px">
+                    <span class="span-value-set">销售领导者姓名：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="LeaderName" name="LeaderName" placeholder="销售领导者姓名"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-edit"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-set">
+                <div class="col-md-2" >
+                    <span class="span-value-set">销售人员性别：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <label class="radio-inline">
+                            <input type="radio" name="salerSex" id="salerSex1" value="男"> <span
+                                class="sex-choose">男</span>
+                        </label>
+                        <label class="radio-inline " style="margin-left:30px;">
+                            <input type="radio" name="salerSex" id="salerSex2" value="女"><span
+                                class="sex-choose"> 女</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-left: 50px">
+                    <span class="span-value-set">销售人员等级：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control" id="salerLevel" name="salerLevel" placeholder="销售人员等级"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-set">
+                <div class="col-md-2" >
+                    <span class="span-value-set">酒店名称：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="hotelName" name="hotelName" placeholder="酒店名称"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-left: 50px">
+                    <span class="span-value-set">市场名称：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="marketName" name="marketName" placeholder="市场名称"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row row-set">
+                <div class="col-md-2 ">
+                    <span class="span-value-set">销售人员出生日期：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group date form_date div-to-date-revexp input-value-set" >
+                        <input type="text" id="salerBirth" name="salerBirth" placeholder="yyyy-mm-dd"
+                               class="form-control input-value">
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-remove" id="remove-to-date-revexp"></span></span>
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar" id="show-to-date-revexp"></span></span>
+                    </div>
+                </div>
+
+                <div class="col-md-2" style="margin-left: 50px">
+                    <span class="span-value-set">开始工作时间：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group date form_date div-from-date-revexp input-value-set" >
+                        <input type="text" id="startTime" name="startTime" placeholder="yyyy-mm-dd"
+                               class="form-control input-value">
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-remove" id="remove-from-date-revexp"></span></span>
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar" id="show-from-date-revexp"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-set">
+                <div class="col-md-2 ">
+                    <span class="span-value-set">电子邮箱：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="salerEmail" name="salerEmail" placeholder="销售人员电子邮箱"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-left: 50px">
+                    <span class="span-value-set">办公室电话：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="salerOfficePhone" name="salerOfficePhone" placeholder="销售人员办公室电话"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-set">
+                <div class="col-md-2 ">
+                    <span class="span-value-set">传真：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="salerFax" name="salerFax" placeholder="销售人员传真"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-print"></span></span>
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-left: 50px">
+                    <span class="span-value-set">手机号码：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="salerMobilePhone" name="salerMobilePhone" placeholder="销售人员手机号码"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-set">
+                <div class="col-md-2 ">
+                    <span class="span-value-set">销售人员职位：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="salerPosition" name="salerPosition" placeholder="销售人员职位"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-heart"></span></span>
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-left: 50px">
+                    <span class="span-value-set">销售人员代码：</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group  input-value-set">
+                        <input type="text" class="form-control input-value-set" id="salerCode" name="salerCode" placeholder="销售人员代码"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-barcode"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-set">
+                <button type="submit" class="btn btn-success pull-right" style="margin-right: 90px">提交</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script  src="js/jquery.js"></script>
+<script  src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    $('.div-from-date-revexp').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 7,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView:3,
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#remove-from-date-revexp').click(function(){$('#birthday').val(null)});
+
+    $('.div-to-date-revexp').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 7,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        format: 'yyyy-mm-dd',
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#remove-to-date-revexp').click(function(){$('#to-date-revexp').val(null)});
+</script>
+
+</body>
+</html>

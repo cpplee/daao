@@ -1,0 +1,141 @@
+﻿
+/*模态对话框*/
+.table-result {
+    margin-top: -1px;
+    padding: 0px;
+    border: 0px;
+}
+.table th {
+    text-align: center;
+}
+.table td {
+    text-align: center;
+    font-size: 13px;
+}
+.table-control {
+    padding: 15px;
+    display: inline-block;
+}
+.input-go-page {
+    display: inline-block;
+    margin-left: 100px;
+}
+.input-page {
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 30px;
+}
+
+.input-sm {
+    width: 150px;
+    height: 28px;
+    display: inline-block;
+}
+
+.box-left {
+    display: inline-block;
+    width: 635px;
+}
+.box-line {
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.span-key {
+    vertical-align: center;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+#city {
+    width: 250px;
+}
+#prov {
+    width: 150px;
+}
+.input-value {
+    width: 610px;
+    display: inline-block;
+}
+.input-value-sm {
+    width: 250px;
+    display: inline-block;
+}
+.box-right {
+    width: 390px;
+    display: inline-block;
+}
+.box-bottom {
+    padding-top: 25px;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+}
+.tab-content {
+    margin-top: -1px;
+    padding: 30px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+#type {
+    height: 28px;
+    padding-top: 2px;
+}
+#acct-id {
+    width: 150px;
+}
+#account-ids {
+    height: 28px;
+    padding: 0 5px 0 5px;
+}
+#market-segement {
+    height: 28px;
+    padding-top: 2px;
+}
+.null-line {
+    height: 44px;
+}
+.details-left {
+    width: 450px;
+    display: inline-block;
+}
+.details-right {
+    width: 450px;
+    display: inline-block;
+}
+.span-star:before {
+    content: "* ";
+    color: #ff0000;
+}
+#account-phone, #account-fax {
+    width: 180px;
+}
+#account-phone-sm, #account-fax-sm {
+    width: 65px;
+}
+#contact-title-pri, #contact-title-sec {
+    width: 300px;
+}
+#salutation-pri, #salutation-sec {
+    width: 200px;
+}
+.box-top {
+    width: 800px;
+}
+#retired {
+    display: inline-block;
+    margin-left: 10px;
+}
+.box-samll {
+    margin-bottom: 25px;
+}
+#pri-name {
+    width: 540px;
+}
+.modal-newUser {
+    width: 800px;
+}
+.table-name >button {
+    margin-right: 5px;
+}

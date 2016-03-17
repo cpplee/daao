@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/i_daao_manage.css" type="text/css"/>
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/com_account.js"></script>
+    <script type="text/javascript" src="js/i_daao_manage.js"></script>
+</head>
+<body onload="fillHotelInfoSeter();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店通用设置</li>
+            <li class="active">个人信息管理</li>
+        </ol>
+    </div>
+    <div class="table-container">
+        <div class="box">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    个人信息管理
+                </div>
+                <div class="panel-body">
+                <form id="hotelInfoSeter-form">
+                    <div class="row another-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="info-span">姓名</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="客户姓名" id="setName" name="setName"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+
+                            <span class="info-span">所属酒店</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="客户所属酒店" id="hotelname" name="hotelname"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row another-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="info-span">职位</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="客户所担任职务" id="setPosition" name="setPosition"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="info-span">固定电话</span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="客户固定电话" id="setTel" name="setTel"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row another-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="info-span">手机号码</span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="客户手机号码" id="setMobile" name="setMobile"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="info-span">电子邮箱</span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="用户电子邮箱" id="setEmail" name="setEmail"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row another-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="info-span">QQ</span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="用户QQ号码" id="setQq" name="setQq"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="info-span">微信</span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="用户微信号" id="setWechat" name="setWechat"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-heart"></span></span>
+                            </div>
+                        </div>
+                    </div>
+</form>
+                    <hr/>
+
+                    <div class="row another-row">
+                        <div class="form-group  button-container">
+                            <button class="btn btn-default pull-right" onclick="goUrl()">返回</button>
+                            <button class="btn btn-success pull-right" onclick="onSubmit();">提交</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal_salerinfo" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">提示：</h4>
+            </div>
+            <div class="modal-body">
+                <span class="h4">信息修改成功</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+<script  src="js/jquery.js"></script>
+<script  src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    $('.div-from-date-revexp').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 7,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        format: 'yyyy-mm-dd',
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#remove-from-date-revexp').click(function(){$('#birthday').val(null)});
+
+    $('.div-to-date-revexp').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 7,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#remove-to-date-revexp').click(function(){$('#to-date-revexp').val(null)});
+
+
+</script>
+<script src="js/validate.js"></script>
+<script src="js/salerinfo_validate.js"></script>
+
+</body>
+</html>

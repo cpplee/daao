@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>header</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/table_list.js"></script>
+<script type="text/javascript">
+	$import("rpc.js");
+	$import("html/format.js");
+</script>
+
+<script type="text/javascript" src="js/list_hotel.js"></script>
+</head>
+<body onload="pageLoad3();">
+	<div class="menu-content">
+		<div class="road-nav">
+			<ol class="breadcrumb">
+				<li class="active">首页</li>
+				<li class="active">酒店管理</li>
+				<li class="active">餐饮列表</li>
+			</ol>
+		</div>
+		<div class="table-container">
+
+			<div class="table-name">
+				<div class="title">餐饮列表</div>
+				<button type="button" class="btn btn-default btn-xs pull-right"
+					onclick="onExport();">
+					<span class="glyphicon glyphicon-share"></span>&nbsp;&nbsp;导出
+				</button>
+				<button type="button" class="btn btn-default btn-xs pull-right"
+					onclick="addResaurantBars();">
+					<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;新建
+				</button>
+				<button type="button" class="btn btn-default btn-xs pull-right"
+					onclick="reverseChoose();">
+					<span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;反选
+				</button>
+			</div>
+			<div class="table-result">
+				<div id="container_div"></div>
+				<div class="table-control-old">
+					<form id="export_form" name="export_form" action="../ExportExcel"
+						method="post">
+						<input type="hidden" id="excelType" name="excelType" value="" /> 
+						<input type="hidden" id="fileName" name="fileName" value="" /> 
+						<input type="hidden" id="name_export" name="name_export" value="" />
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+</body>
+</html>

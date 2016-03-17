@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>价格信息录入</title>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/roomprice-set.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店设置</li>
+            <li class="active">房间价格设置</li>
+        </ol>
+    </div>
+
+		<div class="table-container">
+
+			<div class="table-name">
+				<div class="title" id="title">房型及价格设置</div>
+			</div>
+			<div class="table-result">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#excel1" role="tab."
+						data-toggle	="tab">网络及前台价格</a></li>
+					<li><a href="#excel2" role="tab" data-toggle="tab">协议价格</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content" style="margin-top: 20px">
+					<div class="tab-pane active" id="excel1">
+							<table class="table-setting" style="width: 80%;margin:0px 100px">
+							<tr>
+								<th colspan="4">网络及前台价格</th>
+							</tr>
+							<tr>
+								<th colspan="4">价格套系代号</th>
+								<th colspan="4" style="background-color: #f5e79e"
+									name="package1">E(紧张期间价格)</th>
+
+							</tr>
+							<tr>
+
+								<th colspan="4">价格执行期间</th>
+								<th colspan="4" style="background-color: #f5e79e">
+									月份日期--月份日期</th>
+							</tr>
+							<tr>
+								<th colspan="4">房型设置</th>
+								<th style="background-color: #f5e79e"><span
+									class="Ebasichometype">大床</span></th>
+								<th style="background-color: #f5e79e"><span
+									class="Eroomtype2">双床</span></th>
+								<th style="background-color: #f5e79e"><span
+									class="Eroomtype3">套房</span></th>
+								<th style="background-color: #f5e79e"><span
+									class="Eroomtype4">豪华套房</span></th>
+
+
+							</tr>
+							<tr>
+								<th style="width: 180px">项目名称</th>
+								<th>价格种类</th>
+								<th>酒店对应价格编码</th>
+								<th style="width: 60px">附加费</th>
+								<th colspan="4"></th>
+							</tr>
+							<tr>
+								<td><span class="Eproj1">网络公开价/前台价(无早餐)</span></td>
+								<td><input class="input-set" type="text" id="Epk1" /></td>
+								<td><input class="input-set" type="text" id="Ehtcode1" /></td>
+								<td><input class="input-set" type="text" id="Esupplement1" /></td>
+								<td><input class="input-set" type="text" id="Ebaseprice1" /></td>
+								<td><input class="input-set" type="text" id="Eroom2price1" /></td>
+								<td><input class="input-set" type="text" id="Eroom3price1" /></td>
+								<td><input class="input-set" type="text" id="Eroom4price1" /></td>
+							</tr>
+							<tr>
+								<td class="Eproj2">网络公开价/前台价(含早餐)</td>
+								<td><input class="input-set" type="text" id="Epk2" /></td>
+								<td><input class="input-set" type="text" id="Ehtcode2" /></td>
+								<td><input class="input-set" type="text" id="Esupplement2" /></td>
+								<td><input class="input-set" type="text" id="Ebaseprice2" /></td>
+								<td><input class="input-set" type="text" id="Eroom2price2" /></td>
+								<td><input class="input-set" type="text" id="Eroom3price2" /></td>
+								<td><input class="input-set" type="text" id="Eroom4price2" /></td>
+							</tr>
+							<tr>
+								<td class="Eproj3">提前3天预付价(无早餐)</td>
+								<td><input type="text" class="input-set" id="Epk3"></td>
+								<td><input class="input-set" type="text" id="Ehtcode3" /></td>
+								<td><input class="input-set" type="text" id="Esupplement3" /></td>
+								<td><input class="input-set" type="text" id="Ebaseprice3" /></td>
+								<td><input class="input-set" type="text" id="Eroom2price3" /></td>
+								<td><input class="input-set" type="text" id="Eroom3price3" /></td>
+								<td><input class="input-set" type="text" id="Eroom4price3" /></td>
+							</tr>
+							<tr>
+								<td class="Eproj4">提前3天预付价(含早餐)</td>
+								<td><input type="text" class="input-set" id="Epk4"></td>
+								<td><input class="input-set" type="text" id="Ehtcode4" /></td>
+								<td><input class="input-set" type="text" id="Esupplement4" /></td>
+								<td><input class="input-set" type="text" id="Ebaseprice4" /></td>
+								<td><input class="input-set" type="text" id="Eroom2price4" /></td>
+								<td><input class="input-set" type="text" id="Eroom3price4" /></td>
+								<td><input class="input-set" type="text" id="Eroom4price4" /></td>
+							</tr>
+							<tr>
+								<td class="Eproj5">周末价(含早餐)</td>
+								<td><input type="text" class="input-set" id="Epk5"></td>
+								<td><input class="input-set" type="text" id="Ehtcode5" /></td>
+								<td><input class="input-set" type="text" id="Esupplement5" /></td>
+								<td><input class="input-set" type="text" id="Ebaseprice5" /></td>
+								<td><input class="input-set" type="text" id="Eroom2price5" /></td>
+								<td><input class="input-set" type="text" id="Eroom3price5" /></td>
+								<td><input class="input-set" type="text" id="Eroom4price5" /></td>
+							</tr>
+							<tr>
+								<td class="Eproj6">包价1</td>
+								<td><input type="text" class="input-set" id="Epk6"></td>
+								<td><input class="input-set" type="text" id="Ehtcode6" /></td>
+								<td><input class="input-set" type="text" id="Esupplement6" /></td>
+								<td><input class="input-set" type="text" id="Ebaseprice6" /></td>
+								<td><input class="input-set" type="text" id="Eroom2price6" /></td>
+								<td><input class="input-set" type="text" id="Eroom3price6" /></td>
+								<td><input class="input-set" type="text" id="Eroom4price6" /></td>
+							</tr>
+							<tr>
+								<td class="Eproj7">包价2</td>
+								<td><input type="text" class="input-set" id="Epk7"></td>
+								<td><input class="input-set" type="text" id="Ehtcode7" /></td>
+								<td><input class="input-set" type="text" id="Esupplement7" /></td>
+								<td><input class="input-set" type="text" id="Ebaseprice7" /></td>
+								<td><input class="input-set" type="text" id="Eroom2price7" /></td>
+								<td><input class="input-set" type="text" id="Eroom3price7" /></td>
+								<td><input class="input-set" type="text" id="Eroom4price7" /></td>
+							</tr>
+							<tr>
+								<th colspan="4">价格套系代号</th>
+								<th colspan="4" style="background-color: #67b168"
+									name="package2">H(旺季期间价格)</th>
+
+							</tr>
+							<tr>
+
+								<th colspan="4">价格执行期间</th>
+								<th colspan="4" style="background-color:#67b168">
+									月份日期--月份日期</th>
+							</tr>
+							<tr>
+								<th colspan="4">房型设置</th>
+								<th style="background-color: #67b168"><span
+									class="Hbasichometype">大床</span></th>
+								<th style="background-color: #67b168"><span
+									class="Hroomtype2">双床</span></th>
+								<th style="background-color: #67b168"><span
+									class="Hroomtype3">套房</span></th>
+								<th style="background-color: #67b168"><span
+									class="Hroomtype4">豪华套房</span></th>
+
+
+							</tr>
+							<tr>
+								<th>项目名称</th>
+								<th style="width: 180px">价格种类</th>
+								<th style="width: 120px">酒店对应价格编码</th>
+								<th style="width: 60px">附加费</th>
+								<th colspan="4"></th>
+							</tr>
+							<tr>
+								<td class="Hproj1">网络公开价/前台价(无早餐)</td>
+								<td><input class="input-set" type="text" id="Hpk1" /></td>
+								<td><input class="input-set" type="text" id="Hhtcode1" /></td>
+								<td><input class="input-set" type="text" id="Hsupplement1" /></td>
+								<td><input class="input-set" type="text" id="Hbaseprice1" /></td>
+								<td><input class="input-set" type="text" id="Hroom2price1" /></td>
+								<td><input class="input-set" type="text" id="Hroom3price1" /></td>
+								<td><input class="input-set" type="text" id="Hroom4price1" /></td>
+							</tr>
+							<tr>
+								<td class="Hproj2">网络公开价/前台价(含早餐)</td>
+								<td><input class="input-set" type="text" id="Hpk2" /></td>
+								<td><input class="input-set" type="text" id="Hhtcode2" /></td>
+								<td><input class="input-set" type="text" id="Hsupplement2" /></td>
+								<td><input class="input-set" type="text" id="Hbaseprice2" /></td>
+								<td><input class="input-set" type="text" id="Hroom2price2" /></td>
+								<td><input class="input-set" type="text" id="Hroom3price2" /></td>
+								<td><input class="input-set" type="text" id="Hroom4price2" /></td>
+							</tr>
+							<tr>
+								<td class="Hproj3">提前3天预付价(无早餐)</td>
+								<td><input type="text" class="input-set" id="Hpk3"></td>
+								<td><input class="input-set" type="text" id="Hhtcode3" /></td>
+								<td><input class="input-set" type="text" id="Hsupplement3" /></td>
+								<td><input class="input-set" type="text" id="Hbaseprice3" /></td>
+								<td><input class="input-set" type="text" id="Hroom2price3" /></td>
+								<td><input class="input-set" type="text" id="Hroom3price3" /></td>
+								<td><input class="input-set" type="text" id="Hroom4price3" /></td>
+							</tr>
+							<tr>
+								<td class="Hproj4">提前3天预付价(含早餐)</td>
+								<td><input type="text" class="input-set" id="Hpk4"></td>
+								<td><input class="input-set" type="text" id="Hhtcode4" /></td>
+								<td><input class="input-set" type="text" id="Hsupplement4" /></td>
+								<td><input class="input-set" type="text" id="Hbaseprice4" /></td>
+								<td><input class="input-set" type="text" id="Hroom2price4" /></td>
+								<td><input class="input-set" type="text" id="Hroom3price4" /></td>
+								<td><input class="input-set" type="text" id="Hroom4price4" /></td>
+							</tr>
+							<tr>
+								<td class="Hproj5">周末价(含早餐)</td>
+								<td><input type="text" class="input-set" id="Hpk5"></td>
+								<td><input class="input-set" type="text" id="Hhtcode5" /></td>
+								<td><input class="input-set" type="text" id="Hsupplement5" /></td>
+								<td><input class="input-set" type="text" id="Hbaseprice5" /></td>
+								<td><input class="input-set" type="text" id="Hroom2price5" /></td>
+								<td><input class="input-set" type="text" id="Hroom3price5" /></td>
+								<td><input class="input-set" type="text" id="Hroom4price5" /></td>
+							</tr>
+							<tr>
+								<td class="Hproj6">包价1</td>
+								<td><input type="text" class="input-set" id="Hpk6"></td>
+								<td><input class="input-set" type="text" id="Hhtcode6" /></td>
+								<td><input class="input-set" type="text" id="Hsupplement6" /></td>
+								<td><input class="input-set" type="text" id="Hbaseprice6" /></td>
+								<td><input class="input-set" type="text" id="Hroom2price6" /></td>
+								<td><input class="input-set" type="text" id="Hroom3price6" /></td>
+								<td><input class="input-set" type="text" id="Hroom4price6" /></td>
+							</tr>
+							<tr>
+								<td class="Hproj7">包价2</td>
+								<td><input type="text" class="input-set" id="Hpk7"></td>
+								<td><input class="input-set" type="text" id="Hhtcode7" /></td>
+								<td><input class="input-set" type="text" id="Hsupplement7" /></td>
+								<td><input class="input-set" type="text" id="Hbaseprice7" /></td>
+								<td><input class="input-set" type="text" id="Hroom2price7" /></td>
+								<td><input class="input-set" type="text" id="Hroom3price7" /></td>
+								<td><input class="input-set" type="text" id="Hroom4price7" /></td>
+							</tr>
+
+							<tr>
+								<th colspan="4">价格套系代号</th>
+								<th colspan="4" style="background-color: #f5e79e"
+									name="package3">N(平常期间价格)</th>
+
+							</tr>
+							<tr>
+
+								<th colspan="4">价格执行期间</th>
+								<th colspan="4" style="background-color: #f5e79e">
+									月份日期--月份日期</th>
+							</tr>
+							<tr>
+								<th colspan="4">房型设置</th>
+								<th style="background-color: #f5e79e"><span
+									class="Nbasichometype">大床</span></th>
+								<th style="background-color: #f5e79e"><span
+									class="Nroomtype2">双床</span></th>
+								<th style="background-color: #f5e79e"><span
+									class="Nroomtype3">套房</span></th>
+								<th style="background-color: #f5e79e"><span
+									class="Nroomtype4">豪华套房</span>
+							</tr>
+							<tr>
+								<th>项目名称</th>
+								<th style="width: 180px">价格种类</th>
+								<th style="width: 120px">酒店对应价格编码</th>
+								<th style="width: 60px">附加费</th>
+								<th colspan="4"></th>
+							</tr>
+							<tr>
+								<td><span class="Nproj1">网络公开价/前台价(无早餐)</span></td>
+								<td><input class="input-set" type="text" id="Npk1" /></td>
+								<td><input class="input-set" type="text" id="Nhtcode1" /></td>
+								<td><input class="input-set" type="text" id="Nsupplement1" /></td>
+								<td><input class="input-set" type="text" id="Nbaseprice1" /></td>
+								<td><input class="input-set" type="text" id="Nroom2price1" /></td>
+								<td><input class="input-set" type="text" id="Nroom3price1" /></td>
+								<td><input class="input-set" type="text" id="Nroom4price1" /></td>
+							</tr>
+							<tr>
+								<td class="Nproj2">网络公开价/前台价(含早餐)</td>
+								<td><input class="input-set" type="text" id="Npk2" /></td>
+								<td><input class="input-set" type="text" id="Nhtcode2" /></td>
+								<td><input class="input-set" type="text" id="Nsupplement2" /></td>
+								<td><input class="input-set" type="text" id="Nbaseprice2" /></td>
+								<td><input class="input-set" type="text" id="Nroom2price2" /></td>
+								<td><input class="input-set" type="text" id="Nroom3price2" /></td>
+								<td><input class="input-set" type="text" id="Nroom4price2" /></td>
+							</tr>
+							<tr>
+								<td class="Nproj3">提前3天预付价(无早餐)</td>
+								<td><input type="text" class="input-set" id="Npk3"></td>
+								<td><input class="input-set" type="text" id="Nhtcode3" /></td>
+								<td><input class="input-set" type="text" id="Nsupplement3" /></td>
+								<td><input class="input-set" type="text" id="Nbaseprice3" /></td>
+								<td><input class="input-set" type="text" id="Nroom2price3" /></td>
+								<td><input class="input-set" type="text" id="Nroom3price3" /></td>
+								<td><input class="input-set" type="text" id="Nroom4price3" /></td>
+							</tr>
+							<tr>
+								<td class="Nproj4">提前3天预付价(含早餐)</td>
+								<td><input type="text" class="input-set" id="Npk4"></td>
+								<td><input class="input-set" type="text" id="Nhtcode4" /></td>
+								<td><input class="input-set" type="text" id="Nsupplement4" /></td>
+								<td><input class="input-set" type="text" id="Nbaseprice4" /></td>
+								<td><input class="input-set" type="text" id="Nroom2price4" /></td>
+								<td><input class="input-set" type="text" id="Nroom3price4" /></td>
+								<td><input class="input-set" type="text" id="Nroom4price4" /></td>
+							</tr>
+							<tr>
+								<td class="Nproj5">周末价(含早餐)</td>
+								<td><input type="text" class="input-set" id="Npk5"></td>
+								<td><input class="input-set" type="text" id="Nhtcode5" /></td>
+								<td><input class="input-set" type="text" id="Nsupplement5" /></td>
+								<td><input class="input-set" type="text" id="Nbaseprice5" /></td>
+								<td><input class="input-set" type="text" id="Nroom2price5" /></td>
+								<td><input class="input-set" type="text" id="Nroom3price5" /></td>
+								<td><input class="input-set" type="text" id="Nroom4price5" /></td>
+							</tr>
+							<tr>
+								<td class="Nproj6">包价1</td>
+								<td><input type="text" class="input-set" id="Npk6"></td>
+								<td><input class="input-set" type="text" id="Nhtcode6" /></td>
+								<td><input class="input-set" type="text" id="Nsupplement6" /></td>
+								<td><input class="input-set" type="text" id="Nbaseprice6" /></td>
+								<td><input class="input-set" type="text" id="Nroom2price6" /></td>
+								<td><input class="input-set" type="text" id="Nroom3price6" /></td>
+								<td><input class="input-set" type="text" id="Nroom4price6" /></td>
+							</tr>
+							<tr>
+								<td class="Nproj7">包价2</td>
+								<td><input type="text" class="input-set" id="Npk7"></td>
+								<td><input class="input-set" type="text" id="Nhtcode7" /></td>
+								<td><input class="input-set" type="text" id="Nsupplement7" /></td>
+								<td><input class="input-set" type="text" id="Nbaseprice7" /></td>
+								<td><input class="input-set" type="text" id="Nroom2price7" /></td>
+								<td><input class="input-set" type="text" id="Nroom3price7" /></td>
+								<td><input class="input-set" type="text" id="Nroom4price7" /></td>
+							</tr>
+
+								<tr>
+								<th colspan="4">价格套系代号</th>
+								<th colspan="4" style="background-color: #67b168" name = "L">L(淡季期间价格)</th>
+
+							</tr>
+							<tr>
+
+								<th colspan="4">价格执行期间</th>
+								<th colspan="4" style="background-color:#67b168">
+									月份日期--月份日期</th>
+							</tr>
+                            <tr>
+                                <th colspan="4">房型设置</th>
+                                <th style="background-color:#67b168"><span class="Lbasichometype">大床</span>
+                                </th>
+                                <th style="background-color:#67b168"><span class="Lroomtype2">双床</span>
+                                </th>
+                                <th style="background-color:#67b168"><span class="Lroomtype3">套房</span>
+                                </th>
+                                <th style="background-color:#67b168"><span  class="Lroomtype4">豪华套房</span>
+                                </th>
+
+
+                            </tr>
+							<tr>
+								<th>项目名称</th>
+								<th style="width: 180px">价格种类</th>
+								<th style="width: 120px">酒店对应价格编码</th>
+								<th style="width: 60px">附加费 （%）</th>
+								<th colspan="4"></th>
+							</tr>
+                            <tr>
+                                <td><span class="Lproj1">网络公开价/前台价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Lpk1" /></td>
+                                <td><input class="input-set" type="text" id="Lhtcode1" /></td>
+                                <td><input class="input-set" type="text" id="Lsupplement1" /></td>
+                                <td><input class="input-set" type="text" id="Lbasprice1" /></td>
+                                <td><input class="input-set" type="text" id="Lroom2price1" /></td>
+                                <td><input class="input-set" type="text" id="Lroom3price1" /></td>
+                                <td><input class="input-set" type="text" id="Lroom4price1" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Lproj2">网络公开价/前台价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Lpk2" /></td>
+                                <td><input class="input-set" type="text" id="Lhtcode2" /></td>
+                                <td><input class="input-set" type="text" id="Lsupplement2" /></td>
+                                <td><input class="input-set" type="text" id="Lbasprice2" /></td>
+                                <td><input class="input-set" type="text" id="Lroom2price2" /></td>
+                                <td><input class="input-set" type="text" id="Lroom3price2" /></td>
+                                <td><input class="input-set" type="text" id="Lroom4price2" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Lproj3">提前3天预付价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Lpk3" /></td>
+                                <td><input class="input-set" type="text" id="Lhtcode3" /></td>
+                                <td><input class="input-set" type="text" id="Lsupplement3" /></td>
+                                <td><input class="input-set" type="text" id="Lbasprice3" /></td>
+                                <td><input class="input-set" type="text" id="Lroom2price3" /></td>
+                                <td><input class="input-set" type="text" id="Lroom3price3" /></td>
+                                <td><input class="input-set" type="text" id="Lroom4price3" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Lproj4">提前3天预付价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Lpk4" /></td>
+                                <td><input class="input-set" type="text" id="Lhtcode4" /></td>
+                                <td><input class="input-set" type="text" id="Lsupplement4" /></td>
+                                <td><input class="input-set" type="text" id="Lbasprice4" /></td>
+                                <td><input class="input-set" type="text" id="Lroom2price4" /></td>
+                                <td><input class="input-set" type="text" id="Lroom3price4" /></td>
+                                <td><input class="input-set" type="text" id="Lroom4price4" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Lproj5">周末价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Lpk5" /></td>
+                                <td><input class="input-set" type="text" id="Lhtcode5" /></td>
+                                <td><input class="input-set" type="text" id="Lsupplement5" /></td>
+                                <td><input class="input-set" type="text" id="Lbasprice5" /></td>
+                                <td><input class="input-set" type="text" id="Lroom2price5" /></td>
+                                <td><input class="input-set" type="text" id="Lroom3price5" /></td>
+                                <td><input class="input-set" type="text" id="Lroom4price5" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Lproj6">包价1</span></td>
+                                <td><input class="input-set" type="text" id="Lpk6" /></td>
+                                <td><input class="input-set" type="text" id="Lhtcode6" /></td>
+                                <td><input class="input-set" type="text" id="Lsupplement6" /></td>
+                                <td><input class="input-set" type="text" id="Lbasprice6" /></td>
+                                <td><input class="input-set" type="text" id="Lroom2price6" /></td>
+                                <td><input class="input-set" type="text" id="Lroom3price6" /></td>
+                                <td><input class="input-set" type="text" id="Lroom4price6" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Lproj7">包价2</span></td>
+                                <td><input class="input-set" type="text" id="Lpk7" /></td>
+                                <td><input class="input-set" type="text" id="Lhtcode7" /></td>
+                                <td><input class="input-set" type="text" id="Lsupplement7" /></td>
+                                <td><input class="input-set" type="text" id="Lbasprice7" /></td>
+                                <td><input class="input-set" type="text" id="Lroom2price7" /></td>
+                                <td><input class="input-set" type="text" id="Lroom3price7" /></td>
+                                <td><input class="input-set" type="text" id="Lroom4price7" /></td>
+                            </tr>
+
+							<tr>
+								<th colspan="4">价格套系代号</th>
+								<th colspan="4" style="background-color: #f5e79e" name = "D">D(惨淡期间价格)</th>
+
+							</tr>
+							<tr>
+
+								<th colspan="4">价格执行期间</th>
+								<th colspan="4" style="background-color: #f5e79e">
+									月份日期--月份日期</th>
+							</tr>
+                            <tr>
+                                <th colspan="4">房型设置</th>
+                                <th style="background-color: #f5e79e"><span class="Dbasichometype">大床</span>
+                                </th>
+                                <th style="background-color: #f5e79e"><span class="Droomtype2">双床</span>
+                                </th>
+                                <th style="background-color: #f5e79e"><span class="Droomtype3">套房</span>
+                                </th>
+                                <th style="background-color: #f5e79e"><span  class="Droomtype4">豪华套房</span>
+                                </th>
+
+
+                            </tr>
+							<tr>
+								<th>项目名称</th>
+								<th style="width: 180px">价格种类</th>
+								<th style="width: 120px">酒店对应价格编码</th>
+								<th style="width: 60px">附加费 （%）</th>
+								<th colspan="4"></th>
+							</tr>
+                            <tr>
+                                <td><span class="Dproj1">网络公开价/前台价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Dpk1" /></td>
+                                <td><input class="input-set" type="text" id="Dhtcode1" /></td>
+                                <td><input class="input-set" type="text" id="Dsupplement1" /></td>
+                                <td><input class="input-set" type="text" id="Dbasprice1" /></td>
+                                <td><input class="input-set" type="text" id="Droom2price1" /></td>
+                                <td><input class="input-set" type="text" id="Droom3price1" /></td>
+                                <td><input class="input-set" type="text" id="Droom4price1" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Dproj2">网络公开价/前台价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Dpk2" /></td>
+                                <td><input class="input-set" type="text" id="Dhtcode2" /></td>
+                                <td><input class="input-set" type="text" id="Dsupplement2" /></td>
+                                <td><input class="input-set" type="text" id="Dbasprice2" /></td>
+                                <td><input class="input-set" type="text" id="Droom2price2" /></td>
+                                <td><input class="input-set" type="text" id="Droom3price2" /></td>
+                                <td><input class="input-set" type="text" id="Droom4price2" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Dproj3">提前3天预付价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Dpk3" /></td>
+                                <td><input class="input-set" type="text" id="Dhtcode3" /></td>
+                                <td><input class="input-set" type="text" id="Dsupplement3" /></td>
+                                <td><input class="input-set" type="text" id="Dbasprice3" /></td>
+                                <td><input class="input-set" type="text" id="Droom2price3" /></td>
+                                <td><input class="input-set" type="text" id="Droom3price3" /></td>
+                                <td><input class="input-set" type="text" id="Droom4price3" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Dproj4">提前3天预付价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Dpk4" /></td>
+                                <td><input class="input-set" type="text" id="Dhtcode4" /></td>
+                                <td><input class="input-set" type="text" id="Dsupplement4" /></td>
+                                <td><input class="input-set" type="text" id="Dbasprice4" /></td>
+                                <td><input class="input-set" type="text" id="Droom2price4" /></td>
+                                <td><input class="input-set" type="text" id="Droom3price4" /></td>
+                                <td><input class="input-set" type="text" id="Droom4price4" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Dproj5">周末价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="Dpk5" /></td>
+                                <td><input class="input-set" type="text" id="Dhtcode5" /></td>
+                                <td><input class="input-set" type="text" id="Dsupplement5" /></td>
+                                <td><input class="input-set" type="text" id="Dbasprice5" /></td>
+                                <td><input class="input-set" type="text" id="Droom2price5" /></td>
+                                <td><input class="input-set" type="text" id="Droom3price5" /></td>
+                                <td><input class="input-set" type="text" id="Droom4price5" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Dproj6">包价1</span></td>
+                                <td><input class="input-set" type="text" id="Dpk6" /></td>
+                                <td><input class="input-set" type="text" id="Dhtcode6" /></td>
+                                <td><input class="input-set" type="text" id="Dsupplement6" /></td>
+                                <td><input class="input-set" type="text" id="Dbasprice6" /></td>
+                                <td><input class="input-set" type="text" id="Droom2price6" /></td>
+                                <td><input class="input-set" type="text" id="Droom3price6" /></td>
+                                <td><input class="input-set" type="text" id="Droom4price6" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="Dproj7">包价2</span></td>
+                                <td><input class="input-set" type="text" id="Dpk7" /></td>
+                                <td><input class="input-set" type="text" id="Dhtcode7" /></td>
+                                <td><input class="input-set" type="text" id="Dsupplement7" /></td>
+                                <td><input class="input-set" type="text" id="Dbasprice7" /></td>
+                                <td><input class="input-set" type="text" id="Droom2price7" /></td>
+                                <td><input class="input-set" type="text" id="Droom3price7" /></td>
+                                <td><input class="input-set" type="text" id="Droom4price7" /></td>
+                            </tr>
+
+							<tr>
+								<th colspan="4">价格套系代号</th>
+								<th colspan="4" style="background-color: #67b168" name = "SP1">S1(特别期间价格1)</th>
+
+							</tr>
+							<tr>
+
+								<th colspan="4">价格执行期间</th>
+								<th colspan="4" style="background-color:#67b168">
+									月份日期--月份日期</th>
+							</tr>
+
+                            <tr>
+                                <th colspan="4">房型设置</th>
+                                <th style="background-color:#67b168"><span class="SP1basichometype">大床</span>
+                                </th>
+                                <th style="background-color:#67b168"><span class="SP1roomtype2">双床</span>
+                                </th>
+                                <th style="background-color:#67b168"><span class="SP1roomtype3">套房</span>
+                                </th>
+                                <th style="background-color:#67b168"><span  class="SP1roomtype4">豪华套房</span>
+                                </th>
+
+
+                            </tr>
+
+
+							</tr>
+							<tr>
+								<th>项目名称</th>
+								<th style="width: 180px">价格种类</th>
+								<th style="width: 120px">酒店对应价格编码</th>
+								<th style="width: 60px">附加费 （%）</th>
+								<th colspan="4"></th>
+							</tr>
+                            <tr>
+                                <td><span class="SP1proj1">网络公开价/前台价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP1pk1" /></td>
+                                <td><input class="input-set" type="text" id="SP1htcode1" /></td>
+                                <td><input class="input-set" type="text" id="SP1supplement1" /></td>
+                                <td><input class="input-set" type="text" id="SP1basprice1" /></td>
+                                <td><input class="input-set" type="text" id="SP1room2price1" /></td>
+                                <td><input class="input-set" type="text" id="SP1room3price1" /></td>
+                                <td><input class="input-set" type="text" id="SP1room4price1" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="SP1proj2">网络公开价/前台价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP1pk2" /></td>
+                                <td><input class="input-set" type="text" id="SP1htcode2" /></td>
+                                <td><input class="input-set" type="text" id="SP1supplement2" /></td>
+                                <td><input class="input-set" type="text" id="SP1basprice2" /></td>
+                                <td><input class="input-set" type="text" id="SP1room2price2" /></td>
+                                <td><input class="input-set" type="text" id="SP1room3price2" /></td>
+                                <td><input class="input-set" type="text" id="SP1room4price2" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="SP1proj3">提前3天预付价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP1pk3" /></td>
+                                <td><input class="input-set" type="text" id="SP1htcode3" /></td>
+                                <td><input class="input-set" type="text" id="SP1supplement3" /></td>
+                                <td><input class="input-set" type="text" id="SP1basprice3" /></td>
+                                <td><input class="input-set" type="text" id="SP1room2price3" /></td>
+                                <td><input class="input-set" type="text" id="SP1room3price3" /></td>
+                                <td><input class="input-set" type="text" id="SP1room4price3" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="SP1proj4">提前3天预付价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP1pk4" /></td>
+                                <td><input class="input-set" type="text" id="SP1htcode4" /></td>
+                                <td><input class="input-set" type="text" id="SP1supplement4" /></td>
+                                <td><input class="input-set" type="text" id="SP1basprice4" /></td>
+                                <td><input class="input-set" type="text" id="SP1room2price4" /></td>
+                                <td><input class="input-set" type="text" id="SP1room3price4" /></td>
+                                <td><input class="input-set" type="text" id="SP1room4price4" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="SP1proj5">周末价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP1pk5" /></td>
+                                <td><input class="input-set" type="text" id="SP1htcode5" /></td>
+                                <td><input class="input-set" type="text" id="SP1supplement5" /></td>
+                                <td><input class="input-set" type="text" id="SP1basprice5" /></td>
+                                <td><input class="input-set" type="text" id="SP1room2price5" /></td>
+                                <td><input class="input-set" type="text" id="SP1room3price5" /></td>
+                                <td><input class="input-set" type="text" id="SP1room4price5" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="SP1proj6">包价1</span></td>
+                                <td><input class="input-set" type="text" id="SP1pk6" /></td>
+                                <td><input class="input-set" type="text" id="SP1htcode6" /></td>
+                                <td><input class="input-set" type="text" id="SP1supplement6" /></td>
+                                <td><input class="input-set" type="text" id="SP1basprice6" /></td>
+                                <td><input class="input-set" type="text" id="SP1room2price6" /></td>
+                                <td><input class="input-set" type="text" id="SP1room3price6" /></td>
+                                <td><input class="input-set" type="text" id="SP1room4price6" /></td>
+                            </tr>
+                            <tr>
+                                <td><span class="SP1proj7">包价2</span></td>
+                                <td><input class="input-set" type="text" id="SP1pk7" /></td>
+                                <td><input class="input-set" type="text" id="SP1htcode7" /></td>
+                                <td><input class="input-set" type="text" id="SP1supplement7" /></td>
+                                <td><input class="input-set" type="text" id="SP1basprice7" /></td>
+                                <td><input class="input-set" type="text" id="SP1room2price7" /></td>
+                                <td><input class="input-set" type="text" id="SP1room3price7" /></td>
+                                <td><input class="input-set" type="text" id="SP1room4price7" /></td>
+                            </tr>
+
+							<tr>
+								<th colspan="4">价格套系代号</th>
+								<th colspan="4" style="background-color: #f5e79e" name="SP2">S2(特别期间价格2)</th>
+
+							</tr>
+							<tr>
+
+								<th colspan="4">价格执行期间</th>
+								<th colspan="4" style="background-color: #f5e79e">
+									月份日期--月份日期</th>
+							</tr>
+							<tr>
+								<th colspan="4">房型设置</th>
+                                <th style="background-color: #f5e79e"><span class="SP2basichometype">大床</span>
+                                </th>
+                                <th style="background-color: #f5e79e"><span class="SP2roomtype2">双床</span>
+                                </th>
+                                <th style="background-color: #f5e79e"><span class="SP2roomtype3">套房</span>
+                                </th>
+                                <th style="background-color: #f5e79e"><span  class="SP2roomtype4">豪华套房</span>
+                                </th>
+
+
+							</tr>
+							<tr>
+								<th>项目名称</th>
+								<th style="width: 180px">价格种类</th>
+								<th style="width: 120px">酒店对应价格编码</th>
+								<th style="width: 60px">附加费 （%）</th>
+								<th colspan="4"></th>
+							</tr>
+							<tr>
+								<td><span class="SP2proj1">网络公开价/前台价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP2pk1" /></td>
+                                <td><input class="input-set" type="text" id="SP2htcode1" /></td>
+                                <td><input class="input-set" type="text" id="SP2supplement1" /></td>
+                                <td><input class="input-set" type="text" id="SP2basprice1" /></td>
+                                <td><input class="input-set" type="text" id="SP2room2price1" /></td>
+                                <td><input class="input-set" type="text" id="SP2room3price1" /></td>
+                                <td><input class="input-set" type="text" id="SP2room4price1" /></td>
+							</tr>
+							<tr>
+								<td><span class="SP2proj2">网络公开价/前台价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP2pk2" /></td>
+                                <td><input class="input-set" type="text" id="SP2htcode2" /></td>
+                                <td><input class="input-set" type="text" id="SP2supplement2" /></td>
+                                <td><input class="input-set" type="text" id="SP2basprice2" /></td>
+                                <td><input class="input-set" type="text" id="SP2room2price2" /></td>
+                                <td><input class="input-set" type="text" id="SP2room3price2" /></td>
+                                <td><input class="input-set" type="text" id="SP2room4price2" /></td>
+							</tr>
+							<tr>
+								<td><span class="SP2proj3">提前3天预付价(无早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP2pk3" /></td>
+                                <td><input class="input-set" type="text" id="SP2htcode3" /></td>
+                                <td><input class="input-set" type="text" id="SP2supplement3" /></td>
+                                <td><input class="input-set" type="text" id="SP2basprice3" /></td>
+                                <td><input class="input-set" type="text" id="SP2room2price3" /></td>
+                                <td><input class="input-set" type="text" id="SP2room3price3" /></td>
+                                <td><input class="input-set" type="text" id="SP2room4price3" /></td>
+							</tr>
+							<tr>
+								<td><span class="SP2proj4">提前3天预付价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP2pk4" /></td>
+                                <td><input class="input-set" type="text" id="SP2htcode4" /></td>
+                                <td><input class="input-set" type="text" id="SP2supplement4" /></td>
+                                <td><input class="input-set" type="text" id="SP2basprice4" /></td>
+                                <td><input class="input-set" type="text" id="SP2room2price4" /></td>
+                                <td><input class="input-set" type="text" id="SP2room3price4" /></td>
+                                <td><input class="input-set" type="text" id="SP2room4price4" /></td>
+							</tr>
+							<tr>
+								<td><span class="SP2proj5">周末价(含早餐)</span></td>
+                                <td><input class="input-set" type="text" id="SP2pk5" /></td>
+                                <td><input class="input-set" type="text" id="SP2htcode5" /></td>
+                                <td><input class="input-set" type="text" id="SP2supplement5" /></td>
+                                <td><input class="input-set" type="text" id="SP2basprice5" /></td>
+                                <td><input class="input-set" type="text" id="SP2room2price5" /></td>
+                                <td><input class="input-set" type="text" id="SP2room3price5" /></td>
+                                <td><input class="input-set" type="text" id="SP2room4price5" /></td>
+							</tr>
+							<tr>
+								<td><span class="SP2proj6">包价1</span></td>
+                                <td><input class="input-set" type="text" id="SP2pk6" /></td>
+                                <td><input class="input-set" type="text" id="SP2htcode6" /></td>
+                                <td><input class="input-set" type="text" id="SP2supplement6" /></td>
+                                <td><input class="input-set" type="text" id="SP2basprice6" /></td>
+                                <td><input class="input-set" type="text" id="SP2room2price6" /></td>
+                                <td><input class="input-set" type="text" id="SP2room3price6" /></td>
+                                <td><input class="input-set" type="text" id="SP2room4price6" /></td>
+							</tr>
+							<tr>
+								<td><span class="SP2proj7">包价2</span></td>
+                                <td><input class="input-set" type="text" id="SP2pk7" /></td>
+                                <td><input class="input-set" type="text" id="SP2htcode7" /></td>
+                                <td><input class="input-set" type="text" id="SP2supplement7" /></td>
+                                <td><input class="input-set" type="text" id="SP2basprice7" /></td>
+                                <td><input class="input-set" type="text" id="SP2room2price7" /></td>
+                                <td><input class="input-set" type="text" id="SP2room3price7" /></td>
+                                <td><input class="input-set" type="text" id="SP2room4price7" /></td>
+							</tr>
+						</table>
+						<div class="col-md-offset-5" style="margin-top:15px;">
+							<button type="button" class="btn btn-primary" onclick="OnSubmit();">提交</button>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="excel2">
+						<table class="table-setting">
+							<tr>
+								<th colspan="4">协议价格</th>
+							</tr>
+                            <tr>
+                                <th colspan="4">价格套系代号</th>
+                                <th colspan="4" style="background-color: #dca7a7" name="Npackage">N(全年价格)</th>
+                                <th colspan="4" style="background-color: #67b168" name="Wpackage">W(旺季价格)</th>
+                                <th colspan="4" style="background-color: #dca7a7" name="Dpackage">D(淡季价格)</th>
+
+                            </tr>
+                            <tr>
+                                <th colspan="4">价格执行期间</th>
+                                <th colspan="4" style="background-color: #dca7a7">
+                                    月份日期--月份日期</th>
+                                <th colspan="4" style="background-color: #67b168">
+                                    月份日期--月份日期</th>
+                                <th colspan="4" style="background-color: #dca7a7">
+                                    月份日期--月份日期</th>
+                            </tr>
+                            <tr>
+                                <th colspan="4">房型设置</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="NBaseRoomType">大床</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="NRoomType2">双床</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="NRoomType3">套房</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="NRoomType4">豪华套房</th>
+                                <th style="background-color: #67b168;width: 50px" class="WBaseRoomType">大床</th>
+                                <th style="background-color: #67b168;width: 50px" class="WRoomType2">双床</th>
+                                <th style="background-color: #67b168;width: 50px" class="WRoomType3">套房</th>
+                                <th style="background-color: #67b168;width: 50px" class="WRoomType4">豪华套房</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="DBaseRoomType">大床</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="DRoomType2">双床</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="DRoomType3">套房</th>
+                                <th style="background-color: #dca7a7;width: 50px" class="DRoomType4">豪华套房</th>
+
+
+
+                            </tr>
+							<tr>
+								<th style="width: 170px">项目名称</th>
+								<th>价格种类</th>
+								<th style="width: 90px">酒店对应价格编码</th>
+								<th style="width: 30px">附加费 ( % )</th>
+								<th colspan="12"></th>
+							</tr>
+                            <tr>
+                                <td class="owner">业主价格</td>
+                                <td><input type="text" class="input-set" id="ownerPk" >	</td>
+                                <td><input type="text" class="input-set" id="ownerHotelCode"></td>
+                                <td><input type="text" class="input-set" id="ownerSupplement"></td>
+                                <td><input type="text" class="input-set" id="ownerNBasePrice"></td>
+                                <td><input type="text" class="input-set" id="ownerNRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="ownerNRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="ownerNRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="ownerWBasePrice"></td>
+                                <td><input type="text" class="input-set" id="ownerWRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="ownerWRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="ownerWRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="ownerDBasePrice"></td>
+                                <td><input type="text" class="input-set" id="ownerDRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="ownerDRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="ownerDRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td class="government">政府价格</td>
+                                <td><input type="text" class="input-set" id="governPk"></td>
+                                <td><input type="text" class="input-set" id="governHotelCode"></td>
+                                <td><input type="text" class="input-set" id="governSupplement"></td>
+                                <td><input type="text" class="input-set" id="governNBasePrice"></td>
+                                <td><input type="text" class="input-set" id="governNRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="governNRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="governNRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="governWBasePrice"></td>
+                                <td><input type="text" class="input-set" id="governWRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="governWRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="governWRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="governDBasePrice"></td>
+                                <td><input type="text" class="input-set" id="governDRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="governDRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="governDRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td class="peer">同行价格</td>
+                                <td><input type="text" class="input-set" id="peerPk" >	</td>
+                                <td><input type="text" class="input-set" id="peerHotelCode"></td>
+                                <td><input type="text" class="input-set" id="peerSupplement"></td>
+                                <td><input type="text" class="input-set" id="peerNBasePrice"></td>
+                                <td><input type="text" class="input-set" id="peerNRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="peerNRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="peerNRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="peerWBasePrice"></td>
+                                <td><input type="text" class="input-set" id="peerWRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="peerWRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="peerWRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="peerDBasePrice"></td>
+                                <td><input type="text" class="input-set" id="peerDRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="peerDRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="peerDRoom4Price"></td>
+                            </tr>
+
+                            <tr>
+                                <th colspan="4" style="background-color: #31b0d5" id="comtype1">商务散客协议价格</th>
+                            </tr>
+                            <tr>
+                                <th>项目名称</th>
+                                <th>价格种类</th>
+                                <th>酒店对应价格编码</th>
+                                <th>附加费 （%）</th>
+                            </tr>
+                            <tr>
+                                <td rowspan="4" class="first">第一级商务协议价格(针对年产100房晚以下忠实客户)</td>
+                                <td style="width: 280px"><input type="text" class="input-set" id="first1Pk"></td>
+                                <td><input type="text" class="input-set" id="first1HotelCode"></td>
+                                <td><input type="text" class="input-set" id="first1Supplement"></td>
+                                <td><input type="text" class="input-set" id="first1NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first1NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first1NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first1NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first1WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first1WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first1WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first1WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first1DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first1DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first1DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first1DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="first2Pk"></td>
+                                <td><input type="text" class="input-set" id="first2HotelCode"></td>
+                                <td><input type="text" class="input-set" id="first2Supplement"></td>
+                                <td><input type="text" class="input-set" id="first2NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first2NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first2NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first2NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first2WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first2WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first2WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first2WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first2DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first2DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first2DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first2DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="first3Pk"></td>
+                                <td><input type="text" class="input-set" id="first3HotelCode"></td>
+                                <td><input type="text" class="input-set" id="first3Supplement"></td>
+                                <td><input type="text" class="input-set" id="first3NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first3NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first3NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first3NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first3WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first3WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first3WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first3WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first3DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first3DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first3DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first3DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="first4Pk"></td>
+                                <td><input type="text" class="input-set" id="first4HotelCode"></td>
+                                <td><input type="text" class="input-set" id="first4Supplement"></td>
+                                <td><input type="text" class="input-set" id="first4NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first4NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first4NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first4NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first4WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first4WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first4WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first4WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="first4DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="first4DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="first4DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="first4DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4" class="second">第二级商务协议价格(针对年产100-200房晚的客户)</td>
+                                <td style="width: 280px"><input type="text" class="input-set" id="second1Pk"></td>
+                                <td><input type="text" class="input-set" id="second1HotelCode"></td>
+                                <td><input type="text" class="input-set" id="second1Supplement"></td>
+                                <td><input type="text" class="input-set" id="second1NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second1NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second1NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second1NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second1WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second1WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second1WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second1WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second1DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second1DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second1DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second1DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="second2Pk"></td>
+                                <td><input type="text" class="input-set" id="second2HotelCode"></td>
+                                <td><input type="text" class="input-set" id="second2Supplement"></td>
+                                <td><input type="text" class="input-set" id="second2NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second2NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second2NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second2NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second2WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second2WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second2WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second2WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second2DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second2DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second2DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second2DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="second3Pk"></td>
+                                <td><input type="text" class="input-set" id="second3HotelCode"></td>
+                                <td><input type="text" class="input-set" id="second3Supplement"></td>
+                                <td><input type="text" class="input-set" id="second3NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second3NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second3NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second3NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second3WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second3WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second3WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second3WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second3DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second3DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second3DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second3DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="second4Pk"></td>
+                                <td><input type="text" class="input-set" id="second4HotelCode"></td>
+                                <td><input type="text" class="input-set" id="second4Supplement"></td>
+                                <td><input type="text" class="input-set" id="second4NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second4NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second4NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second4NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second4WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second4WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second4WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second4WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="second4DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="second4DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="second4DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="second4DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="third">第三级商务协议价格(针对年产200-500房晚的客户)</td>
+                                <td style="width: 280px"><input type="text" class="input-set" id="third1Pk"></td>
+                                <td><input type="text" class="input-set" id="third1HotelCode"></td>
+                                <td><input type="text" class="input-set" id="third1Supplement"></td>
+                                <td><input type="text" class="input-set" id="third1NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="third1NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="third1NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="third1NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="third1WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="third1WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="third1WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="third1WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="third1DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="third1DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="third1DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="third1DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="third2Pk"></td>
+                                <td><input type="text" class="input-set" id="third2HotelCode"></td>
+                                <td><input type="text" class="input-set" id="third2Supplement"></td>
+                                <td><input type="text" class="input-set" id="third2NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="third2NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="third2NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="third2NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="third2WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="third2WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="third2WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="third2WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="third2DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="third2DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="third2DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="third2DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="core">核心客户商务协议价格(针对年产500房晚以上的核心客户)</td>
+                                <td style="width: 280px"><input type="text" class="input-set" id="core1Pk"></td>
+                                <td><input type="text" class="input-set" id="core1HotelCode"></td>
+                                <td><input type="text" class="input-set" id="core1Supplement"></td>
+                                <td><input type="text" class="input-set" id="core1NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="core1NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="core1NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="core1NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="core1WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="core1WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="core1WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="core1WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="core1DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="core1DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="core1DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="core1DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 280px"><input type="text" class="input-set" id="core2Pk"></td>
+                                <td><input type="text" class="input-set" id="core2HotelCode"></td>
+                                <td><input type="text" class="input-set" id="core2Supplement"></td>
+                                <td><input type="text" class="input-set" id="core2NBasePrice"></td>
+                                <td><input type="text" class="input-set" id="core2NRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="core2NRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="core2NRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="core2WBasePrice"></td>
+                                <td><input type="text" class="input-set" id="core2WRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="core2WRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="core2WRoom4Price"></td>
+                                <td><input type="text" class="input-set" id="core2DBasePrice"></td>
+                                <td><input type="text" class="input-set" id="core2DRoom2Price"></td>
+                                <td><input type="text" class="input-set" id="core2DRoom3Price"></td>
+                                <td><input type="text" class="input-set" id="core2DRoom4Price"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="4" style="background-color: #31b0d5" id ="HT_comtype1">会议团队协议价格</th>
+                            </tr>
+                            <tr>
+                                <td class="HT_conBasicproj1">会议团队协议价格1</td>
+                                <td><input type="text" class="input-set" id="HT_conPk1" >	</td>
+                                <td><input type="text" class="input-set" id="HT_conHotelCode1"></td>
+                                <td><input type="text" class="input-set" id="HT_consupplement1"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon1Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon2Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon3Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon4Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon1Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon2Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon3Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon4Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon1Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon2Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon3Price1"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon4Price1"></td>
+                            </tr>
+                            <tr>
+                                <td class="HT_conBasicproj2">会议团队协议价格2</td>
+                                <td><input type="text" class="input-set" id="HT_conPk2" >	</td>
+                                <td><input type="text" class="input-set" id="HT_conHotelCode2"></td>
+                                <td><input type="text" class="input-set" id="HT_consupplement2"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon1Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon2Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon3Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Ncon4Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon1Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon2Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon3Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Wcon4Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon1Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon2Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon3Price2"></td>
+                                <td><input type="text" class="input-set" id="HT_Dcon4Price2"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="4" style="background-color: #31b0d5" id ="LS_comtype1">旅游散客协议价格</th>
+                            </tr>
+                            <tr>
+                                <td class="LS_conBasicproj1">旅游散客协议价格1</td>
+                                <td><input type="text" class="input-set" id="LS_conPk1" >	</td>
+                                <td><input type="text" class="input-set" id="LS_conHotelCode1"></td>
+                                <td><input type="text" class="input-set" id="LS_consupplement1"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon1Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon2Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon3Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon4Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon1Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon2Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon3Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon4Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon1Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon2Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon3Price1"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon4Price1"></td>
+                            </tr>
+                            <tr>
+                                <td class="LS_conBasicproj2">旅游散客协议价格2</td>
+                                <td><input type="text" class="input-set" id="LS_conPk2" >	</td>
+                                <td><input type="text" class="input-set" id="LS_conHotelCode2"></td>
+                                <td><input type="text" class="input-set" id="LS_consupplement2"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon1Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon2Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon3Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon4Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon1Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon2Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon3Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon4Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon1Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon2Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon3Price2"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon4Price2"></td>
+                            </tr>
+                            <tr>
+                                <td class="LS_conBasicproj3">旅游散客包价协议1</td>
+                                <td><input type="text" class="input-set" id="LS_conPk3" >	</td>
+                                <td><input type="text" class="input-set" id="LS_conHotelCode3"></td>
+                                <td><input type="text" class="input-set" id="LS_consupplement3"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon1Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon2Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon3Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon4Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon1Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon2Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon3Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon4Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon1Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon2Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon3Price3"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon4Price3"></td>
+                            </tr>
+                            <tr>
+                                <td class="LS_conBasicproj4">旅游散客包价协议2</td>
+                                <td><input type="text" class="input-set" id="LS_conPk4" >	</td>
+                                <td><input type="text" class="input-set" id="LS_conHotelCode4"></td>
+                                <td><input type="text" class="input-set" id="LS_consupplement4"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon1Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon2Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon3Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Ncon4Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon1Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon2Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon3Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Wcon4Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon1Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon2Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon3Price4"></td>
+                                <td><input type="text" class="input-set" id="LS_Dcon4Price4"></td>
+                            </tr>
+							<tr>
+								<th colspan="4" style="background-color: #31b0d5" id ="LT_comtype1">旅游团队协议价格</th>
+							</tr>
+                            <tr>
+                                <td class="LT_conBasicproj1">旅游团队协议价格1</td>
+                                <td><input type="text" class="input-set" id="LT_conPk1" >	</td>
+                                <td><input type="text" class="input-set" id="LT_conHotelCode1"></td>
+                                <td><input type="text" class="input-set" id="LT_consupplement1"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon1Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon2Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon3Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon4Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon1Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon2Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon3Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon4Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon1Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon2Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon3Price1"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon4Price1"></td>
+                            </tr>
+							<tr>
+								<td class="LT_conBasicproj2">旅游团队协议价格2</td>
+                                <td><input type="text" class="input-set" id="LT_conPk2" >	</td>
+                                <td><input type="text" class="input-set" id="LT_conHotelCode2"></td>
+                                <td><input type="text" class="input-set" id="LT_consupplement2"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon1Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon2Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon3Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon4Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon1Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon2Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon3Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon4Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon1Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon2Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon3Price2"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon4Price2"></td>
+							</tr>
+							<tr>
+								<td class="LT_conBasicproj3">系列团队协议价格1</td>
+                                <td><input type="text" class="input-set" id="LT_conPk3" >	</td>
+                                <td><input type="text" class="input-set" id="LT_conHotelCode3"></td>
+                                <td><input type="text" class="input-set" id="LT_consupplement3"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon1Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon2Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon3Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon4Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon1Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon2Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon3Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon4Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon1Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon2Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon3Price3"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon4Price3"></td>
+							</tr>
+							<tr>
+								<td class="LT_conBasicproj4">系列团队协议价格2</td>
+                                <td><input type="text" class="input-set" id="LT_conPk4" >	</td>
+                                <td><input type="text" class="input-set" id="LT_conHotelCode4"></td>
+                                <td><input type="text" class="input-set" id="LT_consupplement4"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon1Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon2Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon3Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Ncon4Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon1Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon2Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon3Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Wcon4Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon1Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon2Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon3Price4"></td>
+                                <td><input type="text" class="input-set" id="LT_Dcon4Price4"></td>
+							</tr>
+
+						</table>
+						  <div class="col-md-offset-5" style="margin-top:15px;">
+                    <button type="button" class="btn btn-primary" onclick="OnSubmitDeal();">提交</button>
+                    </div>
+					</div>
+				</div>
+				  
+			</div>
+			
+		</div>
+	</div>
+
+<div id="myModal_salerinfo" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">提示：</h4>
+            </div>
+            <div class="modal-body">
+                <span class="h4">信息添加成功</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script src="js/roomprice.js"></script>
+<script src="js/roomDealPrice.js"></script>
+</body>
+</html>

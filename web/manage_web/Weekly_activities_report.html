@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/weekly_activites_report.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">销售管理</li>
+            <li class="active">销售人员主页</li>
+        </ol>
+    </div>
+    <div class="table-container">
+        <div class="table-name">
+            <div class="title" id="title">销售周报</div>
+        </div>
+        <div class="table-result">
+            <div class="container-fluid">
+                <h3>Weekly Sales Activities Report 销售活动周报</h3>
+                <table>
+                    <tr>
+                        <th style="width:180px ">Sales Person销售人员</th>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Starting Date起始日期</th>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Ending Date起始日期</th>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">SALES CALL SUMMARY 销售拜访汇总</th>
+                        <td colspan="4" style="border: 0px"></td>
+                        <td>TOTAL 汇总</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>MON 周一</td>
+                        <td>TUE 周二</td>
+                        <td>WED 周三</td>
+                        <td>THU 周四</td>
+                        <td>FRI 周五</td>
+                        <td></td>
+                        <td>MTD 月累计</td>
+                        <td>YTD 年累计</td>
+                    </tr>
+                    <tr>
+                        <th>Key Account核心客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Niche Account忠实客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Prospect Account潜力客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Suspect Account潜在客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>REMARK 备注</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 0px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">TEL SALES SUMMARY 电话销售汇总</th>
+                        <td colspan="4" style="border: 0px"></td>
+                        <td>TOTAL 汇总</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>MON 周一</td>
+                        <td>TUE 周二</td>
+                        <td>WED 周三</td>
+                        <td>THU 周四</td>
+                        <td>FRI 周五</td>
+                        <td></td>
+                        <td>MTD 月累计</td>
+                        <td>YTD 年累计</td>
+                    </tr>
+                    <tr>
+                        <th>Key Account核心客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Niche Account忠实客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Prospect Account潜力客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Suspect Account潜在客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>REMARK 备注</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 0px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">ENT SUMMARY 宴请汇总</th>
+                        <td colspan="4" style="border: 0px"></td>
+                        <td>TOTAL 汇总</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>MON 周一</td>
+                        <td>TUE 周二</td>
+                        <td>WED 周三</td>
+                        <td>THU 周四</td>
+                        <td>FRI 周五</td>
+                        <td></td>
+                        <td>MTD 月累计</td>
+                        <td>YTD 年累计</td>
+                    </tr>
+                    <tr>
+                        <th>Key Account核心客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Niche Account忠实客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Prospect Account潜力客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Suspect Account潜在客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>REMARK 备注</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 0px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">COST SUMMARY 销售成本汇总</th>
+                        <td colspan="4" style="border: 0px"></td>
+                        <td>TOTAL 汇总</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>MON 周一</td>
+                        <td>TUE 周二</td>
+                        <td>WED 周三</td>
+                        <td>THU 周四</td>
+                        <td>FRI 周五</td>
+                        <td></td>
+                        <td>MTD 月累计</td>
+                        <td>YTD 年累计</td>
+                    </tr>
+                    <tr>
+                        <th>Key Account核心客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Niche Account忠实客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Prospect Account潜力客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Suspect Account潜在客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>REMARK 备注</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 0px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">ROOM NINGHT SUMMARY 房晚汇总</th>
+                        <td colspan="4" style="border: 0px"></td>
+                        <td>TOTAL 汇总</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>MON 周一</td>
+                        <td>TUE 周二</td>
+                        <td>WED 周三</td>
+                        <td>THU 周四</td>
+                        <td>FRI 周五</td>
+                        <td></td>
+                        <td>MTD 月累计</td>
+                        <td>YTD 年累计</td>
+                    </tr>
+                    <tr>
+                        <th>Key Account核心客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Niche Account忠实客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Prospect Account潜力客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Suspect Account潜在客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>REMARK 备注</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 0px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">REVENUE SUMMARY 收入汇总</th>
+                        <td colspan="4" style="border: 0px"></td>
+                        <td>TOTAL 汇总</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>MON 周一</td>
+                        <td>TUE 周二</td>
+                        <td>WED 周三</td>
+                        <td>THU 周四</td>
+                        <td>FRI 周五</td>
+                        <td></td>
+                        <td>MTD 月累计</td>
+                        <td>YTD 年累计</td>
+                    </tr>
+                    <tr>
+                        <th>Key Account核心客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Niche Account忠实客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Prospect Account潜力客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Suspect Account潜在客户</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>REMARK 备注</th>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="9">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th colspan="9">SALES LEADS (Convention, Long stay, Catering, etc.) 生意线索（会议，长住，宴会等）
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Company 公司</th>
+                        <th>Date 日期</th>
+                        <th>Contact联系</th>
+                        <th>Tel 电话</th>
+                        <th colspan="3">Enquiry需求详情</th>
+                        <th>Referral介绍人</th>
+                        <th>Trace Date跟踪日期</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td colspan="3"><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td colspan="3"><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td colspan="3"><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="9">LOST BUSINESS (Convention, Long stay, Catering, etc.) 丢失生意（会议，长住，宴会等）
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Company 公司</th>
+                        <th>Date 日期</th>
+                        <th>Contact联系</th>
+                        <th>Tel 电话</th>
+                        <th colspan="3">Enquiry需求详情</th>
+                        <th>Referral介绍人</th>
+                        <th>Trace Date跟踪日期</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td colspan="3"><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td colspan="3"><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td colspan="3"><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 0px">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>New accounts(Name)新客户</th>
+                    </tr>
+                    <tr>
+                        <td colspan="9" style="height: 40px"><input type="text" class="input-value-set" style="text-align: left"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">New Projects, Exhibitions, Activities 新项目，展会，活动</th>
+                    </tr>
+                    <tr>
+                        <td colspan="9" style="height: 40px"><input type="text" class="input-value-set" style="text-align: left"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Competitors' information and activities 竞争对手信息</th>
+                    </tr>
+                    <tr>
+                        <td colspan="9" style="height: 40px"><input type="text" class="input-value-set" style="text-align: left"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Guests Comments 客户意见</th>
+                    </tr>
+                    <tr>
+                        <td colspan="9" style="height: 40px"><input type="text" class="input-value-set" style="text-align: left"></td>
+                    </tr>
+                    <tr>
+                        <th>Reviewed By 批阅人</th>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th>Review Date 批阅时间</th>
+                        <td><input type="text" class="input-value-set"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="4">Review Comments 批阅意见</th>
+                    </tr>
+                    <tr>
+                        <td colspan="9" style="height: 40px"><input type="text" class="input-value-set" style="text-align: left"></td>
+                    </tr>
+
+
+
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

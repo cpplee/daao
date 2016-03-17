@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>销售工具</title>
+<link href="css/bootstrap-theme.min.css" rel="stylesheet"
+	type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/sale_tool.css" rel="stylesheet" type="text/css">
+<link href="css/list.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="js/definedatepicker.js"></script>
+</head>
+<body>
+	<div class="hotel-info">
+		<div class="info-title">
+			<ol class="breadcrumb">	
+				<li class="active">首页</li>
+				<li class="active">销售管理</li>
+				<li class="active">预定表单</li>
+			</ol>
+		</div>
+		<div class="table-container">
+
+			<div class="table-name">
+				<div class="title" id="title">预定表单</div>
+			</div>
+			<div class="table-result">
+				<ul id="myTab" class="nav nav-tabs" role="tablist">
+					<li class="active"><a href="#table1" role="tab"
+						data-toggle="tab">房间预定</a></li>
+					<li><a href="#table2" role="tab" data-toggle="tab">宴会预定</a></li>
+					<li><a href="#table3" role="tab" data-toggle="tab">餐饮预定</a></li>
+					<li><a href="#table4" role="tab" data-toggle="tab">专门店预定</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content" style="margin-top: 20px">
+					<div class="tab-pane active" id="table1">
+						 <form>					    	
+					        <div class="divcss5">
+					         <!-- class="control-label"-->
+								   <div class="panel panel-info">
+			              <div class="panel panel-body">
+								    	<div class="panel panel-info">
+										     <div class="panel-heading">
+										    <h3 class="panel-title">房间预订表单</h3>
+										     </div>
+										     <div class="panel-body">
+										     
+										     <!-- 
+										  	<div>	  		
+										  		<label class="labelstyle1">酒店</label>
+												<input type="text" class="inputstyle3" placeholder="酒店">
+										  	</div>
+										  	
+								              -->		  	
+								
+										  	<br/>
+			
+								    		<div>
+									    	    <label class="labelstyle1">入住日期</label>
+								                 <input style="border-radius:5px;margin-left:14px;" type="text" value="" class="form_date inputstyle1" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" placeholder="xxxx-xx-xx">
+								                
+											    <label style="margin-left:9px;">离店日期</label>
+											
+								                 <input style="border-radius:5px;margin-left:5px;" type="text" value="" class="form_date inputstyle1" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" placeholder="xxxx-xx-xx">
+								                 
+								        </div>
+								        <br/>
+			
+								        <div>
+												
+										    <label class="labelstyle1">姓名</label>
+										    	
+												<input type="text" class="inputstyle1" style="border-radius:5px;margin-left:14px;" placeholder="姓名" >
+												
+												 
+												<label class="labelstyle1">房间编号</label>
+												  <input  type="text" style="border-radius:5px;margin-left:5px;" class="inputstyle1"  placeholder="房间编号">
+										    </div>
+										    <br/>
+										 
+										    <br/>
+										    <div class="form-inline">
+												
+										    	<label class="labelstyle1">国籍</label>
+					
+			
+									              <select id="select01" style="width:200px;margin-left:12px;" class="form-control">
+									                <option value="中国(China)">中国(China)</option>
+									                <option   value="美国">美国</option>
+									                <option value="法国">法国</option>
+									                <option value="日本">日本</option>
+									                <option value="韩国">韩国</option>
+									              </select>
+												
+												
+										    </div>
+										    <br/>
+										    <div>
+										    	<label class="labelstyle1">预订方式</label>
+												<input type="text"  style="width:200px;border-radius:5px;margin-left:12px;" class="inputstyle3" placeholder="网络预订">
+			
+										    </div>
+										    <br/>
+			
+										    <div>		
+										    	<label class="labelstyle1">房间数量</label>
+												<input type="text" class="inputstyle4" placeholder="房间数量" >
+											    
+												
+												<label class="labelstyle2">订单状态</label>
+												
+												<input type="text" class="inputstyle4" placeholder="订单状态">
+										    </div>
+										    <br/>
+										    <div >		
+										    	<label class="labelstyle1">房间均价</label>
+												<input type="text" class="inputstyle4" placeholder="房间均价" >
+										    </div>
+										    <br/>
+			
+			
+										    <div class="form-inline">
+											
+												<label class="labelstyle2">订单类型</label>
+												
+												<input type="text" class="inputstyle4" placeholder="订单类型">
+										    </div>
+										    <br/>
+
+											   </div>
+										  </div>
+									    <br/>
+									
+										  <br/>
+										
+											<div align="center">
+												<button type="submit" class="btn btn-success">保存</button>
+												
+												<button type="reset" class="btn btn-primary" style="argin-left:15px;">重置</button>
+											</div>
+											<br/>
+										 </div>
+						       </div>
+						     
+						 </form>
+
+						
+					
+					</div>
+					
+				</div>
+        
+					<div class="tab-pane" id="table2" style="margin-top: 20px">
+							<form>
+						    <div class="divcss6">
+									<!-- class="control-label"-->
+									<div class="panel panel-info">
+									  <div class="panel-body">
+												<div class="panel panel-info">
+												  <div class="panel-heading">
+												    <h3 class="panel-title">宴会预订</h3>
+												  </div>
+													<div class="panel-body">
+									           <!--
+									             <div >
+											    	        <label class="labelstyle1">日期</label>
+										                    <input style="width:200px;border-radius:5px;margin-left:14px;" type="text" value="" class="form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" placeholder="xxxx-xx-xx">
+										                    <label class="labelstyle3">时间</label>
+										            	    <input style="width:200px;border-radius:5px;margin-left:15px;" type="text" value="" class="form_time" data-date="" data-date-format="hh:ii"  data-link-format="hh:ii" placeholder="xx-xx">
+										          </div>
+									           
+									           -->
+													   
+										                <br/>
+										                <div>
+														    <label>活动名称</label>
+						                    <input class="inputstyle7" type="text" value="" placeholder="活动名称" >
+						                    <label class="labelstyle2">预订状态</label>
+						                    <input class="inputstyle8" type="text" value="" placeholder="预订状态" >
+						                    <label class="labelstyle2">销售人员</label>
+						                    <input class="inputstyle8" type="text" value="" placeholder="预订状态" >
+					
+														</div>
+														<br/>
+														<div>
+															<label>公司名称</label>
+					                    <input class="inputstyle7" type="text" value="" placeholder="公司名称" >
+					                
+															<label class="labelstyle2">电话</label>
+					                    <input class="inputstyle9" type="text" value="" placeholder="电话" >
+					                    <label class="labelstyle2">邮箱</label>
+					                    <input class="inputstyle9" type="text" value="" placeholder="xxxxx@xxx.xx" >    
+														</div>
+														<br/>
+																		<!-- On rows -->
+																			<div class="bs-example" data-example-id="bordered-table">
+																			    <table class="table table-bordered">
+																			      <thead>
+																			        <tr>
+																			          <th>日期</th>
+																			          <th>房间数</th>
+																			          <th>房间价格</th>
+																			          <th>会议/用餐</th>
+																			          <th>开始时间</th>
+																			          <th>结束时间</th>
+																			          <th>地点</th>
+																			          <th>确定人数</th>
+																			          <th>价格</th>
+																			          <th>摆设</th>
+																			          <th>活动单号</th>
+																			          <th>备注</th>
+																			        </tr>
+																			      </thead>
+																			      <tbody>
+																			        <tr>
+																			        
+																			          <td>
+																			          
+										                    
+																			          	
+																			          	</td>
+																			          <td>
+																			         
+										                    
+																			          	
+																			          	
+																			          	</td>
+																			          <td>
+																			      
+										                    
+																			          	</td>
+																			          <td>
+																			          
+										                    
+																			          	
+																			          	</td>
+																			          <td>
+																			        
+										                    
+																			          	
+																			          	</td>
+																			          <td>
+																			          								                          	
+																			          	
+																			          	</td>
+																			          <td>
+										
+																			          	</td>
+																			          <td>
+																		
+																			          	</td>
+																			          <td> 
+																			          	</td>
+																			          <td>
+																			          
+																			          	</td>
+																			          <td>
+																			          
+																			          	</td>
+																			          <td>
+																			          
+																			          	</td>
+																			         
+																			          
+																			        </tr>
+																			        <tr>
+																			        
+																			          <td>
+																			   
+										                 
+																			          	
+																			          	</td>
+																			          <td>
+															
+																			          	
+																			          	</td>
+																			          <td>
+																			     
+										                    
+																			          	</td>
+																			          <td>
+																			       
+										                    
+																			          	
+																			          	</td>
+																			          <td>
+																			     
+										                    
+																			          	
+																			          	</td>
+																			          <td>
+																			 									                          	
+																			          	
+																			          	</td>
+																			          <td>
+																			          
+                                             
+																			          	</td>
+																			          <td>
+																	
+																			          	</td>
+																			          <td>
+																		
+																			          	</td>
+																			          <td>
+																			 
+																			          	</td>
+																			          <td>
+																		
+																			          	</td>
+																			          <td>
+														 
+																			          	</td>
+																			         
+																			          
+																			        </tr> 
+																			      </tbody>
+																			    </table>
+																			  </div>
+																			  
+																							
+													</div>
+													
+												</div>
+									    </div>
+									    <div align="center">
+														<button type="submit" class="btn btn-success">保存</button>
+														
+														<button type="reset" class="btn btn-primary" style="argin-left:15px;">重置</button>
+													</div>
+													<br/>
+									</div>
+								</div>				
+						</form>
+
+						
+					</div>
+					<div class="tab-pane" id="table3" style="margin-top: 20px">
+						<form>											        
+						    <div class="divcss5">
+						<!-- class="control-label"-->
+						<div class="panel panel-info">
+						  <div class="panel-body">
+									<div class="panel panel-info">
+									  <div class="panel-heading">
+									    <h3 class="panel-title">餐饮预订</h3>
+									  </div>
+										<div class="panel-body">
+						
+										    <div >
+								    	        <label class="labelstyle1">日期</label>
+							                    <input style="width:200px;border-radius:5px;margin-left:14px;" type="text" value="" class="form_date inputstyle1" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" placeholder="xxxx-xx-xx">
+							                    <label class="labelstyle3">时间</label>
+							            	    <input style="width:200px;border-radius:5px;margin-left:15px;" type="text" value="" class="form_time inputstyle1" data-date="" data-date-format="hh:ii"  data-link-format="hh:ii" placeholder="xx-xx">
+							                </div>
+							                <br/>
+							                <div>
+											    <label class="labelstyle1">餐厅</label>
+							                    <input class="inputstyle1" type="text" value="" placeholder="餐厅" >
+							                    <label class="labelstyle3">人数</label>
+							                    <input class="inputstyle1" type="text" value="" placeholder="人数" >
+						
+											</div>
+											<br/>
+											<div>
+												<label class="labelstyle1">姓名</label>
+							                    <input class="inputstyle1" type="text" value="" placeholder="姓名" >
+							                    <label class="labelstyle3">电话</label>
+							                    <input class="inputstyle1" type="text" value="" placeholder="电话" >    
+											</div>
+											<br/>
+							                <div>
+							                	<label>公司名称</label>
+							                    <input class="inputstyle5" type="text" value="" placeholder="公司名称" >
+							                </div>
+						                    <br/>
+							                <div>
+							                	<label>协议编号</label>
+							                    <input class="inputstyle5" type="text" value="" placeholder="协议编号" >
+							                </div>
+							                <br/>
+							                <div>
+							                	<label>会员信息</label>
+							                    <input class="inputstyle5" type="text" value="" placeholder="会员信息" >
+							                </div>
+							                <br/>
+							                <div>
+							                	<div>
+												<label class="control-label" for="textarea">客人喜好</label>
+												</div>
+												<textarea class="input-xlarge" id="textarea" rows="5"style="width:550px;font-weight:bold;margin-left:5px;"></textarea>
+						
+							                </div>
+						
+										</div>
+										
+									</div>
+						    </div>
+						    <div align="center">
+											<button type="submit" class="btn btn-success">保存</button>
+											
+											<button type="reset" class="btn btn-primary" style="argin-left:15px;">重置</button>
+										</div>
+										<br/>
+						</div>
+					</div>				
+						</form>
+
+						
+					</div>
+
+					<div class="tab-pane" id="table4" style="margin-top: 20px">
+							<form>
+						    <div class="divcss5">
+						<!-- class="control-label"-->
+						<div class="panel panel-info">
+						  <div class="panel-body">
+									<div class="panel panel-info">
+									  <div class="panel-heading">
+									    <h3 class="panel-title">专门店预订</h3>
+									  </div>
+										<div class="panel-body">
+									    <div >
+							    	        <label class="labelstyle1">日期</label>
+						                    <input style="width:200px;border-radius:5px;margin-left:14px;" type="text" value="" class="form_date inputstyle1" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" placeholder="xxxx-xx-xx">
+						                    <label class="labelstyle3">时间</label>
+						            	    <input style="width:200px;border-radius:5px;margin-left:14px;" type="text" value="" class="form_time inputstyle1" data-date="" data-date-format="hh:ii"  data-link-format="hh:ii" placeholder="xx-xx">
+						          </div>
+			                <br/>
+			                <div>
+										    <label class="labelstyle1">单位</label>
+		                    <input class="inputstyle1" type="text" value="" placeholder="专门店名称" >
+		                    <!--
+		                    <label class="labelstyle3">人数</label>
+		                    <input class="inputstyle1" type="text" value="" placeholder="人数" >
+
+		                     -->
+		                    
+											</div>
+											<br/>
+											<div>
+												<label class="labelstyle1">姓名</label>
+		                    <input class="inputstyle1" type="text" value="" placeholder="预订人姓名" >
+		                    <label class="labelstyle3">电话</label>
+		                    <input class="inputstyle1" type="text" value="" placeholder="预订人电话" >    
+											</div>
+											<br/>
+											<div>
+			                	<label>项目/服务</label>
+			                    <input class="inputstyle2" type="text" value="" placeholder="项目或服务" >
+			                </div>
+											<br/>
+											
+			                <div>
+			                	<label>公司名称</label>
+			                    <input class="inputstyle5" type="text" value="" placeholder="公司名称" >
+			                </div>
+		                    <br/>
+			                <div>
+			                	<label>协议编号</label>
+			                    <input class="inputstyle5" type="text" value="" placeholder="协议编号" >
+			                </div>
+			                <br/>
+			                <div>
+			                	<label>会员信息</label>
+			                    <input class="inputstyle5" type="text" value="" placeholder="会员信息" >
+			                </div>
+			                <br/>
+			                <div>
+		                	<div>
+											<label class="control-label" for="textarea">客人喜好</label>
+											</div>
+											<textarea class="input-xlarge" id="textarea" rows="5"style="width:550px;font-weight:bold;margin-left:5px;"></textarea>
+					
+		                </div>
+	
+										</div>
+										
+									</div>
+						    </div>
+						    <div align="center">
+											<button type="submit" class="btn btn-success">保存</button>
+											
+											<button type="reset" class="btn btn-primary" style="argin-left:15px;">重置</button>
+										</div>
+										<br/>
+						</div>
+					</div>				
+						</form>
+						
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--
+	<script src="js/datepicker.js"></script>
+	 -->	
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>	
+	<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+  </script>
+
+	
+	
+	
+</body>
+</html>

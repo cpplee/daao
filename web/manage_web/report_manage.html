@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	  <title>header</title>
+	  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	  <link href="css/list.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/report_manage.css" />
+  		<script type="text/javascript" src="js/modernizr.custom.69142.js"></script>
+  		<script type="text/javascript" src="../script/common.js"></script>
+  		<script type="text/javascript" src="js/report_manage.js"></script>
+  		  <link href="css/report_account.css" rel="stylesheet" type="text/css" media="screen">
+  		
+</head>
+<body >
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-revenue-export">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">账户报表导出</h4>
+            </div>
+            <div class="modal-body modal-revenue-content clearfix" id="account-modal-choose">
+            <div class="row">
+            <div class="col-md-offset-1 col-md-1 checkbox-style"><input name="account" type="checkbox" value="1" /></div>
+            <div class="col-md-2">公司客户信息</div>
+                  <div class="col-md-offset-1 col-md-1 checkbox-style"><input name="account" type="checkbox" value="2" /></div>
+            <div class="col-md-2">联络人信息</div>
+                     <div class="col-md-offset-1 col-md-1 checkbox-style"><input name="account" type="checkbox" value="3"/></div>
+            <div class="col-md-2">生意分析</div>
+            </div>
+            
+            
+             <div class="row">
+            <div class="col-md-offset-1 col-md-1 checkbox-style"><input name="account" type="checkbox" value="4"/></div>
+            <div class="col-md-2">行动计划</div>
+                  <div class="col-md-offset-1 col-md-1 checkbox-style"><input name="account" type="checkbox" value="5"/></div>
+            <div class="col-md-2">行动记录</div>
+                     
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-xs">预览</button>
+              <button type="button" class="btn btn-default btn-xs">打印</button>
+              <button type="button" class="btn btn-default btn-xs"  onclick="onExport1();">导出</button>
+              <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+	 <div class="menu-content">
+		<div class="road-nav">
+			<ol class="breadcrumb">
+		  		<li class="active">首页</li>
+		  		<li class="active">高级管理</li>
+		  		<li class="active">报表管理</li>
+			</ol>
+		</div>
+		<div class="table-container" style="padding:5px">
+			<div id="grid" class="main">
+		
+				<div class="view">								 	
+					<div class="view-back">
+						<span>Account</span>						
+						<a href="#" class="report-icon-style">
+						<span data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-share" aria-hidden="true">
+						</span></a>		
+						<span class="report-name-flag" style="background-color:#D68A3A">Account</span>		   					
+					</div>	
+				
+					 <img src="img/account-reports.png"  />	
+				</div>
+				
+				<div class="view">
+					<div class="view-back">
+						<span>Booking</span>
+						<a href="#" class="report-icon-style" onclick="onExport2();"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(0, 141, 68, 1)">Booking</span>	
+					</div>
+					<img src="img/booking-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Event</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(255, 166, 20, 1);margin-top:95px;">Event</span>
+					</div>
+					<img src="img/event-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>BEQ</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(0, 166, 81, 1);margin-top:95px;">BEQ</span>
+					</div>
+					<img src="img/beq-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Activity</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(0, 169, 236, 1)">Activity</span>
+					</div>
+					<img src="img/activity-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Contact recap</span>
+						<a onclick="onExport3();" href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(164, 58, 227, 1)">Contact recap</span>
+					</div>
+					<img src="img/contact-recap-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Meeting Profile Recap</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(0, 169, 236, 1);margin-top:38px;">Meeting Profile Recap</span>
+					</div>
+					<img src="img/meeting-profile-recap-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Critical Dates</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(0, 169, 236, 1)">Critical Dates</span>
+					</div>
+					<img src="img/critical-dates-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Monthly Forecast</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(59, 131, 245, 1);margin-top:38px">Monthly Forecast</span>
+					</div>
+					<img src="img/monthly-forecast-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>GRC log</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(61, 16, 123, 1)">GRC log</span>
+					</div>
+					<img src="img/grc-log-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Rooms Inventory</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:rgba(0, 114, 188, 1);margin-top:57px">Rooms Inventory</span>
+					</div>
+					<img src="img/rooms-inventory-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Actuals vs. Goals</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:#00A9EC;margin-top:57px">Actuals vs. Goals</span>
+					</div>
+					<img src="img/actuals-vs-goals-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Performance</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:#209EFE">Performance</span>
+					</div>
+					<img src="img/performance-reports.png" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span>Exports</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:#208ADE">Exports</span>
+					</div>
+					<img src="img/exports-reports.png" />
+				</div>
+						
+				<div class="view">
+					<div class="view-back">
+						<span>Exports</span>
+						<a href="#" class="report-icon-style"><span class="glyphicon glyphicon-share" aria-hidden="true"></span></a>
+						<span class="report-name-flag" style="background-color:#208ADE">Weekly-Exports</span>
+					</div>
+					<img src="img/exports-reports.png" />
+				</div>
+								
+			</div>
+			
+		</div>
+	</div>
+		
+		<form id="export_form" name="export_form" action="../ExportExcel" method="post">
+					<input type="hidden" id="excelType" name="excelType" value=""> 
+					<input type="hidden" id="fileName" name="fileName" value="">
+					<input type="hidden" id="ChooseOption" name="ChooseOption" value="">
+				    <input type="hidden" id="name_export" name="name_export" value="">
+				</form>			
+  <script src="js/jquery.js"></script>
+   <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+  <script type="text/javascript">
+  $('.div-from-date-revexp').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 7,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+    showMeridian: 0
+  });
+  $('#remove-from-date-revexp').click(function(){$('#from-date-revexp').val(null)});
+
+  $('.div-to-date-revexp').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 7,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+    showMeridian: 0
+  });
+  $('#remove-to-date-revexp').click(function(){$('#to-date-revexp').val(null)});
+  
+
+  </script>
+<script type="text/javascript">	
+
+	Modernizr.load({
+	test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+	yep : ['js/jquery.js','js/jquery.hoverfold.js'],
+	nope: 'css/fallback.css',
+	callback : function( url, result, key ) {
+			
+		if( url === 'js/jquery.hoverfold.js' ) {
+			$( '#grid' ).hoverfold();
+		}
+
+	}
+});
+	
+</script>
+</body>
+</html>

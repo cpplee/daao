@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>header</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/list.css" rel="stylesheet" type="text/css">
+   <link href="css/com_account_contact.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript">
+$import("rpc.js");
+$import("table_list.js");
+$import("html/format.js");
+
+var tableList;					//人事信息表格
+var tableOperation;				//tableList的操作
+
+var currentDepartmentId = -1;	//当前选择的地市网点节点的id
+
+/** 添加人员信息 */
+function addUser()
+{
+	window.location.href = "user.html";
+}
+ 
+
+/** 查看人员信息 */
+function onView(data)
+{
+	window.location.href = "user.html?userId=" + data.id + "&sourcePage=view";
+}
+
+/** 初始化人员信息表格 */
+function initTable()
+{
+	var operations = 
+	[
+		{name: "查看",onclick: onView }
+	];
+	
+	
+	var titles = 
+	[
+		{text:"商户名称", width:"10%"},
+		{text:"商户类型", width:"10%"},
+		{text:"创建时间", width:"10%"},
+		{text:"操作", width:"10%"}
+	];
+	var columns =  
+	[
+		function(data) { return data.name; },
+		function(data) { return data.roles[0].name; },
+		function(data) { return ruite.format.date(data.createDate); },
+		function(data) 
+		{
+			return  TableList.link1(operations, data);
+		}
+	];
+	
+	tableOperation = new Operation("商户.个人商家");
+	tableOperation.departmentId = currentDepartmentId;
+	
+	tableList = new TableList(tableOperation, titles, columns);
+	tableList.create($$('container_div'));
+	tableList.refresh();
+}
+
+
+/** 页面加载函数 */
+function pageLoad()
+{
+	//initTrees();
+	
+	initTable();
+
+
+	//loadRoles(-1);
+}
+
+/** 加载角色信息 */
+function loadRoles(departmentId)
+{
+	dwr.util.removeAllOptions('role_select');
+	dwr.util.addOptions('role_select', [{id: -1,name: "全部"}], "id", "name");
+	
+	var callback = function(result)
+	{
+		var data = result.data;
+		dwr.util.addOptions('role_select', data, "id", "name");
+	};
+	
+	var operation = new Operation("系统.权限.列部门角色");
+	operation.departmentId = departmentId;
+	operation.execute(callback);
+}
+
+/** 搜索按钮点击 */
+function onSearch()
+{
+	if(tableList==null ) return ;
+
+	tableOperation.name = $$('name_input').value;
+	tableOperation.roleId = $$('role_select').value;
+
+	// 修复offset bug
+	tableList.reset();
+	tableList.refresh();
+}
+
+
+
+</script>
+  
+</head>
+<body onload="pageLoad();">
+	<div class="menu-content" >
+	<div class="road-nav">
+			<ol class="breadcrumb">
+		  		<li class="active">首页</li>
+		  		<li class="active">商家管理</li>
+		  		<li class="active">商家信息查看</li>
+			</ol>
+		</div>
+		<div class="table-container">
+			<div class="table-select">
+				<form>
+					<span class="information_span">商家名称：</span>
+					<input type="text" id="name_input" class="form-control input-sm" onchange="">
+					<span class="information_span">商家类别：</span>
+					<select id="role_select" onchange="" class="form_input_m">
+						<option value="-1">个人商家</option>
+						<option value="-1">机构商家</option>
+					</select>
+					
+					<button  class="btn" onclick="" >搜索</button>
+				</form>	
+			</div>
+			<div class="table-name">
+				<div class="title" style="display:inline-block;">商家信息列表</div>
+				<button type="button" class="btn btn-default btn-xs pull-right" onclick="export()">
+                  <span class="glyphicon glyphicon-share"></span>&nbsp;&nbsp;导出
+                </button>
+                <button type="button" class="btn btn-default btn-xs pull-right" onclick="showModal();">
+                  <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;新建
+                </button>
+			</div>
+			<div class="table-result">
+				<div id="container_div"></div>
+			<div class="table-control-old">
+				<form id="export_form" name="export_form" action="http://localhost:8080/center/ExportExcel" method="post">
+					<input type="hidden" id="excelType" name="excelType" value=""> 
+					<input type="hidden" id="fileName" name="fileName" value="">
+				    <input type="hidden" id="departmentId" name="departmentId" value="">
+				    <input type="hidden" id="roleId" name="roleId" value="">
+				    <input type="hidden" id="name_export" name="name_export" value="">
+					<input type="button" name="" value="" class="form_add" onclick="addUser();">
+					<input type="button" name="" value="" class="form_export" onclick="onExport();">
+				</form>			
+			</div>
+			
+		</div>
+	</div>	
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>

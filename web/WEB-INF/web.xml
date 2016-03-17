@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "web-app_2_3.dtd">
+
+<web-app>
+	<servlet>
+		<servlet-name>launcher</servlet-name>
+		<servlet-class>com.quiven.web.servlet.Launcher</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	
+	<!--  ********************-->
+	  <servlet>
+    <servlet-name>dwr-invoke</servlet-name>
+    <servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+    <init-param>
+      <description>打开调试模式，程序发布时必须关闭</description>
+      <param-name>debug</param-name>
+      <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>crossDomainSessionSecurity</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dwr-invoke</servlet-name>
+    <url-pattern>/dwr/*</url-pattern>
+  </servlet-mapping>
+  <!-- ******************************** -->
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+
+
+
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>false</param-value>
+		</init-param>
+
+
+
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/script/dwr/*</url-pattern>
+	</servlet-mapping>
+	<!-- 文件上传 -->
+	<servlet>
+		<servlet-name>UploadHandleServlet</servlet-name>
+		<servlet-class>com.quiven.web.servlet.UploadHandleServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UploadHandleServlet</servlet-name>
+		<url-pattern>/servlet/UploadHandleServlet</url-pattern>
+	</servlet-mapping>
+	<!--HttpSessionListener -->
+	<listener>
+		<listener-class>com.quiven.web.servlet.SessionListener</listener-class>
+	</listener>
+
+	<!-- 导出Excel -->
+	<servlet>
+		<servlet-name>ImageServlet</servlet-name>
+		<servlet-class>com.quiven.web.servlet.ImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImageServlet</servlet-name>
+		<url-pattern>/ImageServlet.jpeg</url-pattern>
+	</servlet-mapping>
+
+	<!-- 生成验证码 -->
+	<servlet>
+		<servlet-name>export_excel</servlet-name>
+		<servlet-class>com.quiven.web.servlet.ExportExcel</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>export_excel</servlet-name>
+		<url-pattern>/ExportExcel</url-pattern>
+	</servlet-mapping>
+
+	<!-- 文件上传 -->
+	<servlet>
+		<servlet-name>upload</servlet-name>
+		<servlet-class>com.quiven.web.servlet.UploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>upload</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

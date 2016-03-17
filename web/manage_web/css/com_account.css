@@ -1,0 +1,159 @@
+﻿
+.input-go-page {
+    display: inline-block;
+    margin-left: 100px;
+}
+.input-page {
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 30px;
+}
+
+.input-sm {
+    width: 100px;
+    height: 28px;
+    display: inline-block;
+}
+.box-left {
+	margin-top:15px;
+    display: inline-block;
+    width: 50%;
+	float:left;
+	
+	
+}
+.box-right {
+	margin-top:15px;
+    width: 50%;
+    display: inline-block;
+	
+	
+}
+.box-line {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.span-key {
+    vertical-align: center;
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+	padding-right:20px;
+	margin-top:7px;
+	float:left;
+}
+#city {
+    width: 160px;
+}
+#prov {
+    width: 140px;
+}
+.input-value {
+    width: 280px;
+	height:35px;
+    display: inline-block;
+}
+.input-value-sm {
+    width: 250px;
+    display: inline-block;
+}
+
+.box-bottom {
+    padding-top: 25px;
+    margin-top: 30px;
+   
+   
+}
+.tab-content {
+    margin-top: -1px;
+    padding: 30px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+#type {
+    height: 28px;
+    padding-top: 2px;
+}
+#acct-id {
+    width: 185px;
+}
+#account-ids {
+    height: 28px;
+    padding: 0 5px 0 5px;
+}
+#market-segement {
+    height: 28px;
+    padding-top: 2px;
+}
+.null-line {
+    height: 44px;
+}
+.details-left {
+    width: 450px;
+    display: inline-block;
+}
+.details-right {
+    width: 450px;
+    display: inline-block;
+}
+.span-star:before {
+    content: "* ";
+    color: #ff0000;
+}
+#account-phone, #account-fax {
+    width: 180px;
+}
+#account-phone-sm, #account-fax-sm {
+    width: 65px;
+}
+.input-group1
+{
+	width:330px;
+	float:right;
+}
+
+.box-big
+{
+	width:50%;
+	height:300px;
+
+	float:left;
+}
+
+.box-small
+{
+	width:50%;
+	height:300px;		
+	float:left;
+	background:#f00;
+}
+.span-flag
+{
+	  vertical-align: center;
+	  text-align: right;
+	  padding-top:5px;
+}
+.no-divide
+{
+	padding-left:0px;
+}
+.divide-dis
+{
+	margin-top:20px;
+}
+.second-line
+{
+	margin-left:30px
+}
+.sponuse
+{
+	margin-left:10px;
+}
+
+.form-control-feedback{
+    right: -25px;
+    line-height: 50px;
+}

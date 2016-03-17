@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>酒店信息录入</title>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/booking_banquet.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/booking_banquet.js"></script>
+</head>
+<body onload="pageLoad();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">销售管理</li>
+            <li class="active">销售人员主页</li>
+        </ol>
+    </div>
+
+
+    <div class="table-container">
+        <div class="table-name">
+            <div class="title" id="title">宴会厅订单</div>
+        </div>
+      
+        <div class="table-result">
+          <form id ="banquet-form">
+            <div class="container-fluid" style="border-bottom: 1px solid #AAAAAA">
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">公司名称：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="BanquetCompanyName"
+                                   name="BanquetCompanyName"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-pencil"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">公司联系人名称：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control"
+                                   id="banquetContactName" name="banquetContactName">
+										<span class="input-group-addon"><span
+                                                class="glyphicon glyphicon-user"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">酒店名称：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group date div-from-date-revexp">
+                            <input type="text" class="form-control" id="banquetHotelName"
+                                   name="banquetHotelName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-pencil"></span>
+									</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">宴会厅号：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group date div-from-date-revexp">
+                            <input type="text" class="form-control" id="banquetId"
+                                   name="banquetId"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-copyright-mark"></span>
+									</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">开始时间：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group date div-from-start-date-revexp">
+                            <input type="text" class="form-control" id="banquetArrive" 
+                                   name="banquetArrive"> <span
+                                class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar"
+                                id="show-from-date-revexp"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">结束时间：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group date div-to-end-date-revexp">
+                            <input type="text" class="form-control" id="banquetDepart" 
+                                   name="banquetDepart"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar" id="show-to-date-revexp"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">宴会厅价格：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="banquetRate" name="banquetRate">
+										<span class="input-group-addon"><span
+                                                class="glyphicon glyphicon-usd"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set">预订方式：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="banquetBookType"
+                                   name="banquetBookType"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-info-sign"></span>
+									</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row new-row">
+                    <div class="col-md-2 flag-set">订单状态：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="banquetStatus"
+                                   name="banquetStatus"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-unchecked"></span>
+									</span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 flag-set" style="padding-left: 0px">资料提供截止时间：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group ">
+                            <input type="text" class="form-control" id="banquetCutoff" 
+                                   name="banquetCutoff"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-calendar" id="banquetCutoff-revexp"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row new-row" style="margin-bottom: 20px">
+                    <div class="col-md-2 flag-set">是否已处理？</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <label class="radio-inline"> <input type="radio"
+                                                                name="banquetConfirmation" value="true" checked> 是 </label> <label
+                                class="radio-inline"> <input type="radio"
+                                                             name="banquetConfirmation" value="false"> 否 </label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 flag-set">协议代码：</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="banquetResId"
+                                   name="banquetResId"> <span class="input-group-addon"><span
+                                class="glyphicon glyphicon-barcode"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>	
+            <div class="button-wrapper">
+                <button type="button" class="btn btn-default" style="margin-right: 20px">重置</button>
+                <button type="submit" class="btn btn-success" onclick="onSubmit();">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    $('.div-from-start-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        minView: 2,
+        startView: 2,     
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        format:'yyyy-mm-dd',
+        showMeridian: 0
+    });
+ 
+    $('.div-to-end-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        autoclose: 1,
+        minView: 2,
+        startView: 2,
+        todayHighlight: 1,
+        startView: 2,
+        format:'yyyy-mm-dd',
+        forceParse: 0,
+        showMeridian: 0
+    });
+ 
+</script>
+<script src="js/validate.js"></script>
+<script src="js/bookingbanquet_validate.js"></script>
+</body>
+</html>

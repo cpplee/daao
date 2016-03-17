@@ -1,0 +1,164 @@
+﻿body {
+  padding: 0;
+  margin: 0;
+  background-color: #ebebeb;
+}
+
+.nav-left {
+  border-right: 0px solid #eee;
+  //box-shadow: 1px 0px 3px rgba(0,0,0,.1);
+  width: 200px;
+  height: 3000px;
+  background-color:#ebebeb;
+  color: #fff;
+  /*font-family: "Microsoft Yahei Light";*/
+}
+
+.portrait-left {
+  height: 20px;
+  background-color:#ebebeb;
+}
+
+.menu-left div {
+  border: none;
+  border-radius: 0;
+}
+
+.panel-body {
+  border-radius: 0;
+  padding: 0;
+}
+
+.menu-left li {
+  margin-top: 0;
+  background-color: #c0cfd6;
+}
+
+.menu-left li>a {
+  border-radius: 0;
+
+}
+
+.panel-group .panel {
+  margin-bottom: -3px;
+  border-radius: 4px;
+  border: solid;
+  border-color:#333333;
+  border-width: 1px;
+  
+}
+
+.panel-default > .panel-heading
+{
+	border-radius: 2px;
+	border: solid;
+  	border-color:#888888;
+ 	border-width: 1px;
+ 	box-shadow: 0px 0px 10px rgba(0,0,0, 1);
+}
+.nav-stacked > li + li {
+  margin-top: 0;
+}
+
+.panel-heading {
+  padding: 0 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel {
+  box-shadow: none;
+}
+
+.menu-title > a:link {
+  text-decoration: none;
+}
+
+.menu-title > a:visited {
+  text-decoration: none;
+  background-color: #425a66;
+}
+
+.menu-title > a:hover {
+  text-decoration: none;
+  background-color: #425a66;
+  color: #fff;
+}
+
+.menu-title > a:active {
+  text-decoration: none;
+  background-color: #425a66;
+
+}
+
+.content-menu-sub> a:link {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.content-menu-sub> a:visited {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.content-menu-sub> a:hover {
+  font-size: 13px;
+  text-decoration: none;
+  background-color: #425a66;
+  color: #fff;
+}
+
+.content-menu-sub> a:active {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.li-menu {
+  padding: 10px 35px;
+  padding-left: 25px;
+  display: block;
+  font-size: 16px;
+  color: #425a66;
+  font-family: "Microsoft Yahei Light";
+background-color: #fff
+}
+
+.menu-sub {
+  display: block;
+  text-decoration: none;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #303a40;
+  font-size: 16px;
+  font-family: "Microsoft Yahei Light";
+  background-color: #d6dcdc;
+
+}
+
+.menu-sub:first-child {
+  border-top: 0px solid #ebebeb;
+}
+
+.menu-sub:last-child {
+  border-bottom: 0px solid #ebebeb;
+}
+
+.box-menu-sub {
+
+}
+
+.content-menu-sub {
+
+}
+
+.menu-title> a {
+  border-bottom: 0px solid #ddd;
+}
+
+.menu-left
+{
+	  margin-left: 10px;
+}

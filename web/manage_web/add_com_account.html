@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>comAccount</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/com_account_contact.css" rel="stylesheet" type="text/css">
+    <link href="css/activity_plan.css" rel="stylesheet" type="text/css">
+    <link href="css/com_account.css" rel="stylesheet" type="text/css">
+    <link href="css/excel1.css" rel="stylesheet" type="text/css">
+    <link href="css/talent_analysis.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/com_account.js"></script>
+    <script type="text/javascript" src="../script/table_list.js"></script>
+
+</head>
+
+<body onload="pageLoad();">
+<div class="menu-content">
+    <div class="road-nav">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">基本客户管理</li>
+            <li class="active">客户信息</li>
+        </ol>
+    </div>
+ <div class="table-container">
+        <div class="table-name">
+            <div class="title" id="title">添加客户信息</div>
+        </div>
+                        <div id="myTabContent" class="tab-content">
+                        
+                          <div role="tabpanel" class="tab-pane fade active in"
+                                 id="customerinfo" aria-labelledby="customerinfo-tab">
+                                <div id="submit-customer">
+                                <!--  <h4 class="modal-title" id="title">客户信息</h4> -->
+                                <form id="account-form">
+
+                    <div>
+                        <div class="box-left">
+                            <div class="box-line form-group">
+                                <span class="span-key">公司名称：</span>
+
+                                <div class="input-group input-group1">
+                                    <input type="text" id="cname" name="cname"
+                                           class="form-control input-sm input-value"
+                                           placeholder="每个单词首字母大写，公司信息为首，其他信息其次"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-edit"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">销售代表：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="salername" name="salername"
+                                           class="form-control input-sm input-value"
+                                           placeholder="代表公司客户的销售人员"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-user"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">地址1：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="address-1" name="address1"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在的门牌号/ 楼层及所在的写字楼名称"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-home"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">地址2：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="address-2" name="address2"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在的街道名称"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-road"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">地址3：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="address-3" name="address3"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在城市的区/ 县"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-cloud"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">城市：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="city" name="city"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在城市及省份，且无空格" style="width: 291px"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-star-empty"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">省份：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="prov" name="province"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在省份" style="width: 291px"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-star"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">国家：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="country" name="country"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在国家" style="width: 291px"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-globe"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">邮编：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="postal" name="postal"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在地邮编"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-send"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="box-right">
+
+                            <div class="box-line form-group">
+                                <span class="span-key">电话：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comTelphone" name="comTelphone"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司联系电话"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-earphone"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">传真：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comFax" name="comFax"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司联系传真"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-print"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">电子邮箱：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comEmail" name="comEmail"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司联系电子邮箱"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-envelope"></span></span>
+                                </div>
+                            </div>
+
+
+                            <div class="box-line form-group">
+                                <span class="span-key">网站：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="webAddress" name="webAddress"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户网站"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-paperclip"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">微信：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comWechat" name="comWechat"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户微信"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-heart"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">公司代码：</span> <input type="text"
+                                                                           id="comAccountCode" placeholder="公司客户代码"
+                                                                           name="comAccountCode"
+                                                                           style="width:270px;height:36px"
+                                                                           class="form-control input-sm input-value-sm "
+                                                                           disabled="disabled">
+                                <button type="button" id="account-ids"
+                                        class="btn btn-default btn-sm " style="height:35px"
+                                        onclick="onGenerateAccountCode();">自动生成
+                                </button>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">市场划分：</span> <select
+                                    style="width:325px;height:36px"
+                                    class="form-control input-value-sm" id="marketSegmentId"
+                                    name="marketSegmentId">
+                                <option value="Airline Crew航空公司机组人员">Airline
+                                    Crew航空公司机组人员
+                                </option>
+                                <option value="Association协会">Association协会</option>
+                                <option value="Bussiness Travel商务旅游">Bussiness
+                                    Travel商务旅游
+                                </option>
+                                <option value="Corporate企业">Corporate企业</option>
+                                <option value="Government Group政府集团">Government
+                                    Group政府集团
+                                </option>
+                                <option value="Incentive House/Pco激励之家">Incentive
+                                    House/Pco激励之家
+                                </option>
+                                <option value="Internal内部">Internal内部</option>
+                                <option value="Social社会">Social社会</option>
+                                <option value="Tour and Leisure旅游和休闲">Tour and
+                                    Leisure旅游和休闲
+                                </option>
+                                <option value="Wholesale批发">Wholesale批发</option>
+                            </select>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">客户级别：</span> <select
+                                    style="width:325px;height:36px"
+                                    class="form-control input-value-sm" id="comtypeId"
+                                    name="comtypeId">
+                                <option value="1">核心客户</option>
+                                <option value="2">忠实客户</option>
+                                <option value="3">普通客户</option>
+                                <option value="4">潜在客户</option>
+                            </select>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">拜访频率：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comFrequency" name="comFrequency"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户拜访频率"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-th"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">重要信息提示：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="keynotes" name="keynotes"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户重要提示信息"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-comment"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                                  
+                                </div>
+                                  <div id="submit" style="padding-left:880px;margin-top:30px">
+                    <input type="button" class="form_sub btn btn-default btn-success"
+                           onclick="onSubmit();"  value="提交"/>
+                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+ 
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/comaccout_validate.js"></script>
+<script src="js/tanlent_validate.js"></script>
+<script src="js/tanlent_analysis2.js"></script>
+</body>
+</html>

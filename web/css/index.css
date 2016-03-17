@@ -1,0 +1,44 @@
+.destination-style
+ {
+	height: 30px;
+	border-color: #ccc;
+	width: 120px !important;
+	padding: 0 10px 0 5px;
+	border: 1px solid #ccc;
+	color: #999;
+	text-shadow: 1px 1px #FFF;
+	font: 13px/30px "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+	cursor: pointer;	
+}
+
+.destination-name
+{
+	
+	width:130px;
+	float:left;
+}
+.destination-title
+{
+	padding-left:0px;
+	margin-top:3px;
+	margin-bottom:18px;
+	
+}
+.destination-flag
+{
+	width:100px;
+	float:left;
+	margin-left:20px;
+}
+.selectbox-custom
+{
+	height: 30px;
+	border-color: #ccc;
+	
+	width: 102px;	
+	border: 1px solid #ccc;
+	color: #999;
+	text-shadow: 1px 1px #FFF;
+	font: 13px/30px "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+	cursor: pointer;	
+}

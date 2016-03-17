@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>酒店信息录入</title>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+	<link href="css/list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/control.css" type="text/css"/>
+    <script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/table_list.js"></script>
+	<script type="text/javascript">
+		$import("rpc.js");
+		$import("html/format.js");
+</script>
+
+</head>
+<body >
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">宴会场地预定</li>
+            <li class="active">预定状态</li>
+        </ol>
+    </div>
+
+
+    <div class="hotel-table-info-content">
+        <div class="row">
+            <div class="item-container">
+                <div class="date-select">
+                    <span class="date-select-span">年份：</span>
+
+                    <div class="input-group date" id="year-select">
+                        <input type="text" class="form-control" id="yearBanquet"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                    <span class="date-select-span">月份：</span>
+
+                    <div class="input-group date" id="month-select">
+                        <input type="text" class="form-control" id="monthBanquet"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                    <span class="date-select-span"> 日：</span>
+                    <div class="input-group date" id="day-select">
+                        <input type="text" class="form-control" id="dayBanquet"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                  <!--   <span class="date-select-span" style="margin-left: 100px;">搜索：</span>   --> 
+                   <div class="row">
+                       <button type="button" class="btn btn-success" onclick="onSearch();">搜索</button>
+                   </div>
+                    <!-- 
+                    <div class="search-box">
+                        <span class="glyphicon glyphicon-search search-box-span"></span>
+                        <input type="text" class="form-control"/>
+                    </div>
+                       -->
+                </div>
+                <!--  
+                <table class="item-table table-bordered" >
+               
+                    <tr>
+                        <td colspan="4"></td>
+                        <td style="width: 50px">&nbsp;</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td></td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">XXXXXXXXX厅</td>
+                        <td></td>
+                        <td>预留</td>
+                        <td></td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td></td>
+                        <td></td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td></td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">XX厅</td>
+                        <td></td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td></td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td></td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td></td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">XX厅</td>
+                        <td></td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td></td>
+                        <td></td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td></td>
+                        <td></td>
+                        <td>确定</td>
+                        <td></td>
+                        <td>预定</td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td></td>
+                        <td>确定</td>
+                        <td>预留</td>
+                        <td>预定</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                   
+                </table>
+                -->
+               
+            </div>
+
+        </div>
+
+    </div>
+          
+</div>
+   <div id="container_div"></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="js/control.js"></script>
+<script type="text/javascript" src="js/banquetcontrol.js"></script>
+
+</body>
+</html>

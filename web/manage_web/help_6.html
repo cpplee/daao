@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Direction-Aware Hover Effect with CSS3 and jQuery" />
+    <meta name="keywords" content="hover, css3, jquery, effect, direction, aware, depending, thumbnails" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/help_2.css" />
+    <script src="js/modernizr.custom.97074.js"></script>
+    <noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
+</head>
+<body>
+<div class="container">
+
+    <section>
+        <ul id="da-thumbs" class="da-thumbs">
+            <li>
+                <a href="#">
+                    <img src="img/activity-reports.png" />
+                    <div><span>房间预定审核</span></div>
+                    <div class="custom-hover-object"><span>房间预定审核</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/activity-reports.png" />
+                    <div><span>宴会/会议厅预定审核</span></div>
+                    <div class="custom-hover-object"><span>宴会/会议厅预定审核</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/activity-reports.png" />
+                    <div><span>餐饮/酒吧店预定审核</span></div>
+                    <div class="custom-hover-object"><span>餐饮/酒吧店预定审核</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/activity-reports.png" />
+                    <div><span>专门店预定审核</span></div>
+                    <div class="custom-hover-object"><span>专门店预定审核</span></div>
+                </a>
+            </li>
+
+        </ul>
+    </section>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+<script type="text/javascript">
+    $(function() {
+
+        $(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+            hoverElem : '.custom-hover-object'
+        }); } );
+
+    });
+</script>
+</body>
+</html>

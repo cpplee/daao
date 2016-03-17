@@ -1,0 +1,52 @@
+body
+{	
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #0f0f0f;
+    background-color: #ebebeb; 
+}
+.row{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.hotel-info
+{
+	height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    border: solid  rgb(136, 136, 136)  1px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    background-color:#fff;
+}
+.info-title
+{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #5CC5FC;
+    border: 1px solid #ddd;
+    height: 36px;
+}
+.info-title ol
+{
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+.breadcrumb > .active
+{
+    color: #0f0f0f;
+}
+.hotel-table-info-content
+{    
+    height:auto;
+    padding-top: 30px;
+    border-top-width: 0px;
+
+}
+th{
+    text-align:center;
+}
+td{   text-align:center;
+}
+
+

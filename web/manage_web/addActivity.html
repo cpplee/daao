@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>行动计划</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+    <link href="css/addActivity.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/addActivity.js"></script>
+</head>
+<body onload="pageLoad();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">拜访活动</li>
+            <li class="active">活动计划</li>
+        </ol>
+    </div>
+
+    <div class="table-container">
+        <div class="table-name">
+            <div class="title" id="activitytitle">房间订单</div>
+        </div>
+        <form class="form-inline" id="activity-form">
+            <div class="table-result">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 panel-flag">公司名称 :</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                        <select style="width:240px;height:35px" id="companyname" class="form-control">
+                        
+                        </select>
+                          <span class="input-group-addon" id="company" name="company">
+                                    <span class="glyphicon glyphicon-home"
+                                          aria-hidden="true"></span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row other-part">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 panel-flag">联络人姓名 :</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input style="width: 240px;height: 35px" type="text" name="activityPerson"
+                                   id="activityPerson" class="form-control"
+                                   placeholder="请输入联络人姓名"
+                                   aria-describedby="name">
+                                <span class="input-group-addon" id="    name">
+                                    <span class="glyphicon glyphicon-user"
+                                          aria-hidden="true"></span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row other-part">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 panel-flag">拜访活动地点 :</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input style="width: 240px;height: 35px" type="text" class="form-control"
+                                   placeholder="请输入行动地点" id="activityAddress" name="activityAddress"
+                                   aria-describedby="name">
+                                <span class="input-group-addon" id="name">
+                                    <span class="glyphicon glyphicon-tower"
+                                          aria-hidden="true"></span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row other-part">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 panel-flag">拜访行动描述 :</div>
+                    <div class="col-md-4 form-group">
+                        <select style="width: 280px;height: 35px" id="activityDescription" name="activityDescription"
+                                class="form-control">
+                            <option>客户维护行动分析</option>
+                            <option>客户潜力分析</option>
+                            <option>把主要用户签为会员</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row other-part">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 panel-flag">拜访活动日期 :</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group input-group-sm date div-from-date-revexp">
+                            <input style="width: 240px;height: 35px" class="form-control" type="text"
+                                   disabled="disabled" id="activityDate" name="activityDate">
+
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"
+                                                                      id="show-from-date-revexp"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row other-part">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 panel-flag">拜访活动时间 :</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group input-group-sm date div-from-time-revexp">
+                            <input style="width: 240px;height: 35px" class="form-control" type="text"
+                                   disabled="disabled" id="activityTime" name="activityTime">
+
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"
+                                                                      id="show-from-time-revexp"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="devider-form"></div>
+
+                <div class="row other-part">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 panel-flag">成本 :</div>
+                    <div class="col-md-4 form-group">
+                        <div class="input-group">
+                            <input style="width: 240px;height: 35px" type="text" class="form-control" id="cost"
+                                   name="cost"
+                                   placeholder="请输入成本"
+                                   aria-describedby="company">
+                                <span class="input-group-addon" >
+                                    <span class="glyphicon glyphicon-usd"
+                                          aria-hidden="true"></span>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="devider-form"></div>
+                </div>
+        </form>
+        <button class="btn btn-primary btn-lg" type="button" onclick="onSubmit();">提交</button>
+    </div>
+</div>
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    $('.div-from-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        format: 'yyyy-mm-dd',
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#remove-from-date-revexp').click(function () {
+        $('#from-date-revexp').val(null)
+    });
+
+    $('.div-from-time-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 0,
+        minView: 0,
+        maxView: 0,
+        format: 'hh:ii',
+        forceParse: 0,
+        showMeridian: false
+    });
+    $('#remove-from-time-revexp').click(function () {
+        $('#from-time-revexp').val(null)
+    });
+</script>
+<script src="js/validate.js"></script>
+<script src="js/activity_validate.js"></script>
+</body>
+</html>

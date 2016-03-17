@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>header</title>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"  media="screen">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="css/revenue-report.css" rel="stylesheet" type="text/css" media="screen">
+
+
+</head>
+<body>
+  <div class="content">
+    <!-- 模态框按钮 -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        打开模态对话框
+      </button>
+
+      <!-- 模态框主体 -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-revenue-export">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">账户报表导出</h4>
+            </div>
+            <div class="modal-body modal-revenue-content clearfix">
+              <div class="modal-revenue-left">
+                <table>
+                  <tr>
+                    <td><span class="key-revenue-export">起始日期：</span></td>
+                    <td>
+                      <div class="input-group input-group-sm date div-from-date-revexp">
+                        <input class="form-control" type="text" disabled="disabled" id="from-date-revexp">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove" id="remove-from-date-revexp"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th" id="show-from-date-revexp"></span></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="key-revenue-export">结束日期：</span></td>
+                    <td>
+                      <div class="input-group input-group-sm date div-to-date-revexp">
+                        <input class="form-control" type="text" disabled="disabled" id="to-date-revexp">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove" id="remove-to-date-revexp"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th" id="show-to-date-revexp"></span></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="key-revenue-export">个人/团体：</span></td>
+                    <td>
+                      <select class="form-control input-sm" id="individuals-revexp">
+                        <option></option>
+                        <option value="1">.input-1</option>
+                        <option value="2">.input-2</option>
+
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="key-revenue-export">最低收益：</span></td>
+                    <td>
+                      <input class="form-control input-sm" type="text" id="min-revenue-revexp">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="key-revenue-export">最少时间：</span></td>
+                    <td>
+                      <input class="form-control input-sm" type="text" id="min-nights-revexp">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="key-revenue-export">国家编号：</span></td>
+                    <td>
+                      <select class="form-control input-sm" id="country-code-revexp">
+                        <option></option>
+                        <option value="1">.input-1</option>
+                        <option value="2">.input-2</option>
+
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="key-revenue-export">邮编：</span></td>
+                    <td>
+                      <select class="form-control input-sm" id="from-postal-revexp">
+                        <option></option>
+                        <option value="1">.input-1</option>
+                        <option value="2">.input-2</option>
+
+                      </select>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td><span class="key-revenue-export">行业编号：</span></td>
+                    <td>
+                      <select class="form-control input-sm" id="industry-code-revexp">
+                        <option></option>
+                        <option value="1">.input-1</option>
+                        <option value="2">.input-2</option>
+
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="key-revenue-export">业务区域：</span></td>
+                    <td>
+                      <select class="form-control input-sm" id="business-segment-revexp">
+                        <option></option>
+                        <option value="1">.input-1</option>
+                        <option value="2">.input-2</option>
+
+                      </select>
+                    </td>
+                  </tr>
+                  
+                </table>
+              </div>
+              <div class="modal-revenue-right pull-right">
+                
+                <ul class="display-revexp">
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">客房夜数
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="total-revenue-display-revexp" value="room-nights-display-revexp">每位客人全部收益
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">入住房间
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">每位客人房间
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">取消的房间
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">每位客人餐饮收入
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">不显示房间
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">每位客人额外收入
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">每日用房
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">每位客人没有收益
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">不良药物反应
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">预定房晚
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">全部收益
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">预定到达
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">房间收益
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">取消的预订数
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">餐饮收益
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">未显示的预定
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">额外收入
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">日常预定
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">无收入
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">团队取消
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">成人
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">个人取消
+                    </label>
+                  </li>
+                  <li>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="room-nights-display-revexp" value="room-nights-display-revexp">儿童
+                    </label>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="print-options-revexp">
+                <ul class="print-options-revexp">
+                  <li>
+                    数量
+                  </li>
+                  <li>
+                    <input type="text" id="copies-revexp" class="form-control input-sm">
+                  </li>
+                  <li>
+                    排序
+                  </li>
+                  <li>
+                    <select class="form-control input-sm" id="sort-order-revexp">
+                      <option></option>
+                      <option value="1">.input-1</option>
+                      <option value="2">.input-2</option>
+
+                    </select>
+                  </li>
+                  <li>
+                    上限
+                  </li>
+                  <li>
+                    <input type="text" id="top-revexp" class="form-control input-sm">
+                  </li>
+                  <li>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="net-revexp" value="net-revexp">净利润
+                    </label>
+                  </li>
+                  <li>
+                    <label class="radio-inline">
+                      <input type="radio" name="inlineRadioOptions" id="gross-revexp" value="gross-revexp">毛收入
+                    </label>
+                  </li>
+
+
+                </ul>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-xs">预览</button>
+              <button type="button" class="btn btn-default btn-xs">打印</button>
+              <button type="button" class="btn btn-default btn-xs">打开</button>
+              <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+  <script type="text/javascript">
+  $('.div-from-date-revexp').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 7,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+    showMeridian: 0
+  });
+  $('#remove-from-date-revexp').click(function(){$('#from-date-revexp').val(null)});
+
+  $('.div-to-date-revexp').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 7,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+    showMeridian: 0
+  });
+  $('#remove-to-date-revexp').click(function(){$('#to-date-revexp').val(null)});
+  
+
+  </script>
+</body>
+</html>

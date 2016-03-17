@@ -1,0 +1,211 @@
+﻿/*无关样式，请删除*/
+
+body {
+    padding: 20px;
+    background-color: #ebebeb;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+.content {
+    background-color: #fff;
+    height: 450px;
+    padding: 200px 200px;
+}
+
+/*模态对话框样式*/
+
+div.modal-bokman {
+    width: 930px;
+    padding: 20 20;
+}
+
+div.modal-bokman > div {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+div.modal-bokman td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+}
+
+.name-bokman {
+    display: inline-block;
+    padding-top: 6px;
+    width: 90px;
+    height: 30px;
+    text-align: right;
+
+}
+
+#input-account-bokman, #input-agency-bokman {
+    width: 250px;
+}
+
+#input-contact1-bokman, #input-agent1-bokman {
+    width: 200px;
+}
+
+#input-contact2-bokman, #input-agent2-bokman {
+    width: 130px;
+}
+
+#input-contact3-bokman, #input-agent3-bokman {
+    width: 100px;
+}
+
+#input-postas-bokman {
+    width: 500px;
+    display: inline-block;
+}
+
+#input-abbrv-bokman {
+    width: 200px;
+    display: inline-block;
+}
+
+#input-secondary-bokman {
+    width: 500px;
+    display: inline-block;
+}
+
+div.div-from-date-bokman {
+    width: 150px;
+    margin-left: 5px;    
+}
+
+div.div-to-date-bokman {
+    width: 150px;
+    margin-left: 5px;
+}
+
+.input-group-sm>.input-group-addon[name=addon-sm] {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#input-comps-bokman {
+    width: 150px;
+    display: inline-block;
+}
+
+#input-resid-bokman {
+    width: 150px;
+    display: inline-block;
+}
+
+#status-select-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+div.div-status-date-bokman {
+    width: 150px;
+    margin-left: 5px;   
+}
+
+#avgrate-select-bokman {
+    width: 150px;
+    display: inline-block;
+}
+
+#type-select-bokman {
+    width: 150px;
+    display: inline-block;
+}
+
+#booked-select-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+div.div-booked-date-bokman {
+    width: 150px;
+    margin-left: 5px;   
+}
+
+div.div-cutoff-date-bokman {
+    width: 150px;
+    margin-left: 5px;   
+}
+
+#class-select-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+#housemthd-select-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+#input-comm-abbrv-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+div.div-Comm-date-bokman {
+    width: 150px;
+    margin-left: 5px;   
+}
+
+div.div-Override-checkbox-bokman {
+    display: inline-block;
+    height: 30px;
+    padding-top: 6px;
+    padding-left: 20px;
+}
+
+#marketseg-select-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+#confirmation-input-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+.name-lg-bokman {
+    display: inline-block;
+    padding-top: 6px;
+    width: 120px;
+    height: 30px;
+    text-align: right;
+}
+
+#blockpeak-input-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+#Forecastpeak-input-bokman {
+    display: inline-block;
+    margin-left: 5px;
+    width: 150px;
+}
+
+button.btn-def {
+    margin-left: 5px;
+}
+
+/*标签页*/
+
+.box-bottom-bokman {
+    padding:0 20px 20px;
+}
+.tab-content-bokman {
+    margin-top: -1px;
+    padding: 30px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}

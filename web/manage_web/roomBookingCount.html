@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>酒店信息录入</title>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/control.css" type="text/css"/>
+	<link href="css/list.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="../script/common.js"></script>
+	<script type="text/javascript" src="../script/table_list.js"></script>
+	<script type="text/javascript">
+		$import("rpc.js");
+		$import("html/format.js");
+</script>
+</head>
+<body>
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店客房预定</li>
+            <li class="active">预定状态</li>
+        </ol>
+    </div>
+
+
+    <div class="hotel-table-info-content">
+      
+        <div class="row">
+            <div class="item-container">
+           
+               
+                <div class="date-select">
+                
+                    <span class="date-select-span">团队人员:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年份：</span>
+
+                    <div class="input-group date" id="year-select">
+                        <input type="text" class="form-control" id="yearRoom"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                    <span class="date-select-span">月份：</span>
+
+                    <div class="input-group date" id="month-select">
+                        <input type="text" class="form-control" id="monthRoom"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                 <span class="date-select-span"> 日：</span>
+                    <div class="input-group date" id="day-select">
+                        <input type="text" class="form-control" id="dayRoom"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                  <!--   <span class="date-select-span" style="margin-left: 100px;">搜索：</span>   --> 
+                   <div class="row">
+                       <button type="button" class="btn btn-success" onclick="onSearch();">搜索</button>
+                   </div>
+
+                </div>
+                
+                
+                        <div class="date-select">
+                
+                    <span class="date-select-span">散客人员:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年份：</span>
+
+                    <div class="input-group date" id="year-select2">
+                        <input type="text" class="form-control" id="yearRoom2"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                    <span class="date-select-span">月份：</span>
+
+                    <div class="input-group date" id="month-select2">
+                        <input type="text" class="form-control" id="monthRoom2"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                 <span class="date-select-span"> 日：</span>
+                    <div class="input-group date" id="day-select2">
+                        <input type="text" class="form-control" id="dayRoom2"/>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+                  <!--   <span class="date-select-span" style="margin-left: 100px;">搜索：</span>   --> 
+                   <div class="row">
+                       <button type="button" class="btn btn-success" onclick="onSearch2();">搜索</button>
+                   </div>
+
+                </div>
+                <!--  
+                <table class="item-table table-bordered">
+                    <tr>
+                        <td colspan="4"></td>
+                        <td>&nbsp;</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td></td>
+                        <td>周三</td>
+                        <td>周四</td>
+                        <td>周五</td>
+                        <td>周六</td>
+                        <td>周日</td>
+                        <td>周一</td>
+                        <td>周二</td>
+                        <td>周三</td>
+                        <td>周四</td>
+                        <td>周五</td>
+                        <td>周六</td>
+                        <td>周日</td>
+                        <td>周一</td>
+                        <td>周二</td>
+                        <td>周三</td>
+                        <td>周四</td>
+                        <td>周五</td>
+                        <td>周六</td>
+                        <td>周日</td>
+                        <td>周一</td>
+                        <td>周二</td>
+                        <td>周三</td>
+                        <td>周四</td>
+                        <td>周五</td>
+                        <td>周六</td>
+                        <td>周日</td>
+                        <td>周一</td>
+                        <td>周二</td>
+                        <td>周三</td>
+                        <td>周四</td>
+                        <td>周五</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td></td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">总可销售<br>房间数量</td>
+                        <td></td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">汇总预定<br>房间数量</td>
+                        <td></td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">团队确定<br>预定房数</td>
+                        <td></td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">团队暂时<br>预留房数</td>
+                        <td></td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">汇总散客<br>预定房数</td>
+                        <td></td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td colspan="36">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="36" style="font-weight: bold">散客预定明细</td>
+                    </tr>
+                    <tr>
+                        <td>散客<br>名称</td>
+                        <td id="customer-booking">预定<br>状态</td>
+                        <td>销售<br>人员</td>
+                        <td>房价</td>
+                        <td colspan="32"></td>
+                    </tr>
+                    <tr>
+                        <td width="40px">ABCdwadaw</td>
+                        <td width="25px">预留</td>
+                        <td width="40px">QQ</td>
+                        <td width="25px">88</td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                    </tr>
+                    <tr>
+                        <td>WDIJIJ</td>
+                        <td>预定</td>
+                        <td>WDIJIJ</td>
+                        <td>88</td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                    </tr>
+                    <tr>
+                        <td>DEF</td>
+                        <td>确定</td>
+                        <td>QQ</td>
+                        <td>88</td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="36" style="font-weight: bold">团队预定明细</td>
+                    </tr>
+                    <tr>
+                        <td>团队<br>名称</td>
+                        <td id="group-booking">预定<br>状态</td>
+                        <td>销售<br>人员</td>
+                        <td>房价</td>
+                        <td colspan="32"></td>
+                    </tr>
+                    <tr>
+                        <td>ABC</td>
+                        <td>预留</td>
+                        <td>QQ</td>
+                        <td>88</td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                    </tr>
+                    <tr>
+                        <td>XYZ</td>
+                        <td>预定</td>
+                        <td>YY</td>
+                        <td>88</td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                    </tr>
+                    <tr>
+                        <td>DEF</td>
+                        <td>确定</td>
+                        <td>QQ</td>
+                        <td>88</td>
+                        <td>
+                            <button class="btn btn-primary button-value">进入</button>
+                        </td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                        <td><input type="text" class="input-value"/></td>
+                    </tr>
+                </table>
+                -->
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+ <div id="container_div"></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="js/control.js"></script>
+<script type="text/javascript" src="js/roomBookingCount.js"></script>
+
+</body>
+</html>

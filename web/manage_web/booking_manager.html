@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>booking_manager</title>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link href="css/booking_manager.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+  <div class="content">
+    <!-- 模态框按钮 -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        打开模态对话框
+      </button>
+
+      <!-- 模态框主体 -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-bokman">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">booking manager</h4>
+            </div>
+            <div class="modal-body modal-bokman">
+              <div>
+                <table>
+                  <tr>
+                  	<td>
+                  		<span class="name-bokman">Account</span>
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-account-bokman">
+                  	</td>
+                  	<td>
+                  		<span class="name-bokman">Contact</span>
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-contact1-bokman">
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-contact2-bokman">
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-contact3-bokman">
+                  	</td>
+
+                  </tr>
+                  <tr>
+                  	<td>
+                  		<span class="name-bokman">Agency</span>
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-agency-bokman">
+                  	</td>
+                  	<td>
+                  		<span class="name-bokman">Agent</span>
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-agent1-bokman">
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-agent2-bokman">
+                  	</td>
+                  	<td>
+                  		<input type="text" class="form-control input-sm" id="input-agent3-bokman">
+                  	</td>
+
+                  </tr>
+                </table>
+              </div>
+              <div>
+              	<span class="name-bokman">Post as:</span>
+								<input type="text" class="form-control input-sm" id="input-postas-bokman">
+								<span class="name-bokman">Abbrv:</span>
+								<input type="text" class="form-control input-sm" id="input-abbrv-bokman">
+              </div>
+              <div>
+              	<span class="name-bokman">Secondary:</span>
+								<input type="text" class="form-control input-sm" id="input-secondary-bokman">
+              </div>
+              <div class="clearfix">
+              	<span class="name-bokman pull-left">Dates:</span>
+								<div class="input-group input-group-sm date pull-left div-from-date-bokman">
+                  <input class="form-control" type="text" disabled="disabled" id="from-date-bokman">
+                  <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-remove" id="remove-from-date-bokman"></span></span>
+                  <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-th" id="show-from-date-bokman"></span></span>
+                </div>
+								<div class="input-group input-group-sm date pull-left div-to-date-bokman">
+                  <input class="form-control" type="text" disabled="disabled" id="to-date-bokman">
+                  <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-remove" id="remove-to-date-bokman"></span></span>
+                  <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-th" id="show-to-date-bokman"></span></span>
+                </div>
+								<span class="name-bokman">Comps:</span>
+								<input type="text" class="form-control input-sm" id="input-comps-bokman">
+								<span class="name-bokman">Res ID:</span>
+								<input type="text" class="form-control input-sm" id="input-resid-bokman">
+              </div>
+	            <div class="clearfix">
+	            	<span class="name-bokman pull-left">Status:</span>
+	            	<select class="form-control input-sm pull-left" id="status-select-bokman">
+	                <option></option>
+	                <option value="1">.input-1</option>
+	                <option value="2">.input-2</option>
+
+	              </select>
+	              <div class="input-group input-group-sm date div-status-date-bokman pull-left">
+	                <input class="form-control" type="text" disabled="disabled" id="status-date-bokman">
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-remove" id="remove-status-date-bokman"></span></span>
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-th" id="show-status-date-bokman"></span></span>
+	              </div>
+								<span class="name-bokman">Avg rate:</span>
+	            	<select class="form-control input-sm" id="avgrate-select-bokman">
+	                <option></option>
+	                <option value="1">.input-1</option>
+	                <option value="2">.input-2</option>
+
+	              </select>
+	              <span class="name-bokman">Type:</span>
+	            	<select class="form-control input-sm" id="type-select-bokman">
+	                <option></option>
+	                <option value="1">.input-1</option>
+	                <option value="2">.input-2</option>
+
+	              </select>
+	            </div>
+	            <div class="clearfix">
+	            	<span class="name-bokman pull-left">Booked:</span>
+	            	<select class="form-control input-sm pull-left" id="booked-select-bokman">
+	                <option></option>
+	                <option value="1">.input-1</option>
+	                <option value="2">.input-2</option>
+
+	              </select>
+	              <div class="input-group input-group-sm date div-booked-date-bokman pull-left">
+	                <input class="form-control" type="text" disabled="disabled" id="booked-date-bokman">
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-remove" id="remove-booked-date-bokman"></span></span>
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-th" id="show-booked-date-bokman"></span></span>
+	              </div>
+	              <span class="name-bokman pull-left">Cutoff:</span>
+								<div class="input-group input-group-sm date div-cutoff-date-bokman pull-left">
+	                <input class="form-control" type="text" disabled="disabled" id="cutoff-date-bokman">
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-remove" id="remove-cutoff-date-bokman"></span></span>
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-th" id="show-cutoff-date-bokman"></span></span>
+	              </div>
+	              <span class="name-bokman pull-left">Class:</span>
+	            	<select class="form-control input-sm pull-left" id="class-select-bokman">
+	                <option></option>
+	                <option value="1">.input-1</option>
+	                <option value="2">.input-2</option>
+
+	              </select>
+	            </div>
+	            <div class="clearfix">
+	            	<span class="name-bokman pull-left">House Mthd:</span>
+	            	<select class="form-control input-sm pull-left" id="housemthd-select-bokman">
+	                <option></option>
+	                <option value="1">.input-1</option>
+	                <option value="2">.input-2</option>
+
+	              </select>
+	              <span class="name-bokman pull-left">Comm%:</span>
+								<input type="text" class="form-control input-sm pull-left" id="input-comm-abbrv-bokman">
+								<span class="name-bokman pull-left">Decision:</span>
+								<div class="input-group input-group-sm date div-Comm-date-bokman pull-left">
+	                <input class="form-control" type="text" disabled="disabled" id="Comm-date-bokman">
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-remove" id="remove-Comm-date-bokman"></span></span>
+	                <span class="input-group-addon" name="addon-sm"><span class="glyphicon glyphicon-th" id="show-Comm-date-bokman"></span></span>
+	              </div>
+	              <div class="div-Override-checkbox-bokman">
+		              <label class="checkbox-inline" id="Override-checkbox-bokman">
+		                <input type="checkbox" id="include-legacy-statistics-revexp" value="include-legacy-statistics-revexp">Override
+		              </label>
+		            </div>  
+	            </div>
+	            <div class="clearfix">
+	            	<span class="name-bokman pull-left">Market seg:</span>
+	            	<select class="form-control input-sm pull-left" id="marketseg-select-bokman">
+	                <option></option>
+	                <option value="1">.input-1</option>
+	                <option value="2">.input-2</option>
+
+	              </select>
+	            </div>
+	            <div class="clearfix">
+								<input type="text" class="form-control input-sm pull-right" id="confirmation-input-bokman">
+	            	<span class="name-lg-bokman pull-right">Confirmation #:</span>
+	            </div>
+	            <div class="clearfix">
+	            	<span class="name-bokman">Block Peak:</span>
+								<input type="text" class="form-control input-sm" id="blockpeak-input-bokman">
+								<span class="name-lg-bokman">Forecast Peak:</span>
+								<input type="text" class="form-control input-sm" id="Forecastpeak-input-bokman">
+								<label class="checkbox-inline" id="Override-checkbox-bokman">
+	                <input type="checkbox" id="include-legacy-statistics-revexp" value="include-legacy-statistics-revexp">Catering Only
+	              </label>
+	              <button type="button" class="btn btn-default btn-sm pull-right">btn</button>
+	            </div>
+	            <div class="clearfix">
+	            	<button type="button" class="btn btn-default btn-sm btn-def pull-right">Rooms</button>
+	            	<button type="button" class="btn btn-default btn-sm btn-def pull-right">Rates</button>
+	            </div>
+
+
+						</div>  
+						<div class="box-bottom-bokman">
+	            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#rooms-bokman" id="rooms-bokman-tab" role="tab" data-toggle="tab" aria-controls="rooms-bokman" aria-expanded="true">Rooms</a>
+                  </li>
+                  
+                </ul>
+                <div id="myTabContent" class="tab-content-bokman">
+                  <div role="tabpanel" class="tab-pane fade active in" id="rooms-bokman" aria-labelledby="rooms-bokman-tab">
+                    <table class="table table-striped table-hover">
+                      <thead>
+                        <tr>
+                          <th rowspan="2">电话</th>
+                          <th>Tue</th>
+                          <th>Wed</th>
+                          <th>Thu</th>
+                          <th>Fri</th>
+                          <th>Sat</th>
+                          <th rowspan="2">Totals</th>
+                        </tr>
+                        <tr>
+                          <th>11/1/2011</th>
+                          <th>11/2/2011</th>
+                          <th>11/3/2011</th>
+                          <th>11/4/2011</th>
+                          <th>11/5/2011</th>
+                        </tr>
+
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Agreed</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          
+                        </tr>
+                        <tr>
+                          <td>Forecast</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          
+                        </tr>
+                        <tr>
+                          <td>Blocked</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          
+                        </tr>
+                        <tr>
+                          <td>Pickup</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                	</div>
+                </div>
+	      			</div>
+	      		</div>	
+            <div class="modal-footer">
+              
+              <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap-datetimepicker.min.js"></script>
+  <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+  <script type="text/javascript">
+  $('.div-from-date-bokman').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 7,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+    showMeridian: 0
+  });
+  $('#remove-from-date-bokman').click(function(){$('#from-date-bokman').val(null)});
+
+  $('.div-to-date-bokman').datetimepicker({
+    language:  'zh-CN',
+    weekStart: 7,
+    todayBtn:  1,
+    autoclose: 1,
+    todayHighlight: 1,
+    startView: 2,
+    forceParse: 0,
+    showMeridian: 0
+  });
+  $('#remove-to-date-bokman').click(function(){$('#to-date-bokman').val(null)});
+  
+
+  </script>
+</body>
+</html>

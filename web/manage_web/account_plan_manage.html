@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="日程安排,FullCalendar,jquery实例">
+<meta name="description"
+	content="Helloweba，在线演示HTML、CSS、jquery、PHP示例DEMO。">
+<title>客户拜访计划管理</title>
+<link rel="stylesheet" type="text/css"
+	href="css/account_plan_manage.css">
+<!-- Jquery and Jquery UI -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/list.css" rel="stylesheet" type="text/css">
+
+<link href="css/muban.css" rel="stylesheet" type="text/css">
+<link href="css/addActivity.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.6.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<link rel="stylesheet" href="css/redmond/jquery-ui-1.8.1.custom.css">
+
+
+<script src='js/fullc/jquery-1.9.1.min.js'></script>
+<script src='js/fullc/jquery-ui-1.10.2.custom.min.js'></script>
+<script src='js/fullc/fullcalendar.min.js'></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/table_list.js"></script>
+<script src="js/account_plan_manage.js"></script>
+<script type="text/javascript" src="js/addActivityModal.js"></script>
+</head>
+
+<body>
+	<div class="menu-content">
+		<div class="road-nav">
+			<ol class="breadcrumb">
+				<li class="active">首页</li>
+				<li class="active">基本客户管理</li>
+				<li class="active">在线预订统计</li>
+			</ol>
+		</div>
+		<div id="container" style="margin-left : 30px;margin-right : 30px">
+			<div id="main" style="width:70%">
+				<div id='calendar' style="padding:25px 0 25px 0"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="myModal_salerinfo" class="modal fade bs-example-modal-lg"
+		tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">新增：</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline" id="activity-form">
+						<div class="table-result">
+							<div class="row">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 panel-flag">公司名称 :</div>
+								<div class="col-md-4 form-group">
+									<div class="input-group">
+										<select style="width:240px;height:35px" id="companyname"
+											class="form-control">
+
+										</select> <span class="input-group-addon" id="company" name="company">
+											<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="row other-part">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 panel-flag">联络人姓名 :</div>
+								<div class="col-md-4 form-group">
+									<div class="input-group">
+										<input style="width: 240px;height: 35px" type="text"
+											name="activityPerson" id="activityPerson"
+											class="form-control" placeholder="请输入联络人姓名"
+											aria-describedby="name"> <span
+											class="input-group-addon" id="    name"> <span
+											class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="row other-part">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 panel-flag">拜访活动地点 :</div>
+								<div class="col-md-4 form-group">
+									<div class="input-group">
+										<input style="width: 240px;height: 35px" type="text"
+											class="form-control" placeholder="请输入行动地点"
+											id="activityAddress" name="activityAddress"
+											aria-describedby="name"> <span
+											class="input-group-addon" id="name"> <span
+											class="glyphicon glyphicon-tower" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="row other-part">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 panel-flag">拜访行动描述 :</div>
+								<div class="col-md-4 form-group">
+									<select style="width: 280px;height: 35px"
+										id="activityDescription" name="activityDescription"
+										class="form-control">
+										<option>客户维护行动分析</option>
+										<option>客户潜力分析</option>
+										<option>把主要用户签为会员</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row other-part">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 panel-flag">拜访活动日期 :</div>
+								<div class="col-md-4 form-group">
+									<div class="input-group input-group-sm">
+										<input style="width: 240px;height: 35px" class="form-control"
+											type="text" disabled="disabled" id="activityDate"
+											name="activityDate">
+									</div>
+								</div>
+							</div>
+
+							<div class="row other-part">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 panel-flag">拜访活动时间 :</div>
+								<div class="col-md-4 form-group">
+									<div class="input-group input-group-sm">
+										<input style="width: 240px;height: 35px" class="form-control"
+											type="text" id="activityTime" name="activityTime">
+									</div>
+								</div>
+							</div>
+
+
+							<div class="devider-form"></div>
+
+							<div class="row other-part">
+								<div class="col-md-2"></div>
+								<div class="col-md-2 panel-flag">成本 :</div>
+								<div class="col-md-4 form-group">
+									<div class="input-group">
+										<input style="width: 240px;height: 35px" type="text"
+											class="form-control" id="cost" name="cost"
+											placeholder="请输入成本" aria-describedby="company"> <span
+											class="input-group-addon"> <span
+											class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+							<div class="devider-form"></div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="col-md-1" style="margin-left:270px;">
+						<button type="button" class="btn btn-default btn-primary"
+							onclick="onSubmit();">提交</button>
+					</div>
+					<div class="col-md-1 pull-right">
+						<button type="button" class="btn btn-default btn-warning"
+							data-dismiss="modal">关闭</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
+

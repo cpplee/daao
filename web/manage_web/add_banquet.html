@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宴会信息</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/add_banquet.css" type="text/css"/>
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/com_account.js"></script>
+    <script type="text/javascript" src="js/add_banquet.js"></script>
+
+</head>
+<body onload="pageLoadBanquet();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店设置</li>
+            <li class="active">宴会信息</li>
+        </ol>
+    </div>
+    <div class="table-container">
+   
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                宴会信息
+            </div>
+            <div class="panel-body">
+           <form id="banquet-form">
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">宴会厅名称：</span>
+
+                        <div class="input-group">
+                            <input id="banName" name="banName" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅名称"
+                                                   aria-describedby="hotel">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-cutlery"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">宴会厅代码：</span>
+
+                        <div class="input-group">
+                            <input id="banCode" name="banCode" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅代码"
+                                                   aria-describedby="code">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-barcode"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">宴会厅位置：</span>
+
+                        <div class="input-group">
+                            <input id="banLocation" name="banLocation" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅位置"
+                                                   aria-describedby="code"> 
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">宴会厅大小：</span>
+
+                        <div class="input-group">
+                           <input id="banSize" name="banSize" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅容量"
+                                                   aria-describedby="level">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-hand-up"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">宴会厅容量：</span>
+
+                        <div class="input-group">
+                           <input id="banContain" name="banContain" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅容量"
+                                                   aria-describedby="level">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-hand-down"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">特色介绍：</span>
+
+                        <div class="input-group">
+                            <textarea cols="30" rows="5" id="banSpecialIntro"
+                                                  name="banSpecialIntro"></textarea>
+                        </div>
+                    </div>
+                       </form>
+                </div>
+                       <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                            <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">餐厅照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传餐厅照片" id="rba_imgurl" name="rba_imgurl">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+                                </div> 
+                </form>
+ <iframe name="a" src="" style="display:none"></iframe>
+                <div class="item-submit">
+                    <div class="form-group">
+                        <button class="btn btn-success"  onclick="onBanquetSubmit();">提交</button>
+                        <button class="btn btn-default">取消</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+     
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

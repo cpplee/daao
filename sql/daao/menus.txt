@@ -1,0 +1,49 @@
+#	父菜单			子菜单					操作名						URL
+根菜单				销售管理				菜单虚操作.销售管理			saler.html
+根菜单				高级管理				菜单虚操作.高级管理			help_2.html
+根菜单				酒店管理				菜单虚操作.酒店管理			help_1.html
+根菜单				预订管理				菜单虚操作.预订管理			help_6.html
+根菜单				酒店设置				菜单虚操作.酒店设置			help_3.html
+根菜单				后台管理				菜单虚操作.后台管理			help_7.html
+根菜单				通用设置				菜单虚操作.通用设置			help_4.html
+根菜单				酒店通用设置				菜单虚操作.酒店通用设置			help_5.html
+
+
+销售管理			客户信息				菜单虚操作.销售管理.客户信息		list_com_account.html
+销售管理			销售活动				菜单虚操作.销售管理.销售活动		list_calandar.html
+销售管理			销售工具				菜单虚操作.销售管理.销售工具		sale_tool.html
+销售管理			报价与协议				菜单虚操作.销售管理.报价与协议	proagreement.html
+
+高级管理			报告审阅批复				菜单虚操作.高级管理.报告审阅批复			list_activitylog.html
+高级管理			报表导出				菜单虚操作.高级管理.报表导出				report_manage.html	
+高级管理			销售人员管理				菜单虚操作.高级管理.销售人员管理			list_saler.html
+
+酒店管理			客户信息管理				菜单虚操作.酒店管理。客户信息管理				list_hotel_member.html
+酒店管理			报表导出				菜单虚操作.酒店管理.报表导出				report_manage.html	
+酒店管理			客房预订统计				菜单虚操作.酒店管理.客房预订统计			roomBookingCount.html
+酒店管理			宴会预订统计				菜单虚操作.酒店管理.宴会预订统计			banquetcontrol.html
+
+预订管理			房间预定审核				菜单虚操作.预订管理.房间预定审核			list_bookroon.html
+预订管理			宴会/会议厅预定审核		菜单虚操作.预订管理.宴会/会议厅预定审核		list_bookbanquent.html
+预订管理			餐饮/酒吧店预定审核		菜单虚操作.预订管理.餐饮/酒吧店预定审核		list_bookrestaurant.html
+预订管理			专门店预定审核			菜单虚操作.预订管理.专门店预定审核			list_bookspecialty-store.html
+
+
+
+酒店设置				酒店信息列表			菜单虚操作.酒店设置.酒店信息列表					list_hotel.html
+酒店设置				宴会/会议厅信息列表			菜单虚操作.酒店设置.宴会/会议厅信息列表		list_meeting.html
+酒店设置				餐厅/酒吧信息列表			菜单虚操作.酒店设置.餐厅/酒吧信息列表			list_restaurant.html
+酒店设置				专门店信息列表			菜单虚操作.酒店设置.专门店信息列表				list_store.html
+酒店设置				房间价格设置			菜单虚操作.酒店设置.房间价格设置					roomprice-set.html
+酒店设置				宴会厅价格设置			菜单虚操作.酒店设置.宴会厅价格设置				banquet_price_set.html
+
+
+后台管理			发布资讯			菜单虚操作.后台管理.发布资讯		../building.html
+后台管理				发起活动			菜单虚操作.后台管理.发起活动		../building.html
+后台管理			发布杂志海报			菜单虚操作.后台管理.发布杂志海报		../building.html
+
+通用设置				个人信息设置			菜单虚操作.通用设置.个人信息设置			salerinfo.html
+通用设置				密码设置			菜单虚操作.通用设置.密码设置			modify_password.html
+
+酒店通用设置				个人信息设置			菜单虚操作.酒店通用设置.个人信息设置			i_daao_manage.html
+酒店通用设置				密码设置			菜单虚操作.酒店通用设置.密码设置			modify_password.html

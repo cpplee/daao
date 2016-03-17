@@ -1,0 +1,1299 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>comAccount</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="css/com_account_contact.css" rel="stylesheet" type="text/css">
+    <link href="css/activity_plan.css" rel="stylesheet" type="text/css">
+    <link href="css/com_account.css" rel="stylesheet" type="text/css">
+    <link href="css/excel1.css" rel="stylesheet" type="text/css">
+    <link href="css/talent_analysis.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/com_account.js"></script>
+    <script type="text/javascript" src="../script/table_list.js"></script>
+
+</head>
+
+<body onload="pageLoad();">
+<div class="modal fade" id="Contact-Modal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-newUser">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">联系人信息录入</h4>
+            </div>
+            <form id="accountcontact-form">
+                <div class="modal-body">
+                    <div class="box">
+                        <div>
+                            <div class="box-top">
+                                <div class="row divide-dis">
+                                    <div class="col-md-5">
+                                        <div class="col-md-3 span-flag">姓名：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="comContactName"
+                                                       name="comContactName" style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-user"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 second-line">
+                                        <div class="col-md-3 span-flag">公司：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="company"
+                                                       name="company" style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-edit"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row divide-dis">
+                                    <div class="col-md-5">
+                                        <div class="col-md-3 span-flag">职位：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                       id="comContactPosition" name="comContactPosition"
+                                                       style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-plus"></span></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-5 second-line">
+                                        <div class="col-md-3 span-flag">电话：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="comContactTel"
+                                                       name="comContactTel" style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-phone-alt"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row divide-dis">
+                                    <div class="col-md-5">
+                                        <div class="col-md-3 span-flag">手机：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                       id="comContactMobile" name="comContactMobile"
+                                                       style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-earphone"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 second-line">
+                                        <div class="col-md-3 span-flag">邮箱：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                       id="comContactEmail" name="comContactEmail"
+                                                       style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-envelope"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row divide-dis">
+                                    <div class="col-md-5">
+                                        <div class="col-md-3 span-flag">传真：</div>
+
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="comContactFax"
+                                                       name="comContactFax" style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-print"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 second-line">
+                                        <div class="col-md-3 span-flag">Skype：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                       id="comContactSkype" name="comContactSkype"
+                                                       style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-star"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row divide-dis">
+                                    <div class="col-md-5 ">
+                                        <div class="col-md-3 span-flag">QQ：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="comContactQq"
+                                                       name="comContactQq" style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-star"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 second-line">
+                                        <div class="col-md-3 span-flag">微信：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control"
+                                                       id="comContactWebchat" name="comContactWebchat"
+                                                       style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-star"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row divide-dis">
+                                    <div class="col-md-5 ">
+                                        <div class="col-md-3 span-flag">生日：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="dob" name="dob"
+                                                       style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 sponuse">
+                                        <div class="col-md-4 span-flag" style="width:100px;">伴侣姓名：</div>
+                                        <div class="col-md-8 no-divide">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="spouse"
+                                                       name="spouse" style="width:230px"> <span
+                                                    class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-user"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row divide-dis">
+                                    <div class="col-md-5 ">
+                                        <div class="col-md-3 span-flag">退休：</div>
+                                        <div class="col-md-9 no-divide">
+                                            <select id="retired" name="retired" class="form-control"
+                                                    style="margin-left:0px">
+                                                <option value="true">是</option>
+                                                <option value="false">否</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm"
+                        data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="Activity-myModal"
+     tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <span class="title-set">拜访活动</span>
+                </h4>
+            </div>
+            <form id="activity-form">
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row new-row">
+                                <div class="col-md-2 flag-set">拜访公司名称：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="companyname"
+                                               name="companyname" style="width:230px"> <span
+                                            class="input-group-addon"><span
+                                            class="glyphicon glyphicon-pencil"></span></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 flag-set flag-style-left">拜访人名称：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="activityPerson"
+                                               name="activityPerson" style="width:230px"> <span
+                                            class="input-group-addon"><span
+                                            class="glyphicon glyphicon-user"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row new-row">
+                                <div class="col-md-2 flag-set">拜访日期：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="activityDate"
+                                               name="activityDate" style="width:230px"> <span
+                                            class="input-group-addon"> <span
+                                            class="glyphicon glyphicon-calendar"></span>
+											</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 flag-set flag-style-left">拜访时间：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="activityTime"
+                                               name="activityTime" style="width:230px"> <span
+                                            class="input-group-addon"> <span
+                                            class="glyphicon glyphicon-time"></span>
+											</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row new-row">
+                                <div class="col-md-2 flag-set">活动地点：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="activityAddress"
+                                               name="activityAddress" style="width:230px"> <span
+                                            class="input-group-addon"><span
+                                            class="glyphicon glyphicon-home"></span></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 flag-set flag-style-left">花费：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="cost" name="cost"
+                                               style="width:230px"> <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-usd"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row new-row">
+                                <div class="col-md-2 flag-set">产出：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="outcome"
+                                               name="outcome" style="width:230px"> <span
+                                            class="input-group-addon"><span
+                                            class="glyphicon glyphicon-briefcase"></span></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 flag-set flag-style-left">投资回报比：</div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="retonin"
+                                               name="retonin" style="width:230px"> <span
+                                            class="input-group-addon"><span
+                                            class="glyphicon glyphicon-tags"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row new-row">
+
+                                <div class="col-md-2 flag-set">拜访形式：</div>
+                                <div class="col-md-6">
+										<textarea class="text-field form-control"
+                                                  id="activityDescription" name="activityDescription"
+                                                  style="width: 360px;height: 130px"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm"
+                        data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="BookingRooms-Modal"
+     tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">房间订单</h4>
+            </div>
+            <form id="bookingRooms-form">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">公司名称：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomcompanyname"
+                                           name="companyname"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-pencil"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">联系人名称：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control"
+                                           id="roomContactName" name="roomContactName">
+											<span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-user"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">酒店名称：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomHotelName"
+                                           name="roomHotelName"> <span class="input-group-addon">
+												<span class="glyphicon glyphicon-pencil"></span>
+										</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">房间订单号：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomBookingNum"
+                                           name="roomBookingNum"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-copyright-mark"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">房间号：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomId"
+                                           name="roomId"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-copyright-mark"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">房间数量：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomNum"
+                                           name="roomNum"> <span class="input-group-addon">
+												<span class="glyphicon glyphicon-plus-sign"></span>
+										</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">入住时间：</div>
+                            <div class="col-md-4">
+                                <div class="input-group date div-from-date-revexp">
+                                    <input type="text" class="form-control" id="roomArrive"
+                                           name="roomArrive" disabled="disabled"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar"
+                                        id="show-from-date-revexp"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">离开时间：</div>
+                            <div class="col-md-4">
+                                <div class="input-group date div-to-date-revexp">
+                                    <input type="text" class="form-control" id="roomDepart"
+                                           name="roomDepart" disabled="disabled"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar"
+                                        id="show-to-date-revexp"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">房间类型：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomType"
+                                           name="roomType"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-saved"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">房间均价：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomAvgRate"
+                                           name="roomAvgRate"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-usd"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">订单类型：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomHouseMthd" name="roomHouseMthd">
+											<span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-saved"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">订单状态：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomStatus"
+                                           name="roomStatus"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-unchecked"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">预订方式：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomBookType"
+                                           name="roomBookType"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-info-sign"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">佣金：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomComm" name="roomComm">
+											<span class="input-group-addon"><span
+                                                    class="glyphicon glyphicon-usd"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                     <div class="row new-row">
+                     <!--         <div class="col-md-2 flag-set" style="padding-left:0px;">资料提供截止时间：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomCutoff"
+                                           name="roomCutoff"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-time"></span></span>
+                                </div>
+                            </div>
+                             -->  
+                            <div class="col-md-2 flag-set">市场段：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="marketSeg"
+                                           name="marketSeg"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-globe"></span></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">是否已处理？</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <label class="radio-inline"> <input type="radio"
+                                                                        name="roomConfirmation" value="true" checked> 是
+                                    </label> <label
+                                        class="radio-inline"> <input type="radio"
+                                                                     name="roomConfirmation" value="false"> 否 </label>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">协议代码：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomResId" name="roomResId"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-barcode"></span></span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row new-row" style="margin-bottom: 20px">
+                            <div class="col-md-2 flag-set">赠送房晚：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="roomComps"
+                                           name="roomComps"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-gift"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm"
+                        data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="BookingBanquet-Modal"
+     tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">宴会厅订单</h4>
+            </div>
+            <form id="banquet-form">
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">公司名称：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="BanquetCompanyName"
+                                           name="BanquetCompanyName"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-pencil"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">公司联系人名称：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control"
+                                           id="banquetContactName" name="banquetContactName">
+										<span class="input-group-addon"><span
+                                                class="glyphicon glyphicon-user"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">酒店名称：</div>
+                            <div class="col-md-4">
+                                <div class="input-group date div-from-date-revexp">
+                                    <input type="text" class="form-control" id="banquetHotelName"
+                                           name="banquetHotelName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-pencil"></span>
+									</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">宴会厅号：</div>
+                            <div class="col-md-4">
+                                <div class="input-group date div-from-date-revexp">
+                                    <input type="text" class="form-control" id="banquetId"
+                                           name="banquetId"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-copyright-mark"></span>
+									</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">开始时间：</div>
+                            <div class="col-md-4">
+                                <div class="input-group date div-from-date-revexp">
+                                    <input type="text" class="form-control" id="banquetArrive"
+                                           name="banquetArrive" disabled="disabled"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar"
+                                        id="show-from-date-revexp"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">结束时间：</div>
+                            <div class="col-md-4">
+                                <div class="input-group date div-to-date-revexp">
+                                    <input type="text" class="form-control" id="banquetDepart"
+                                           name="banquetDepart" disabled="disabled"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar" id="show-to-date-revexp"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">宴会厅价格：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="banquetRate" name="banquetRate">
+										<span class="input-group-addon"><span
+                                                class="glyphicon glyphicon-usd"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set">预订方式：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="banquetBookType"
+                                           name="banquetBookType"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-info-sign"></span>
+									</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row new-row">
+                            <div class="col-md-2 flag-set">订单状态：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="banquetStatus"
+                                           name="banquetStatus"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-unchecked"></span>
+									</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2 flag-set" style="padding-left: 0px">资料提供截止时间：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="banquetCutoff"
+                                           name="banquetCutoff"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-time"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row new-row" style="margin-bottom: 20px">
+                            <div class="col-md-2 flag-set">是否已处理？</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <label class="radio-inline"> <input type="radio"
+                                                                        name="banquetConfirmation" value="true" checked>
+                                        是 </label> <label
+                                        class="radio-inline"> <input type="radio"
+                                                                     name="banquetConfirmation" value="false"> 否
+                                </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 flag-set">协议代码：</div>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="banquetResId"
+                                           name="banquetResId"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-barcode"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm"
+                        data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-lg" id="TalentAnalysis-Modal"
+     tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">公司客户潜力分析</h4>
+            </div>
+            <div class="modal-body">
+                <div class="excel-container1">
+                    <span style="font-size: 20px;font-family: Times New Roman;font-weight: bold">	商务客户潜力分析</span>
+
+                    <form class="form1" id="talent_analysis_form">
+                       
+                       <table style="width: 95%">
+                                    <tr>
+                                        <th class="th-style">选项</th>
+                                        <th class="th-style">权重</th>
+                                        <th colspan="3" class="th-style">分级标准</th>
+                                        <th class="th-style point">分数</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-style"></th>
+                                        <th class="th-style"></th>
+                                        <th class="th-style">1</th>
+                                        <th class="th-style">2</th>
+                                        <th class="th-style">3</th>
+                                        <th class="th-style"></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">潜在生意量（房晚）</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">50或更少</td>
+                                        <td class="td-style">50-200</td>
+                                        <td class="td-style">200以上</td>
+                                        <td class="td-style"><input id="PotentialRoomNights" name="potentialRoomNights" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">价格承受力</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">低于US$60</td>
+                                        <td class="td-style">US$60到US$100</td>
+                                        <td class="td-style">US$100+</td>
+                                        <td class="td-style"><input id="RateTolerance" name="rateTolerance" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">公司规模</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">本地公司</td>
+                                        <td class="td-style">本地J/V或企业</td>
+                                        <td class="td-style">全球公司</td>
+                                        <td class="td-style"><input id="CompanyProfile" name="companyProfile" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">住客级别</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">低级</td>
+                                        <td class="td-style">中级</td>
+                                        <td class="td-style">高级</td>
+                                        <td class="td-style"><input id="UsersProfile" name="usersProfile" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">平均住店日期</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">3房晚或更少</td>
+                                        <td class="td-style">3-5房晚</td>
+                                        <td class="td-style">5房晚以上</td>
+                                        <td class="td-style"><input id="AvgLengthofStay" name="avgLengthofStay" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">房型使用</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">仅优先级</td>
+                                        <td class="td-style">优先级套房及豪华套房</td>
+                                        <td class="td-style">豪华/经济或更高级别</td>
+                                        <td class="td-style"><input id="RoomMix" name="roomMix" type="text" class="input-set validate">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">生意种类</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">只订房间</td>
+                                        <td class="td-style">订房间+F&B</td>
+                                        <td class="td-style">订房间+会议团队</td>
+                                        <td class="td-style"><input id="BusinessMix" name="businessMix" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">合作意向</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">意向低</td>
+                                        <td class="td-style">会考虑</td>
+                                        <td class="td-style">很高</td>
+                                        <td class="td-style"><input id="WillingnesstoTryOurHotel" name="willingnesstoTryourhotel" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">是否可以满足客户要求</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">不能满足一些关键需求</td>
+                                        <td class="td-style">不能满足一些必要需求</td>
+                                        <td class="td-style">不能满足大部分需求</td>
+                                        <td class="td-style"><input id="AbilitytoFulfillClientRequirements" name="abilitytofulfillclientrequirements" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">协议签署</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">不愿意</td>
+                                        <td class="td-style">会考虑</td>
+                                        <td class="td-style">愿意签合同</td>
+                                        <td class="td-style"><input id="TermContract" name="termContract" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">公司位置</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">到达酒店时间短</td>
+                                        <td class="td-style">到达酒店方便</td>
+                                        <td class="td-style">需要走一段路程到达酒店</td>
+                                        <td class="td-style"><input id="LocationofOffice" name="locationofOffice" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">付款条款</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">大于14天</td>
+                                        <td class="td-style">7-14天</td>
+                                        <td class="td-style">立即付款</td>
+                                        <td class="td-style"><input id="PaymentTerms" type="text" name="paymentterms"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" style="text-align: right;">总分</td>
+                                        <td class="td-style"><input readonly="readonly" id="TotalScore3" type="text" name="totalscore"
+                                                                    class="input-set"></td>
+                                    </tr>
+                                </table>
+                       
+                        <span>低于27分，潜在客户</span><br>
+                        <span>28-38分,潜力客户</span><br>
+                        <span>39-49分,忠实客户</span><br>
+                        <span>50分以上，核心客户</span><br>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="tanlent_analysis_submit" onclick="alertLevel(1)" type="button"
+                        class="btn btn-success " style="width: 76px">分析
+                </button>
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="menu-content">
+    <div class="road-nav">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">基本客户管理</li>
+            <li class="active">客户信息</li>
+        </ol>
+    </div>
+    <div class="table-container">
+    
+        <div class="table-result">
+            <div class="box">
+              
+                    
+                <div class="box-bottom" style="display : display;border-top:0px;margin-top:0px;"
+                     id="AccountDetail">
+                    <div class="bs-example bs-example-tabs">
+                        <ul id="myTab" class="nav nav-tabs" role="tablist">
+                         <li role="presentation" class="active"><a href="#customerinfo"
+                                                                      id="customerinfo-tab" role="tab" data-toggle="tab"
+                                                                      aria-controls="customerinfo"
+                                                                      aria-expanded="true">客户信息</a></li>
+                            <li role="presentation" class=""><a href="#contacts" onclick="fillContact();"
+                                                                      id="contacts-tab" role="tab" data-toggle="tab"
+                                                                      aria-controls="contacts"
+                                                                      aria-expanded="false">联系人</a></li>
+                            <li role="presentation" class=""><a href="#activity"
+                                                                onclick="list_activity();" role="tab" id="activity-tab"
+                                                                data-toggle="tab" aria-controls="activity"
+                                                                aria-expanded="false">拜访行动</a></li>
+                            <li role="presentation" class=""><a href="#bookingrooms"
+                                                                onclick="list_bookingRoom();" role="tab"
+                                                                id="bookingsrooms-tab"
+                                                                data-toggle="tab" aria-controls="bookings"
+                                                                aria-expanded="false">房间订单</a></li>
+                            <li role="presentation" class=""><a href="#bookingbanquet"
+                                                                onclick="list_bookingBanquet();" role="tab"
+                                                                id="bookingbanquet-tab" data-toggle="tab"
+                                                                aria-controls="details" aria-expanded="false">宴会厅订单</a>
+                            </li>
+
+                            <li role="presentation" class=""><a href="#business_analysis"
+                                                                onclick=";" role="tab"
+                                                                id="business_analysis-tab" data-toggle="tab"
+                                                                aria-controls="details" aria-expanded="false">生意分析</a>
+                            </li>
+
+                            <li role="presentation" class=""><a href="#agreement-file"
+                                                                onclick=";" role="tab"
+                                                                id="agreement-file-tab" data-toggle="tab"
+                                                                aria-controls="details" aria-expanded="false">协议文件</a>
+                            </li>
+                            <li role="presentation" class=""><a href="#tanlent_analysis"
+                                                                role="tab" id="tanlent_analysis-tab" data-toggle="tab"
+                                                                aria-controls="mtq-profiles"
+                                                                aria-expanded="false">潜力分析</a></li>
+
+                            <li role="presentation" class=""><a href="#mtq-profiles"
+                                                                role="tab" id="mtq-profiles-tab" data-toggle="tab"
+                                                                aria-controls="mtq-profiles"
+                                                                aria-expanded="false">其他</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                        
+                          <div role="tabpanel" class="tab-pane fade active in"
+                                 id="customerinfo" aria-labelledby="customerinfo-tab">
+                                <div id="submit-customer">
+                                <!--  <h4 class="modal-title" id="title">客户信息</h4> -->
+                                <form id="account-form">
+
+                    <div>
+                        <div class="box-left">
+                            <div class="box-line form-group">
+                                <span class="span-key">公司名称：</span>
+
+                                <div class="input-group input-group1">
+                                    <input type="text" id="cname" name="cname"
+                                           class="form-control input-sm input-value"
+                                           placeholder="每个单词首字母大写，公司信息为首，其他信息其次"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-edit"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">销售代表：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="salername" name="salername"
+                                           class="form-control input-sm input-value"
+                                           placeholder="代表公司客户的销售人员"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-user"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">地址1：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="address-1" name="address1"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在的门牌号/ 楼层及所在的写字楼名称"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-home"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">地址2：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="address-2" name="address2"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在的街道名称"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-road"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">地址3：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="address-3" name="address3"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在城市的区/ 县"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-cloud"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">城市：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="city" name="city"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在城市及省份，且无空格" style="width: 291px"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-star-empty"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">省份：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="prov" name="province"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在省份" style="width: 291px"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-star"></span></span>
+                                </div>
+                            </div>
+                            <div class="box-line form-group">
+                                <span class="span-key">国家：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="country" name="country"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在国家" style="width: 291px"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-globe"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">邮编：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="postal" name="postal"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司所在地邮编"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-send"></span></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="box-right">
+
+                            <div class="box-line form-group">
+                                <span class="span-key">电话：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comTelphone" name="comTelphone"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司联系电话"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-earphone"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">传真：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comFax" name="comFax"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司联系传真"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-print"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">电子邮箱：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comEmail" name="comEmail"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司联系电子邮箱"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-envelope"></span></span>
+                                </div>
+                            </div>
+
+
+                            <div class="box-line form-group">
+                                <span class="span-key">网站：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="webAddress" name="webAddress"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户网站"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-paperclip"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">微信：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comWechat" name="comWechat"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户微信"> <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-heart"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">公司代码：</span> <input type="text"
+                                                                           id="comAccountCode" placeholder="公司客户代码"
+                                                                           name="comAccountCode"
+                                                                           style="width:270px;height:36px"
+                                                                           class="form-control input-sm input-value-sm "
+                                                                           disabled="disabled">
+                                <button type="button" id="account-ids"
+                                        class="btn btn-default btn-sm " style="height:35px"
+                                        onclick="onGenerateAccountCode();">自动生成
+                                </button>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">市场划分：</span> <select
+                                    style="width:325px;height:36px"
+                                    class="form-control input-value-sm" id="marketSegmentId"
+                                    name="marketSegmentId">
+                                <option value="Airline Crew航空公司机组人员">Airline
+                                    Crew航空公司机组人员
+                                </option>
+                                <option value="Association协会">Association协会</option>
+                                <option value="Bussiness Travel商务旅游">Bussiness
+                                    Travel商务旅游
+                                </option>
+                                <option value="Corporate企业">Corporate企业</option>
+                                <option value="Government Group政府集团">Government
+                                    Group政府集团
+                                </option>
+                                <option value="Incentive House/Pco激励之家">Incentive
+                                    House/Pco激励之家
+                                </option>
+                                <option value="Internal内部">Internal内部</option>
+                                <option value="Social社会">Social社会</option>
+                                <option value="Tour and Leisure旅游和休闲">Tour and
+                                    Leisure旅游和休闲
+                                </option>
+                                <option value="Wholesale批发">Wholesale批发</option>
+                            </select>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">客户级别：</span> <select
+                                    style="width:325px;height:36px"
+                                    class="form-control input-value-sm" id="comtypeId"
+                                    name="comtypeId">
+                                <option value="1">核心客户</option>
+                                <option value="2">忠实客户</option>
+                                <option value="3">普通客户</option>
+                                <option value="4">潜在客户</option>
+                            </select>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">拜访频率：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="comFrequency" name="comFrequency"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户拜访频率"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-th"></span></span>
+                                </div>
+                            </div>
+
+                            <div class="box-line form-group">
+                                <span class="span-key">重要信息提示：</span>
+
+                                <div class="input-group  input-group1">
+                                    <input type="text" id="keynotes" name="keynotes"
+                                           class="form-control input-sm input-value"
+                                           placeholder="公司客户重要提示信息"> <span
+                                        class="input-group-addon"><span
+                                        class="glyphicon glyphicon-comment"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                                  
+                                </div>
+                                  <div id="submit" style="padding-left:880px;margin-top:30px">
+                    <input type="button" class="form_sub btn btn-default btn-success"
+                           onclick="onSubmit();"  value="提交"/>
+                </div>
+                            </div>
+
+
+
+
+
+                            <div role="tabpanel" class="tab-pane fade active in"
+                                 id="contacts" aria-labelledby="contacts-tab">
+                                <div id="submit-contact">
+                                    <input type="button" id="addContact"
+                                           class="form_sub btn btn-default btn-primary"
+                                           onclick="addContact();" value="添加联系人"/>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="activity"
+                                 aria-labelledby="activity-tab">
+                                <div id="submit-activity">
+                                    <input type="button" id="addActivity"
+                                           class="form_sub btn btn-default btn-primary"
+                                           onclick="addContent();" value="添加拜访行动"/>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="bookingrooms"
+                                 aria-labelledby="bookings-tab">
+                                <div id="submit-bookroom">
+                                    <input type="button" id="addRoom"
+                                           class="form_sub btn btn-default btn-primary"
+                                           onclick="addContent();" value="添加房间订单"/>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="bookingbanquet"
+                                 aria-labelledby="details-tab">
+                                <div id="submit-banquet">
+                                    <input type="button" id="addBanquet"
+                                           class="form_sub btn btn-default btn-primary"
+                                           onclick="addContent();" value="添加宴会厅订单"/>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="business_analysis"
+                                 aria-labelledby="mtq-profiles-tab">
+                                <div id="business_analysis1">
+                                    <input type="button" id="checkAnalysis"
+                                           class="form_sub btn
+                                            btn-primary" onclick="Business_analysis();"
+                                           value="公司客户生意分析"/>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="agreement-file"
+                                 aria-labelledby="mtq-profiles-tab">
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane fade" id="tanlent_analysis"
+                                 aria-labelledby="mtq-profiles-tab">
+                                <button type="button" class="btn btn-primary" onclick="showTalentAnalysis();">分析</button>
+                                 <button type="button" class="btn btn-info" onclick="showTalentAnalysis1();">查看</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/comaccout_validate.js"></script>
+<script src="js/tanlent_validate.js"></script>
+<script src="js/tanlent_analysis2.js"></script>
+</body>
+</html>

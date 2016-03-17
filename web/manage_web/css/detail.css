@@ -1,0 +1,30 @@
+﻿body {
+  padding: 0 40px;
+}
+
+.header-main {
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.title-main {
+  display: inline-block;
+  font-size: 18px;
+  color: #428bca;
+  font-family: "Microsoft Yahei Light";
+}
+
+.input-search {
+  width: 200px;
+}
+
+.button-submit> button {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button-submit> button+ button {
+  margin-left: 20px;
+}

@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>潜力分析</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/talent_analysis.css" rel="stylesheet" type="text/css">
+    <link href="css/excel1.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">销售管理</li>
+            <li class="active">销售人员主页</li>
+        </ol>
+    </div>
+    <div class="hotel-table-info-content" style="padding-left:20px">
+        <div class="panel panel-info" style="margin-top: 20px">
+            <div class="panel-heading">
+                潜力分析表格
+            </div>
+            <div class="panel-body">
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#excel1" role="tab." data-toggle="tab">商务客户潜力分析</a></li>
+                    <li><a href="#excel2" role="tab" data-toggle="tab">旅行社客户潜力分析</a></li>
+                </ul>
+
+
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane active" id="excel1">
+                        <div class="excel-container1">
+                            <span style="font-size: 20px;font-family: Times New Roman;font-weight: bold">	商务客户潜力分析</span>
+
+                            <form class ="form1">
+                                <table style="width: 95%">
+                                    <tr>
+                                        <th class="th-style">选项</th>
+                                        <th class="th-style">权重</th>
+                                        <th colspan="3" class="th-style">分级标准</th>
+                                        <th class="th-style point">分数</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-style"></th>
+                                        <th class="th-style"></th>
+                                        <th class="th-style">1</th>
+                                        <th class="th-style">2</th>
+                                        <th class="th-style">3</th>
+                                        <th class="th-style"></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">潜在生意量（房晚）</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">50或更少</td>
+                                        <td class="td-style">50-200</td>
+                                        <td class="td-style">200以上</td>
+                                        <td class="td-style"><input id="PotentialRoomNights" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">价格承受力</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">低于US$60</td>
+                                        <td class="td-style">US$60到US$100</td>
+                                        <td class="td-style">US$100+</td>
+                                        <td class="td-style"><input id="RateTolerance" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">公司规模</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">本地公司</td>
+                                        <td class="td-style">本地J/V或企业</td>
+                                        <td class="td-style">全球公司</td>
+                                        <td class="td-style"><input id="CompanyProfile" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">住客级别</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">低级</td>
+                                        <td class="td-style">中级</td>
+                                        <td class="td-style">高级</td>
+                                        <td class="td-style"><input id="UsersProfile" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">平均住店日期</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">3房晚或更少</td>
+                                        <td class="td-style">3-5房晚</td>
+                                        <td class="td-style">5房晚以上</td>
+                                        <td class="td-style"><input id="AvgLengthofStay" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">房型使用</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">仅优先级</td>
+                                        <td class="td-style">优先级套房及豪华套房</td>
+                                        <td class="td-style">豪华/经济或更高级别</td>
+                                        <td class="td-style"><input id="RoomMix" type="text" class="input-set validate">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">生意种类</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">只订房间</td>
+                                        <td class="td-style">订房间+F&B</td>
+                                        <td class="td-style">订房间+会议团队</td>
+                                        <td class="td-style"><input id="BusinessMix" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">合作意向</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">意向低</td>
+                                        <td class="td-style">会考虑</td>
+                                        <td class="td-style">很高</td>
+                                        <td class="td-style"><input id="WillingnesstoTryOurHotel" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">是否可以满足客户要求</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">不能满足一些关键需求</td>
+                                        <td class="td-style">不能满足一些必要需求</td>
+                                        <td class="td-style">不能满足大部分需求</td>
+                                        <td class="td-style"><input id="AbilitytoFulfillClientRequirements" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">协议签署</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">不愿意</td>
+                                        <td class="td-style">会考虑</td>
+                                        <td class="td-style">愿意签合同</td>
+                                        <td class="td-style"><input id="TermContract" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">公司位置</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">到达酒店时间短</td>
+                                        <td class="td-style">到达酒店方便</td>
+                                        <td class="td-style">需要走一段路程到达酒店</td>
+                                        <td class="td-style"><input id="LocationofOffice" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">付款条款</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">大于14天</td>
+                                        <td class="td-style">7-14天</td>
+                                        <td class="td-style">立即付款</td>
+                                        <td class="td-style"><input id="PaymentTerms" type="text"
+                                                                    class="input-set validate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" style="text-align: right;">总分</td>
+                                        <td class="td-style"><input readonly="readonly" id="TotalScore1" type="text"
+                                                                    class="input-set"></td>
+                                    </tr>
+                                </table>
+                                <span>Stop:Less than 27 pts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;低于27分，不是大客户</span><br>
+                                <span>Prospect:28-48 pts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28-49分,潜力客户</span><br>
+                                <span>Key Prospect:50 pts+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50分以上，核心客户</span><br>
+                                <button id="tanlent_analysis_submit" onclick="alertLevel(1)" type="button" class="btn btn-success pull-right" style="margin-right: 50px">提交
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane" id="excel2">
+
+                        <div class="excel-container1">
+                            <span style="font-size: 20px;font-family: Times New Roman;font-weight: bold">	旅行社客户潜力分析</span>
+
+                            <form class ="form2">
+                                <table style="width: 95%">
+                                    <tr>
+                                        <th class="th-style">选项</th>
+                                        <th class="th-style">权重</th>
+                                        <th class="th-style" colspan="3">分级标准</th>
+                                        <th class="th-style">分数</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-style"></th>
+                                        <th class="th-style"></th>
+                                        <th class="th-style">1</th>
+                                        <th class="th-style">2</th>
+                                        <th class="th-style">3</th>
+                                        <th class="th-style"></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">生意承诺</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">少于200房晚</td>
+                                        <td class="td-style">200-500房晚</td>
+                                        <td class="td-style">500房晚以上</td>
+                                        <td class="td-style"><input id="Commitment" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">季节性</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">旺季</td>
+                                        <td class="td-style">旺季与淡季</td>
+                                        <td class="td-style">全年</td>
+                                        <td class="td-style"><input id="Seasonality" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">价格承受力</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">US$25</td>
+                                        <td class="td-style">US$25-$40</td>
+                                        <td class="td-style">US$40或更多</td>
+                                        <td class="td-style"><input id="Rate" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">信贷条件</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">60天</td>
+                                        <td class="td-style">30-60天</td>
+                                        <td class="td-style">少于30天</td>
+                                        <td class="td-style"><input id="Credit_terms" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">生意种类</td>
+                                        <td class="td-style">3</td>
+                                        <td class="td-style">仅为旅游团队</td>
+                                        <td class="td-style">旅行社</td>
+                                        <td class="td-style">旅行社与大公司</td>
+                                        <td class="td-style"><input id="Business_mix" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">联系级别</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">低级</td>
+                                        <td class="td-style">中级</td>
+                                        <td class="td-style">高级</td>
+                                        <td class="td-style"><input id="Contact_level" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">公司规模</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">本地</td>
+                                        <td class="td-style">地区</td>
+                                        <td class="td-style">全球</td>
+                                        <td class="td-style"><input id="Company_profile" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">生意量占其总量比例</td>
+                                        <td class="td-style">2</td>
+                                        <td class="td-style">少于30%</td>
+                                        <td class="td-style">30-50%</td>
+                                        <td class="td-style">大于50%</td>
+                                        <td class="td-style"><input id="Market_share" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">联合推广</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">不愿意</td>
+                                        <td class="td-style">会考虑</td>
+                                        <td class="td-style">愿意</td>
+                                        <td class="td-style"><input id="Joint_mktg_promo" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-style" style="text-align: left">客人来源</td>
+                                        <td class="td-style">1</td>
+                                        <td class="td-style">国外地区</td>
+                                        <td class="td-style">亚洲/日本</td>
+                                        <td class="td-style">欧/美/澳洲</td>
+                                        <td class="td-style"><input id="Source_of_pax" class="input-set validate" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" style="text-align: right;">总分</td>
+                                        <td class="td-style" style="width: 50px"><input readonly="readonly" id="TotalScore2" type="text" class="input-set"></td>
+                                    </tr>
+                                </table>
+                                <span>Stop:Less than 23 pts &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;低于23分，不是大客户</span><br>
+                                <span>Prospect:24-44 pts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24-44分,潜力客户</span><br>
+                                <span>Key Prospect:45 pts+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45分以上，核心客户</span><br>
+                                <button type="button" onclick="alertLevel(2)" class="btn btn-success pull-right" style="margin-right: 50px">提交
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal_Stop" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示：</h4>
+            </div>
+            <div class="modal-body">
+                <span class="h4">不是大客户</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="myModal_Prospect" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示：</h4>
+            </div>
+            <div class="modal-body">
+                <span class="h4">潜力客户</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="myModal_Key_Prospect" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示：</h4>
+            </div>
+            <div class="modal-body">
+                <span class="h4">核心客户</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tanlent_analysis.js"></script>
+<script src="js/tanlent_validate.js"></script>
+</body>
+</html>

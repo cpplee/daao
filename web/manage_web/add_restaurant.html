@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宴会信息</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/add_restaurant.css" type="text/css"/>
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/com_account.js"></script>
+    <script type="text/javascript" src="js/add_restaurant.js"></script>
+   
+</head>
+<body onload="onLoadRab();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店设置</li>
+            <li class="active">餐饮信息</li>
+        </ol>
+    </div>
+    <div class="table-container" >
+        
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                餐厅/酒吧
+            </div>
+           
+            <div class="panel-body">
+               <form id="resaurantbar-form">
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">餐厅/酒吧选择：</span>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="rbaName"
+                                                   name="rbaName">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">餐厅代码：</span>
+
+                        <div class="input-group">
+                             <input type="text" class="form-control" id="rbaRbCode"
+                                                   name="rbaRbCode">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-barcode"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">餐厅位置：</span>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="rbaLocation"
+                                                   name="rbaLocation">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">餐厅价格：</span>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="rbaPrice" name="rbaPrice">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">包厢数量：</span>
+
+                        <div class="input-group">
+                           <input type="text" class="form-control" id="rbaBox" name="rbaBox">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-hand-down"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">包厢容量：</span>
+
+                        <div class="input-group">
+                         <select class="form-control" id="rbaBoxContain" name="rbaBoxContain">
+                                                <option>大包厢</option>
+                                                <option>中包厢</option>
+                                                <option>小包厢</option>
+                                            </select>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-hand-down"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">特色服务介绍：</span>
+
+                        <div class="input-group">
+                          <textarea id="rbaSpecialService" name="rbaSpecialService"
+                                                  class="form-control text-field" style="height: 100px"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">特色菜品推荐：</span>
+
+                        <div class="input-group">
+                           <textarea id="" name="rbaSpecialService" class="form-control text-field"
+                                                  style="height: 100px"></textarea>
+                        </div>
+                    </div>
+                </div>
+                </form>
+                </div>
+                
+                
+                <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                            <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">餐厅照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传餐厅照片" id="rba_imgurl" name="rba_imgurl">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+                                </div> 
+                </form>
+ <iframe name="a" src="" style="display:none"></iframe>
+                <div class="item-submit">
+                    <div class="form-group">
+                        <button class="btn btn-success" onclick="onResaurantBarSubmit();">提交</button>
+                        <button class="btn btn-default">取消</button>
+                    </div>
+                    <div class="clearfix"></div>
+                
+                </div>
+          
+            </div>
+          
+        </div>
+    
+    </div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宴会信息</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/customer_operation.css" type="text/css"/>
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/com_account.js"></script>
+  <script type="text/javascript" src="js/customer_operation.js"></script>
+</head>
+<body onload="pageLoad();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店管理</li>
+            <li class="active">客户信息管理</li>
+        </ol>
+    </div>
+    <div class="table-container">
+
+        <div class="box">
+
+            <div class="panel panel-success">
+                <div class="panel-heading" id="title" class="title">
+                    团队客户信息
+                </div>
+                <div class="panel-body">
+               <form id="hotelmember-form">
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">客户账户号：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="accountId" name="accountId"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">客户姓名：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="name" name="name"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-edit"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">出生日期：</span>
+
+                            <div class="input-group date">
+                                <input type="text" class="form-control" id="dob" name="dob"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">客户性别：</span>
+
+                            <div class="input-group item-select">
+                                <input type="radio"  id="sex1" name="sex" value="男"/>男
+                                <input type="radio"  id="sex2" name="sex" value="女"/>女
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">公司名称：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="companyName" name="companyName"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">担任职务：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="companyJob" name="companyJob"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">酒店名称：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="hotelName" name="hotelName"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">客户类型：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="loginType" name="loginType"/>
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-ban-circle"></span></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">会员级别：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control"id="memLevel" name="memLevel"/>
+                                <span class="input-group-addon" ><span
+                                        class="glyphicon glyphicon-align-center"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">会员卡号：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="memNum" name="memNum"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-barcode"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">证件名称：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="certificate" name="certificate"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">证件号码：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="cerNum" name="cerNum"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-heart"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">手机号码：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="phone" name="phone"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">电子邮箱：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="email" name="email"/>
+                                <span class="input-group-addon"><span
+                                        class="glyphicon glyphicon-envelope"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">QQ：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="qq" name="qq"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-star"></span></span>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <span class="item-span">微信：</span>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="wechat" name="wechat"/>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-heart"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row new-row">
+                     
+                        <div class="col-md-5 col-md-offset-1">
+                            <span class="item-span">积分规则</span>
+
+                            <div class="input-group ">
+                                <textarea name="" id="" cols="30" rows="5" id="pointStatus" name="pointStatus"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+
+                    <hr/>
+
+                    <div class="item-submit">
+                        <div class="form-group">
+                            <button class="btn btn-success" onclick="onSubmit();">提交</button>
+                            <button class="btn btn-default" onclick="goback();">取消</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript">
+    $('.date').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        format: 'yyyy-mm-dd',
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#remove-from-date-revexp').click(function () {
+        $('#birthday').val(null)
+    });
+
+    $('.div-to-date-revexp').datetimepicker({
+        language: 'zh-CN',
+        weekStart: 7,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 0
+    });
+    $('#remove-to-date-revexp').click(function () {
+        $('#to-date-revexp').val(null)
+    });
+
+
+</script>
+
+
+</body>
+</html>

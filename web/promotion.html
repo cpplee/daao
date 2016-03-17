@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>达奥网</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<meta name="viewport" content="initial-scale=1; maximum-scale=1">-->
+<link rel="stylesheet" type="text/css" href="css/theme-style.css">
+<link rel="stylesheet" href="css/ie.style.css">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <![endif]-->
+
+<!--[if IE 7]>
+          <link rel="stylesheet" href="css/font-awesome-ie7.css">
+        <![endif]-->
+
+<script src="js/vendor/modernizr.js"></script>
+<!--[if IE 8]><script src="js/vendor/less-1.3.3.js"></script><![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="js/vendor/less.js"></script>
+<!--<![endif]-->
+
+<link rel="stylesheet" href="css/promotion.css">
+
+</head>
+<body onload="pageload();">
+
+	<header id="header">
+		<div class="header-top-row">
+			<div class="container">
+				<div class="header-quick-call pull-left">
+					<i class="icon-mobile-phone icon-2x"></i> <span>联系电话: <mark>(000)400
+							800 0000</mark></span>
+				</div>
+				  <div class="header-socials pull-right" id="contralLoginRegister">
+              <!--   <a href="login.html"> <span>登陆</span></a><a href="register.html"> <span>注册</span> </a>  --> 
+            </div>
+				<!-- /header-socials -->
+				<div class="header-search-form">
+					<div class="header-search-form-button">
+						<i class="icon-search"></i>
+					</div>
+					<form>
+						<input type="text" class="header-search-form-input"
+							placeholder="Search...">
+					</form>
+				</div>
+				<!-- /header-search-form -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /header-top-row -->
+
+		<div class="header-main-menu">
+			<div class="container">
+				<a href="index.html" class="header-logo pull-left"></a>
+				<div class="top-navigation pull-right">
+					<a class="toggleMenu" href="#"><i class="icon-reorder"></i></a>
+					<ul class="nav">
+						<li><a href="index.html#hotel_section">酒店</a></li>
+						<li><a href="banquet.html#banquet_section">宴会/会议</a></li>
+						<li><a href="restaurant.html#restaurant_section">餐饮</a></li>
+						<li><a href="specialty-store.html#special-store_section">专门店</a></li>
+						<li><a href="vip_basicinfo.html">会员专区</a></li>
+						<li><a href="contact.html">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /header-main-menu -->
+	</header>
+
+	<section>
+		<div class="sub-header">
+			<div class="container">
+				<ul class="breadcrumb">
+					<li><a href="#">主页</a></li>
+					<li><a href="#">促销活动</a></li>
+					<li class="active" id="type">西南航空公司</li>
+				</ul>
+				<div class="row">
+					<div class="span12">
+						<div class="title-page">
+							<h3 id="type2">西南航空公司</h3>
+							<p></p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="rooms-page block">
+			<div class="container">
+				<div class="row">
+					<div class="span12" >
+						<div class="block-header">
+							<h2>促销详情</h2>
+						</div>
+						<div id="promotionActivityInfo" style="padding-top: 1px;">
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="block-header">
+				<h2>房型预订</h2>
+			</div>
+			<div class="row">
+				<div class="span1" style="width: 80px;">入住时段</div>
+				<div class="span6">
+					<div class="pull-left">
+						<span>入住 :</span>
+						<div class="input-append date" id="dp1"
+							data-date-format="yyyy-mm-dd">
+							<input style="width:130px;" class="span2" size="1 " type="text"
+								value="2015-08-13" readonly id="livedate" name="livedate"><span class="add-on"><i
+								class="icon-th" style="margin-top:3px;"></i></span>
+						</div>
+					</div>
+					<div class="pull-left">
+						<span>离开 :</span>
+						<div class="input-append date" id="dp2"
+							data-date-format="yyyy-mm-dd">
+							<input style="width:130px;" class="span2" size="16" type="text"
+								value="2015-08-28" readonly id="leavedate" name="leavedate"><span class="add-on"><i
+								class="icon-th" style="margin-top:3px;"></i></span>
+						</div>
+					</div>
+				</div>
+				<div class="span2">
+					<button type="button" class="btn btn-success">
+						<span style="font-weight: bold">重新搜索</span>
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12" id="roomstyle">
+					<!--  
+					<table class="table table-striped">
+						<tr>
+							<th>房型</th>
+							<th>相关条款</th>
+							<th>早餐</th>
+							<th>宽带</th>
+							<th>政策</th>
+							<th>价格</th>
+							<th><input type="checkbox"><span>立即确认</span></th>
+						</tr>
+						<tr>
+							<td rowspan="3">
+								<div style="float: left">
+									<img src="data.data[i].url" width="80px" height="86px">
+								</div>
+								<div>
+									<span style="padding-left:10px"> <a class="text-success">标准间</a></span>
+									<br> <span style="padding-left:8px"><a
+										href="room.html?roomId=data.data[i].id" class="text">了解详情</a></span>
+								</div>
+							</td>
+							<td>限时抢购</td>
+							<td>无早餐</td>
+							<td>免费有线</td>
+							<td>不可取消</td>
+							<td>￥235元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+
+						<tr>
+
+							<td>内宾</td>
+							<td>有早餐</td>
+							<td>免费有线</td>
+							<td>可取消</td>
+							<td>￥336元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+
+						<tr>
+
+							<td>双人入住</td>
+							<td>无早餐</td>
+							<td>免费有线</td>
+							<td>不可取消</td>
+							<td>￥535元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+						<tr>
+							<td rowspan="3">
+								<div style="float: left">
+									<img src="data.data[i].url" width="80px" height="86px">
+								</div>
+								<div>
+									<span style="padding-left:10px"> <a class="text-success">标准间</a></span>
+									<br> <span style="padding-left:8px"><a
+										href="room.html?roomId=data.data[i].id" class="text">了解详情</a></span>
+								</div>
+							</td>
+							<td>限时抢购</td>
+							<td>无早餐</td>
+							<td>免费有线</td>
+							<td>不可取消</td>
+							<td>￥235元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+
+						<tr>
+
+							<td>内宾</td>
+							<td>有早餐</td>
+							<td>免费有线</td>
+							<td>可取消</td>
+							<td>￥336元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+
+						<tr>
+
+							<td>双人入住</td>
+							<td>无早餐</td>
+							<td>免费有线</td>
+							<td>不可取消</td>
+							<td>￥535元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+						<tr>
+							<td rowspan="3">
+								<div style="float: left">
+									<img src="data.data[i].url" width="80px" height="86px">
+								</div>
+								<div>
+									<span style="padding-left:10px"> <a class="text-success">标准间</a></span>
+									<br> <span style="padding-left:8px"><a
+										href="room.html?roomId=data.data[i].id" class="text">了解详情</a></span>
+								</div>
+							</td>
+							<td>限时抢购</td>
+							<td>无早餐</td>
+							<td>免费有线</td>
+							<td>不可取消</td>
+							<td>￥235元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+
+						<tr>
+
+							<td>内宾</td>
+							<td>有早餐</td>
+							<td>免费有线</td>
+							<td>可取消</td>
+							<td>￥336元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+
+						<tr>
+
+							<td>双人入住</td>
+							<td>无早餐</td>
+							<td>免费有线</td>
+							<td>不可取消</td>
+							<td>￥535元</td>
+							<td><a href="book.html"><button type="button"
+										class="btn btn-warning btn-small">预订</button></a></td>
+						</tr>
+
+
+					</table>
+					-->
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="footer-copy color-scheme-2"></div>
+	</footer>
+	<div class="holder"></div>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/jquery.easing.1.3.js"></script>
+	<script src="js/vendor/bootstrap.js"></script>
+	<script src="js/vendor/holder.js"></script>
+	<script src="js/vendor/jquery.magnific-popup.js"></script>
+	<script src="js/vendor/jquery.grid.js"></script>
+	<script src="js/vendor/jquery.bxslider.min.js"></script>
+	<script src="js/vendor/jquery.flexisel.js"></script>
+	<script src="js/vendor/jquery.quicksand.js"></script>
+	<script src="js/vendor/jquery.transit.js"></script>
+	<script src="js/vendor/parallax.js"></script>
+	<script src="js/vendor/jquery.jPages.js"></script>
+	<script src="js/vendor/bootstrap-datepicker.js"></script>
+	<script src="js/vendor/jquery.formstyler.js"></script>
+	<script src="js/vendor/jquery.cookie.js"></script>
+	<script src="js/responsive-navbar.js"></script>
+	<script src="js/main.js"></script>
+	<script src="script/common.js"></script>
+	<script src="js/promotion.js"></script>
+	<!--Here will be Google Analytics code from BoilerPlate-->
+</body>
+</html>

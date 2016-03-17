@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>专门店服务</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/add_bookspecialty-store.css" type="text/css"/>
+    <script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/com_account.js"></script>
+ <script type="text/javascript" src="js/add_bookspecialty-store.js"></script>
+</head>
+<body onload="onLoadStore();">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店设置</li>
+            <li class="active">专门店服务</li>
+        </ol>
+    </div>
+    <div class="table-container">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                专门店服务
+            </div>
+            <div class="panel-body">
+              <form id="store-form">
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">专门店名称：</span>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="storeName"
+                                                   name="storeName"> 
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <span class="item-span">专门店代码：</span>
+
+                        <div class="input-group">
+                           <input type="text" class="form-control" id="storeCode"
+                                                   name="storeCode">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-barcode"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">专门店位置：</span>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="storeLocation"
+                                                   name="storeLocation"> 
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span></span>
+                        </div>
+                    </div>
+                
+
+                <div class="row new-row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <span class="item-span">娱乐设施介绍：</span>
+
+                        <div class="input-group">
+                           <textarea id="storeContent" name="storeContent" class="form-control text-field"
+                                                  style="height: 100px"></textarea>
+                        </div>
+                    </div>
+                  
+                    </form>
+                </div>
+
+                   <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                            <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">专门店照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传专门店照片" name="file">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+                                </div>
+                             </form>
+               <iframe name="a" src="" style="display:none"></iframe>
+
+                <div class="item-submit">
+                    <div class="form-group">
+                        <button class="btn btn-success" onclick="onStoreSubmit();">提交</button>
+                        <button class="btn btn-default">取消</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

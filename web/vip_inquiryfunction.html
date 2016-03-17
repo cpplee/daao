@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>达奥网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="initial-scale=1; maximum-scale=1">-->
+
+    <link rel="stylesheet" type="text/css" href="css/theme-style.css">
+    <link rel="stylesheet" href="css/ie.style.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/progress_bar.css">
+    <link rel="stylesheet" href="css/page.css">
+  <script type="text/javascript" src="script/common.js"></script>
+</head>
+<body onload="pageLoad();">
+
+<header id="header">
+    <div class="header-top-row">
+        <div class="container">
+            <div class="header-quick-call pull-left">
+                <i class="icon-mobile-phone icon-2x"></i> <span>联系电话: <mark>(000)400
+                800 0000
+            </mark></span>
+            </div>
+           <div class="header-socials pull-right" id="contralLoginRegister">
+              <!--   <a href="login.html"> <span>登陆</span></a><a href="register.html"> <span>注册</span> </a>  --> 
+            </div>
+            <!-- /header-socials -->
+            <div class="header-search-form">
+                <div class="header-search-form-button">
+                    <i class="icon-search"></i>
+                </div>
+                <form>
+                    <input type="text" class="header-search-form-input"
+                           placeholder="Search...">
+                </form>
+            </div>
+            <!-- /header-search-form -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /header-top-row -->
+
+    <div class="header-main-menu">
+        <div class="container">
+            <a href="index.html" class="header-logo pull-left"></a>
+
+            <div class="top-navigation pull-right">
+                <a class="toggleMenu" href="#"><i class="icon-reorder"></i></a>
+                <ul class="nav">
+                    <li><a href="index.html#hotel_section">酒店</a></li>
+                    <li><a href="banquet.html#banquet_section">宴会/会议</a></li>
+                    <li><a href="restaurant.html#restaurant_section">餐饮</a></li>
+                    <li><a href="specialty-store.html#special-store_section">专门店</a></li>
+                    <li><a href="vip_basicinfo.html">会员专区</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /header-main-menu -->
+</header>
+
+<section>
+    <div class="sub-header">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="#">主页</a></li>
+                <li class="active">个人主页</li>
+            </ul>
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h3>个人主页</h3>
+
+                        <p></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container block">
+    <div class="row">
+        <div class="span2 sidebar">
+            <div class="block-header">
+                <h2>个人主页</h2>
+            </div>
+            <ul class="nav nav-stacked">
+                <li><a href="vip_basicinfo.html#p1">基本信息</a></li>
+                <li><a href="vip_frequenterinfo.html#p2" id="customer" onclick="pageLoad();">常客信息</a></li>
+                <li><a href="vip_consumingrecord.html#p3" onclick="bookRoomList();">消费记录</a></li>
+                <li><a href="vip_agreelist.html#p4" id="agreelist" onclick="agreeList();">协议列表</a></li>
+                <li class="active"><a href="vip_inquiryfunction.html#p5">询价功能</a></li>
+            </ul>
+        </div>
+
+        <div class="tab-pane" id="p5">
+            <div class="span1"></div>
+            <div class="span10">
+
+                <h3>询价功能</h3>
+
+                <div class="divider-line" style="width: 970px;margin-left: 0px"></div>
+
+                <div class="info-container" style="padding-top: 50px">
+
+                    <table class="table-set3">
+                        <tr>
+                            <td colspan="10" style="text-align: center">询价功能</td>
+                        </tr>
+                        <tr>
+                            <td>活动名称</td>
+                            <td colspan="9"><input type="text" style="width: 98%" /></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 100px">公司名称</td>
+                            <td colspan="2"><input type="text" /></td>
+                            <td>联系人</td>
+                            <td><input type="text" /></td>
+                            <td>电话</td>
+                            <td><input type="text" /></td>
+                            <td>邮箱</td>
+                            <td colspan="2"><input type="text" /></td>
+                        </tr>
+                        <tr>
+                            <td>日期</td>
+                            <td>省份</td>
+                            <td>城市</td>
+                            <td>区县</td>
+                            <td>总价钱</td>
+                            <td>总人数</td>
+                            <td>房间数</td>
+                            <td>会议/用餐</td>                          
+                            
+                           
+                            <td>备注</td>
+                        </tr>
+                        <tr>
+                            <td><input id="date" type="text"  /></td>
+                             <td><input id="province" type="text" /></td>
+                            <td><input id="city" type="text" /></td>
+                             <td><input id="hotelCounty" type="text" /></td>
+                              <td><input id="price" type="text" /></td>
+                            <td><input id="adultNum" type="text" /></td>
+                            <td><input id="roomNum" type="text" /></td>
+                            <td  style="width:100px;">   <select id="way" style="width:100px;padding:0;margin:0;">
+                                       <option value="banquest">会议</option>
+                                       <option value="restaurant">用餐</option>
+                                    </select>
+                            </td>
+                           
+                            <td><input id="note" type="text" readonly="true"  /></td>
+                        </tr>
+                       
+                        
+                    </table>
+                    
+                    <table  style="margin:0 20px;width:95%;text-align:center"   >
+                        <tr>
+                            <td colspan="10" style="text-align:center;" colspan="10">询价结果</td>
+                        </tr>
+                        <tr id="page"> 
+                        </tr>
+                    </table>
+                    
+                    
+                    
+                    
+                    
+
+
+                    <div class="row new-info-row">
+                        <button id="reset" type="submit" class="btn btn-default pull-right" onclick="reSet();">重置</button>
+                        <button id="submit" type="submit" class="btn btn-success pull-right"
+                                style="margin: 0px 30px" onload="dwr.engine.setActiveReverseAjax(true);dwr.engine.setNotifyServerOnPageUnload(true);showmessage();" onclick="OnSubmit();"  >提交</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-copy color-scheme-2"></div>
+</footer>
+
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/jquery.easing.1.3.js"></script>
+<script src="js/vendor/bootstrap-datepicker.js"></script>
+<script src="js/vendor/jquery.formstyler.js"></script>
+<script src="js/vendor/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/dateToStr.js"></script>
+<script src="js/vipInquiryFunction.js"></script>
+
+
+
+
+<!--Here will be Google Analytics code from BoilerPlate-->
+</body>
+</html>

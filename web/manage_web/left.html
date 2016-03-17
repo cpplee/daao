@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>header</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/left.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript">
+$import("rpc.js");
+$import("util.js");
+
+var now_index = '';
+var index = 0;
+var indexSub = 0;
+
+/**
+ * 加载菜单
+ */
+function loadMenu()
+{
+	var callback = function(result)
+	{
+		var leftBarBody = $$("accordion");
+		util.clear(leftBarBody);
+		
+		/** 构造菜单项 */
+		var items = result.items;
+		index = 1;
+		for (var i = 0; i < items.length; i++, index++) 
+		{
+			var item = items[i];
+			/** 大菜单标题 */
+			var div1 = document.createElement("div");
+			div1.setAttribute("class","panel panel-default");
+			var div2 = document.createElement("div");
+			div2.className = "panel-heading";
+			div2.role = "tab";
+			div2.setAttribute("role","tab");
+			div2.id = "menutit" + index;
+			var div3 = document.createElement("div");
+			div3.className = "menu-title";
+			div3.url = item.url;
+			div3.action = do_menu;
+			div3.onclick = function () { this.action(this.url); };	
+			
+			var a1 = document.createElement("a");
+			a1.setAttribute("data-toggle","collapse") ;
+			a1.setAttribute("data-parent","#accordion") ;
+			a1.href="#collapse" + index;
+			a1.setAttribute("aria-expanded","false") ;
+			a1.setAttribute("aria-controls","collapse" + index) ;
+			a1.className="collapsed li-menu";
+			var span1 = document.createElement("span");
+			if(index == 1)
+		    {
+				span1.setAttribute("class","glyphicon glyphicon-user");
+			}
+			else if(index ==2)
+			{
+				span1.setAttribute("class","glyphicon glyphicon-cog");
+			}
+			else if(index ==4)
+			{
+				span1.setAttribute("class","glyphicon glyphicon-list-alt");
+			}
+			else if(index ==3)
+			{
+				span1.setAttribute("class","glyphicon glyphicon-euro");
+			}
+			else
+			{
+				span1.setAttribute("class","glyphicon glyphicon-book");
+			}
+			var span2 = document.createElement("span");
+			span2.setAttribute("style","padding-left:12px");
+			span2.innerHTML = item.name;
+			div1.appendChild(div2);
+			div2.appendChild(div3);
+			div3.appendChild(a1);
+			
+			a1.appendChild(span1);
+			a1.appendChild(span2);
+			leftBarBody.appendChild(div1);
+			
+			/** 子菜单项 */
+			var div4 = document.createElement("div");
+			div4.className = "panel-collapse collapse";
+			div4.setAttribute("id","collapse" + index) ;
+			div4.setAttribute("role","tabpanel") ;
+			div4.setAttribute("aria-labelledby","menutit" + index) ;
+			div4.setAttribute("aria-expanded","false") ;
+			div4.setAttribute("style","height: 0px;") ;
+			var div5 = document.createElement("div");
+			div5.className = "box-menu-sub";
+			var div6 = document.createElement("div");
+			div6.className = "content-menu-sub";
+			div4.appendChild(div5);
+			div5.appendChild(div6);
+			div1.appendChild(div4);
+			indexSub = 1;
+			for (var j = 0; j < item.subMenus.length; j++, indexSub++) 
+			{
+				var subMenu = item.subMenus[j];
+				var a2 = document.createElement("a");
+				a2.setAttribute("class","menu-sub") ;
+				a2.setAttribute("href",subMenu.url) ;
+				a2.innerHTML = subMenu.name;
+				a2.id = "a2-" + index + "-" + indexSub;
+				a2.target = "main";		
+				div6.appendChild(a2);
+			}
+		}
+	}
+	
+	var operation = new Operation("系统.菜单.列菜单");
+	operation.execute(callback);
+}
+
+function do_menu(url)
+{
+	parent.main.location.href=url;
+}
+</script>
+
+
+  </head>
+  <body onload="loadMenu();">
+    <div class="nav-left">
+      <div class="portrait-left">
+
+      </div>
+      	<div class="menu-left">
+
+        	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        
+        	</div>
+      </div>
+    </div>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  </body>
+</html>

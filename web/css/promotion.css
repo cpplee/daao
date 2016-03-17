@@ -1,0 +1,45 @@
+﻿.pull-left > span
+{
+    padding-right: 15px;
+    padding-left: 20px;
+}
+
+.row > .span1
+{
+    padding-top: 9px;
+    font-family: 微软雅黑 宋体 Arial;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 60px;
+}
+
+.room-list-line
+{
+    border-bottom: solid 3px #ccc;
+    width: 98%;
+    margin-top: 10px;
+    margin-left: 27px;
+}
+
+th
+{
+    width: 15.4%;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+.table td
+{
+ vertical-align: middle;
+}
+.title{
+	font-size: 18px;
+}
+.titlename{
+	padding-bottom:13px;
+	border-bottom:1px solid #CCCCFF;
+}
+.titlefont{
+	font-weight: bold;
+}

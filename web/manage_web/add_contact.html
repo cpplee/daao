@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>newContact</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="css/add_contact.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../script/common.js"></script>
+  <script type="text/javascript" src="js/add_contact.js"></script>
+  
+</head>
+<body onload="pageLoad();">
+     <div class="menu-content">
+        <div class="road-nav">
+            <ol class="breadcrumb">
+                <li class="active">首页</li>
+                <li class="active">基本客户管理</li>
+                <li class="active">客户联系人信息</li>
+            </ol>
+        </div>
+        <div class="table-container">
+
+            <div class="table-name">
+                <div class="title" id="title">联系人信息录入</div>
+            </div>
+            <div class="table-result">
+                <div class="box container">
+                <form id="contact-form">
+                    <div>
+                        <div class="box-top">
+									<div class="row divide-dis">
+										<div class="col-md-5 form-group ">
+											<div class="col-md-3 span-flag">姓名：</div>
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactName" name="comContactName"
+											class="form-control input-sm input-value"
+											placeholder="联系人姓名"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-user"></span></span>
+                                            </div>
+										</div>
+										
+										<div class="col-md-5 form-group second-line">
+											<div class="col-md-3 span-flag">公司：</div>
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="account" name="account"
+											class="form-control input-sm input-value"
+											placeholder="联系人所属公司名称"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-asterisk"></span></span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row divide-dis">
+										<div class="col-md-5 form-group">
+											<div class="col-md-3 span-flag">职位：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactPosition" name="comContactPosition"
+											class="form-control input-sm input-value"
+											placeholder="联系人的职位"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-plus"></span></span>
+											</div>
+							
+										</div>
+										
+										<div class="col-md-5 form-group second-line">
+											<div class="col-md-3 span-flag">电话：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactTel" name="comContactTel"
+											class="form-control input-sm input-value"
+											placeholder="联系人电话"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-phone-alt"></span></span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row divide-dis">
+										<div class="col-md-5 form-group">
+											<div class="col-md-3 span-flag">手机：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactMobile" name="comContactMobile"
+											class="form-control input-sm input-value"
+											placeholder="联系人手机"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-earphone"></span></span>
+											</div>
+										</div>
+										
+										<div class="col-md-5 form-group second-line">
+											<div class="col-md-3 span-flag">邮箱：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactEmail" name="comContactEmail"
+											class="form-control input-sm input-value"
+											placeholder="联系人邮箱"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-envelope"></span></span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row divide-dis">
+										<div class="col-md-5 form-group">
+											<div class="col-md-3 span-flag">传真：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactFax" name="comContactFax"
+											class="form-control input-sm input-value"
+											placeholder="联系人传真"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-print"></span></span>
+											</div>
+										</div>
+										
+										<div class="col-md-5 form-group second-line">
+											<div class="col-md-3 span-flag">Skype：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactSkype" name="comContactSkype"
+											class="form-control input-sm input-value"
+											placeholder="联系人Skype"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-play"></span></span>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row divide-dis">
+									<div class="col-md-5 form-group form-group ">
+											<div class="col-md-3 span-flag">QQ：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactQq" name="comContactQq"
+											class="form-control input-sm input-value"
+											placeholder="联系人QQ"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-play"></span></span>
+											</div>
+										</div>
+										
+										<div class="col-md-5 form-group form-groupform-group second-line">
+											<div class="col-md-3 span-flag">微信：</div> 
+											<div class="col-md-9 no-divide input-group">
+											<input type="text" id="comContactWebchat" name="comContactWebchat"
+											class="form-control input-sm input-value"
+											placeholder="联系人微信"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-send"></span></span>
+											</div>
+										</div>
+										
+									</div>
+									
+									<div class="row divide-dis">
+								<div class="col-md-5 form-group">
+											<div class="col-md-3 span-flag">生日：</div> 
+											<div class="col-md-9 no-divide input-group date div-from-date-revexp">
+                                                <input style="height: 35px" class="form-control" type="text"
+                                                       disabled="disabled" id="dob" name="dob">
+
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"
+                                                                      id="show-from-date-revexp"></span></span>
+
+											</div>
+										</div>
+										
+										<div class="col-md-5 form-group second-line sponuse" style="width:430px">
+											<div class="col-md-3">伴侣姓名：</div> 
+											<div class="col-md-9   input-group">
+											<input type="text" id="spouse" name="spouse"
+											class="form-control input-sm input-value"
+											placeholder="联系人伴侣名字"> <span
+											class="input-group-addon"><span
+											class="glyphicon glyphicon-user"></span></span>
+											</div>
+										</div>
+									
+									</div>
+									
+									<div class="row divide-dis">
+								<div class="col-md-5 ">
+											<div class="col-md-3 span-flag">退休：</div> 
+											<div class="col-md-9 no-divide" style="padding-left:0px;">
+											<select id="retired" name="retired" class="form-control" style="margin-left:0px">
+											<option value="true">是</option>
+											<option value="false">否</option>
+											</select>
+											</div>
+										</div>
+										
+									
+									</div>
+									
+								</div>
+                    </div>
+                    </form>
+                    <div class="row save">
+                        <button type="button" class="btn btn-primary  btn-default" onclick="onSubmit();">提 交</button>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="line"></div>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     <script src="js/bootstrap-datetimepicker.min.js"></script>
+     <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+     <script type="text/javascript">
+         $('.div-from-date-revexp').datetimepicker({
+             language: 'zh-CN',
+             weekStart: 7,
+             todayBtn: 1,
+             autoclose: 1,
+             todayHighlight: 1,
+             startView: 2,
+             minView: 2,
+             format: 'yyyy-mm-dd',
+             forceParse: 0,
+             showMeridian: 0
+         });
+     </script>
+     <script src="js/validate.js"></script>
+     <script src="js/contact_validate.js"></script>
+</body>
+</html>

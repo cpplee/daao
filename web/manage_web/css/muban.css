@@ -1,0 +1,176 @@
+body
+{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #0f0f0f;
+    background-color: #ebebeb;
+    padding: 20px;
+
+}
+.hotel-info
+{
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    border: solid  rgb(136, 136, 136)  1px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    background-color:#fff;
+}
+.info-title
+{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #5CC5FC;
+    border: 1px solid #ddd;
+    height: 36px;
+}
+.info-title ol
+{
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+.breadcrumb > .active
+{
+    color: #0f0f0f;
+}
+.hotel-table-info
+{
+
+    height:auto;
+    border: 1px;
+    padding: 15px;
+    padding-top: 5px;
+}
+
+.hotel-table-info-content
+{
+
+    height:auto;
+
+    border-top-width: 0px;
+
+}
+
+
+.hotel-info-title-style
+{
+    height: 40px;
+    background-color:#5CC5FC;
+    width: 710px;
+    padding-top: 8px;
+    border: 1px solid #ccc;
+}
+
+.title-name
+{
+    color: #fff;
+    font-size: 17px;
+    font-family: "微软雅黑 宋体 Arial";
+    font-weight: bold;
+    margin-left: 8px;
+}
+.hotelinfo-content
+{
+    width: 710px;
+    border: 1px solid #ccc;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+}
+.inside-style
+{
+    padding-top: 20px;
+
+}
+.inside-flag-style
+{
+    font-size: 14px;
+    text-align: right;
+
+}
+.input-length
+{
+    width: 300px;
+    margin-left: 10px;
+}
+
+.last-style
+{
+    padding-bottom:15px;
+}
+.necessary-flag
+{
+    font-size: 19px;
+    color: red;
+}
+.input-small
+{
+    width: 80px;
+}
+.number-flag
+{
+    font-size: 18px;
+    padding-right: 10px;
+}
+.number-flag-left
+{
+    padding-right: 0px;
+    margin-left: 10px;
+}
+.form-inline  .form-control
+{
+
+}
+.other-part
+{
+    margin-top: 15px;
+}
+.check-box-style
+{
+    width: 15px;
+    height: 15px;
+}
+.check-box-decription
+{
+    font-size: 14px;
+    font-family: "微软雅黑", Tahoma, Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.text-field
+{
+    width: 340px;
+    height: 150px;
+    overflow: scroll;
+}
+
+th{
+    text-align:center;
+}
+td{   text-align:center;
+}
+.text-box-style
+{
+    width: 80px;
+    height: 30px;
+}
+
+.ul-style
+{
+    padding-left: 25px;
+}
+.radio-style
+{
+    padding-left: 23px;
+}
+
+.select-style
+{
+    padding-left: 23px;
+}
+.textarea-style
+{
+    padding-left: 23px;
+}
+
+

@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>酒店信息录入</title>
+    <style type="text/css">
+        div.panel {
+            margin-bottom: 0px;
+        }
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="css/Hotel-Info.css" rel="stylesheet" type="text/css">
+    <link href="css/muban.css" rel="stylesheet" type="text/css">
+</head>
+<body data-spy="scroll" data-target="#navbar">
+<div class="hotel-info">
+    <div class="info-title">
+        <ol class="breadcrumb">
+            <li class="active">首页</li>
+            <li class="active">酒店设置</li>
+            <li class="active">酒店信息</li>
+        </ol>
+    </div>
+
+
+    <div class="hotel-table-info-content">
+        <div class="row">
+            <div class="col-md-4" role="complementary">
+                <nav class="hidden-print affix" id="navbar">
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li><a href="#section-1"><span class="nav-style">基本信息</span></a></li>
+                        <li><a href="#section-2"><span class="nav-style">联系方式</span></a></li>
+                        <li><a href="#section-3"><span class="nav-style">房型信息</span></a></li>
+                        <li><a href="#section-4"><span class="nav-style">宴会信息</span></a></li>
+                        <li><a href="#section-5"><span class="nav-style">餐饮信息</span></a></li>
+                        <li><a href="#section-6"><span class="nav-style">专门店服务</span></a></li>
+                        <li><a href="#section-7"><span class="nav-style">促销信息</span></a></li>
+                        <li><a href="#section-8"><span class="nav-style">支付设置</span></a></li>
+                        <li><a href="#section-9"><span class="nav-style">网络入住手续管理</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <h3 id="section-1">基本信息</h3>
+
+                    <form id="hotel-form">
+                        <div class="panel panel-info">
+
+                            <div class="panel-heading">
+                                <div class="panel-title-set">酒店信息</div>
+                            </div>
+
+                            <div class="panel-body">
+
+                                <div class="row another-row">
+                                    <div class="col-md-offset-1 col-md-3 panel-flag">
+                                        酒店中文名：
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="cname"
+                                                   name="cname"> <span class="input-group-addon"><span
+                                                class="glyphicon glyphicon-edit" aria-hidden="true"></span></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">酒店英文名：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="ename"
+                                                   name="ename"> <span class="input-group-addon"><span
+                                                class="glyphicon glyphicon-edit" aria-hidden="true"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">酒店代码：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="hotelCode"
+                                                   name="hotelCode"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">酒店总机：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="telephone"
+                                                   name="telephone"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone-alt"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">酒店传真：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="fax" name="fax">
+										<span class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-print" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">酒店邮箱：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="email"
+                                                   name="email"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">酒店邮编：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="postAs"
+                                                   name="postAs"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">酒店简介：</div>
+                                    <div class="col-md-6 textarea-style last-row form-group" style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+										<textarea class="form-control text-field" id="hotelIntro" name="hotelIntro"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title-set">酒店位置：</div>
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">国家：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="country"
+                                                   name="country"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">省份：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="province"
+                                                   name="province"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">城市：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="city" name="city">
+										<span class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">区/县：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="hotelCounty"
+                                                   name="hotelCounty"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-cloud"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">街道信息：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="region"
+                                                   name="region"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">地址说明：</div>
+                                    <div class="col-md-6 textarea-style last-row form-group" style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+										<textarea class="form-control text-field" id="locationDes" name="locationDes"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+							
+                            </div>
+                            </form>
+                            <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                           		    <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">酒店照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传酒店照片" name="file">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+
+                                </div>
+                              
+                            </form>
+                            <iframe name="a" src="" style="display:none"></iframe>
+                                <div class="row">
+                                    <button type="button"
+                                            class="btn btn-success  pull-right button-style"
+                                            onclick="onSubmit();">保存
+                                    </button>
+                                    <button type="button"
+                                            class="btn btn-default  pull-right button-style">重置
+                                    </button>
+                                </div>
+
+                            </div>
+                            
+                       
+                    
+                    
+                </div>
+
+                <div class="row">
+                    <h3 id="section-2">联系方式</h3>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">信息设置人</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="hotelinfo-seter">
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">姓名：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="setName"
+                                                   name="setName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">登录账号：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="infoset-account"
+                                                   name="infoset-account"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">职位：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="setPosition"
+                                                   name="setPosition"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">电话：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="setTel"
+                                                   name="setTel"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone-alt"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">手机：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="setMobile"
+                                                   name="setMobile"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">邮箱：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="setEmail"
+                                                   name="setEmail"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">微信：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="setWechat"
+                                                   name="setWechat"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">QQ：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="setQq"
+                                                   name="setQq"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <button type="button" onclick="onSeterSubmit();"
+                                        class="btn btn-success  pull-right button-style">保存
+                                </button>
+                                <button type="button"
+                                        class="btn btn-default  pull-right button-style">重置
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">客房预订联系人</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="resercontact-form">
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">姓名：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="conName"
+                                                   name="conName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">登录账号：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="roombook-account"
+                                                   name="roombook-account"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">职位：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="conPosition"
+                                                   name="conPosition"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">电话：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="conTel"
+                                                   name="conTel"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone-alt"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">手机：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="conMobile"
+                                                   name="conMobile"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">邮箱：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="conEmail"
+                                                   name="conEmail"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">微信：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="conWechat"
+                                                   name="conWechat"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">QQ：</div>
+                                    <div class="col-md-6 form-group last-row">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="conQq"
+                                                   name="conQq"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <button type="button" onclick="onRerserContactSubmit();"
+                                        class="btn btn-success  pull-right button-style">保存
+                                </button>
+                                <button type="button"
+                                        class="btn btn-default  pull-right button-style">重置
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">销售负责人</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="salecharger-form">
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">姓名：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="incName"
+                                                   name="incName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">登录账号：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="salercharge-account"
+                                                   name="salercharge-account"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">职位：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="incPosition"
+                                                   name="incPosition"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">电话：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="incTel"
+                                                   name="incTel"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone-alt"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">手机：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="incMobile"
+                                                   name="incMobile"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">邮箱：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="incEmail"
+                                                   name="incEmail"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">微信：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="incWechat"
+                                                   name="incWechat"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">QQ：</div>
+                                    <div class="col-md-6 last-row form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="incQq"
+                                                   name="incQq"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <button type="button"
+                                        class="btn btn-success  pull-right button-style"
+                                        onclick="onSaleInchargerSubmit();">保存
+                                </button>
+                                <button type="button"
+                                        class="btn btn-default  pull-right button-style">重置
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">会议负责人</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="michotel-form">
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">姓名：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="micName"
+                                                   name="micName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">登录账号：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="meetcharge-account"
+                                                   name="meetcharge-account"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">职位：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="micPosition"
+                                                   name="micPosition"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">电话：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="micTel"
+                                                   name="micTel"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone-alt"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">手机：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="micMobile"
+                                                   name="micMobile"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">邮箱：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="micEmail"
+                                                   name="micEmail"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">微信：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="micWechat"
+                                                   name="micWechat"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">QQ：</div>
+                                    <div class="col-md-6 last-row form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="micQq"
+                                                   name="micQq"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <button type="submit"
+                                        class="btn btn-success  pull-right button-style"
+                                        onclick=" onMiceInchargerSubmit();">保存
+                                </button>
+                                <button type="button"
+                                        class="btn btn-default  pull-right button-style">重置
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">市场总监</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="marketdir-form">
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">姓名：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dirName"
+                                                   name="dirName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">登录账号：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="marketcharge-account"
+                                                   name="marketcharge-account"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">职位：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dirPosition"
+                                                   name="dirPosition"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">电话：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dirTel"
+                                                   name="dirTel"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone-alt"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">手机：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dirMobile"
+                                                   name="dirMobile"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">邮箱：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dirEmail"
+                                                   name="dirEmail"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">微信：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dirWechat"
+                                                   name="dirWechat"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">QQ：</div>
+                                    <div class="col-md-6 last-row form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dirQq"
+                                                   name="dirQq"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <button type="submit"
+                                        class="btn btn-success  pull-right button-style" onclick="onMarketDirSubmit();">保存
+                                </button>
+                                <button type="button"
+                                        class="btn btn-default  pull-right button-style">重置
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">总经理</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="hotelmanager-form">
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">姓名：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="manName"
+                                                   name="manName"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">登录账号：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="hotelmanage-account"
+                                                   name="hotelmanage-account"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">职位：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="manPosition"
+                                                   name="manPosition"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">电话：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="manTel"
+                                                   name="manTel"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone-alt"
+                                                  aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">手机：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="manMobile"
+                                                   name="manMobile"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">邮箱：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="manEmail"
+                                                   name="manEmail"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">微信：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="manWechat"
+                                                   name="manWechat"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">QQ：</div>
+                                    <div class="col-md-6 last-row form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="manQq"
+                                                   name="manQq"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row">
+                                <button type="submit"
+                                        class="btn btn-success  pull-right button-style" onclick="onHotelManagerSubmit();">保存
+                                </button>
+                                <button type="button"
+                                        class="btn btn-default  pull-right button-style">重置
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <h3 id="section-3">房型信息</h3>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">房型设置</div>
+                        </div>
+
+                        <div class="panel-body">
+                            <form id="room-form" >
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">房间类型：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                          <select id="type" name="type" class="form-control" style="border-radius:5px;">
+                                          <option value="大床">大床房</option>
+                                          <option value="双床">双床房</option>
+                                          <option value="套房">套房</option>
+                                          <option value="豪华套房">豪华套房</option>
+                                          </select>
+									
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">房间描述：</div>
+                                    <div class="col-md-6 textarea-style last-row form-group" style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+										<textarea class="form-control text-field" id="roomDescription"
+                                                  name="roomDescription"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                            <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">房间照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传房间照片" name="file">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+
+                                </div>
+                              
+                            </form>
+                            <div class="row">
+                                <button type="button"
+                                        class="btn btn-success  pull-right button-style" id="onRoomSubmit" onclick="onRoomSubmit();" >保存
+                                </button>
+                                <button type="button" onclick="addnewrooms();"
+                                        class="btn btn-default  pull-right button-style">新增
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 id="section-4">宴会信息</h3>
+
+                    <div class="panel panel-default panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">宴会信息</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="banquet-form">
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">宴会厅名称：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input id="banName" name="banName" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅名称"
+                                                   aria-describedby="hotel"> <span
+                                                class="input-group-addon" id="hall"> <span
+                                                class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">宴会厅代码：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input id="banCode" name="banCode" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅代码"
+                                                   aria-describedby="code"> <span
+                                                class="input-group-addon" id="code"> <span
+                                                class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">宴会厅位置：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input id="banLocation" name="banLocation" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅位置"
+                                                   aria-describedby="code"> <span
+                                                class="input-group-addon" id="location"> <span
+                                                class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">宴会厅大小：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input id="banSize" name="banSize" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅容量"
+                                                   aria-describedby="level"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-hand-up" style="height: 20px"
+                                                aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">宴会厅容量：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input id="banContain" name="banContain" type="text" class="form-control"
+                                                   placeholder="请输入宴会厅容量"
+                                                   aria-describedby="level"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-hand-up" style="height: 20px"
+                                                aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">特色介绍：</div>
+                                    <div class="col-md-6 textarea-style last-row form-group" style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+										<textarea class="form-control text-field" id="banSpecialIntro"
+                                                  name="banSpecialIntro"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+<!--  
+                                <div class="row another-row">
+                                    <div class="col-md-2  col-md-offset-2 panel-flag">套餐选择：</div>
+                                    <div class="col-md-6 form-group" style="padding-left: 15px">
+                                        <div class="input-group">
+                                            <select class="form-control" id="banCombo" name="banCombo">
+                                                <option>套餐一</option>
+                                                <option>套餐二</option>
+                                                <option>套餐三</option>
+                                                <option>套餐四</option>
+                                                <option>套餐五</option>
+                                            </select> <span class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+-->
+                                <div class="row another-row">
+                                    <div class="col-md-4  panel-flag">是否支持网上点菜功能？</div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline"> <input type="radio"
+                                                                            name="RadioOptions" id="inlineRadio3"
+                                                                            value="option1">
+                                            是
+                                        </label> <label class="radio-inline"> <input type="radio"
+                                                                                     name="RadioOptions"
+                                                                                     id="inlineRadio4" value="option2">
+                                        否
+                                    </label>
+                                    </div>
+                                </div>
+<!--  
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">优惠介绍：</div>
+                                    <div class="col-md-6 textarea-style last-row form-group" style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+										<textarea class="form-control text-field" id="banPrivilige" name="banPrivilige"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+ -->                               
+                            </form>
+                            <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                           		    <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">宴会厅照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传宴会/会议厅照片" name="file">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+
+                                </div>
+                              
+                            </form>
+                            <div class="row">
+                                <button type="submit" onclick="onBanquetSubmit();"
+                                        class="btn btn-success  pull-right button-style">保存
+                                </button>
+                                <button type="button" onclick="addnewbanquets();"
+                                        class="btn btn-default  pull-right button-style">新增
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <h3 id="section-5">餐饮信息</h3>
+
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">餐厅/酒吧</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="resaurantbar-form">
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">餐厅/酒吧选择：</div>
+                                    <div class="col-md-6 form-group" style="padding-left: 15px">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="rbaName"
+                                                   name="rbaName"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">餐厅代码:</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="rbaRbCode"
+                                                   name="rbaRbCode"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">餐厅位置:</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="rbaLocation"
+                                                   name="rbaLocation"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-home" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">餐厅价格:</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="rbaPrice" name="rbaPrice"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">包厢数量:</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="rbaBox" name="rbaBox"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">包厢容量:</div>
+                                    <div class="col-md-6 form-group" style="padding-left: 15px">
+                                        <div class="input-group">
+                                            <select class="form-control" id="rbaBoxContain" name="rbaBoxContain">
+                                                <option>大包厢</option>
+                                                <option>中包厢</option>
+                                                <option>小包厢</option>
+                                            </select> <span class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">特色服务介绍:</div>
+                                    <div class="col-md-6 textarea-style last-row form-group" style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+                                        <textarea id="rbaSpecialService" name="rbaSpecialService"
+                                                  class="form-control text-field" style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">特色菜品推荐 :</div>
+                                    <div class="col-md-6 textarea-style last-row form-group"
+                                         style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+                                        <textarea id="" name="rbaSpecialService" class="form-control text-field"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-4  panel-flag">是否支持网上点菜功能？</div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline"> <input type="radio"
+                                                                            name="RadioOptions"
+                                                                            id="inlineRadio1"
+                                                                            value="option1">
+                                            是
+                                        </label> <label class="radio-inline"> <input type="radio"
+                                                                                     name="RadioOptions"
+                                                                                     id="inlineRadio2"
+                                                                                     value="option2">
+                                        否
+                                    </label>
+                                    </div>
+                                </div>
+<!--  
+                                <div class="row another-row">
+                                    <div class="col-md-2 col-md-offset-2 panel-flag">优惠介绍 :</div>
+                                    <div class="col-md-6 textarea-style last-row form-group"
+                                         style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+                                        <textarea id="rbaPrivilige" name="rbaPrivilige" class="form-control text-field"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+-->
+                            </form>
+                            <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                            <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">餐厅照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传餐厅照片" name="file">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+
+                                </div>
+                              
+                            </form>
+                            <div class="row">
+                                <button type="button" onclick="onResaurantBarSubmit();"
+                                        class="btn btn-success  pull-right button-style">保存
+                                </button>
+                                <button type="button" onclick="addnewrestaurants();"
+                                        class="btn btn-default  pull-right button-style">新增
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3 id="section-6">专门店服务</h3>
+
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">专门店服务</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="store-form">
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">专门店名称：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="storeName"
+                                                   name="storeName"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">专门店代码：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="storeCode"
+                                                   name="storeCode"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">专门店位置：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="storeLocation"
+                                                   name="storeLocation"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-home" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">娱乐设施介绍：</div>
+                                    <div class="col-md-6 textarea-style last-row form-group"
+                                         style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+                                        <textarea id="storeContent" name="storeContent" class="form-control text-field"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                             <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                            <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">专门店照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传专门店照片" name="file">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="fileupload" value="上传" onclick="uploadfile();"/>
+                                   </div>
+
+                                </div>
+                              
+                           
+                             </form>
+                            <div class="row">
+                                <button type="button"
+                                        class="btn btn-success  pull-right button-style" onclick="onStoreSubmit();">保存
+                                </button>
+                                <button type="button" onclick="addnewstores();"
+                                        class="btn btn-default  pull-right button-style">新增
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 id="section-7">促销信息</h3>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">促销信息</div>
+                        </div>
+                        <div class="panel-body">
+                            <form id="sale-form">
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">活动名称：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="propActivityName"
+                                                   name="propActivityName"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">促销代码：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="propActivityCode"
+                                                   name="propActivityCode"> <span
+                                                class="input-group-addon"> <span
+                                                class="glyphicon glyphicon-barcode" aria-hidden="true"></span>
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">合作伙伴：</div>
+                                    <div class="col-md-6 form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="propActivityCompany"
+                                                   name="propActivityCompany"> <span class="input-group-addon">
+											<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                
+                                <div class="row another-row">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">预定条款：</div>
+                                    <div class="col-md-6 textarea-style last-row form-group"
+                                         style="padding-left: 15px">
+                                        <div class="input-group" style="width: 307px">
+                                        <textarea id="propActivityCondition" name="propActivityCondition" class="form-control text-field"
+                                                  style="height: 100px"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                             <form method="POST" enctype="multipart/form-data" action="../servlet/UploadHandleServlet" target="a">
+                            <div class="row another-row" style="margin-bottom:30px;">
+                                    <div class="col-md-3 col-md-offset-1 panel-flag">促销活动照片上传：</div>
+                                    <div class="col-md-4 "
+                                         style="padding-left: 18px">
+                                        <input type="file" value="上传促销活动照片" name="proActivityImgUrl">
+                                    </div>
+                                   <div class="col-md-1">
+                                   <input type="submit" id="propActivityImgUrl" value="上传" onclick="uploadfile();"/>
+                                   </div>
+
+                                </div>
+                              
+                            </form>
+                            <div class="row">
+                                <button type="button"
+                                        class="btn btn-success  pull-right button-style" onclick="onPropmtionActivityInfoSubmit();">保存
+                                </button>
+                                <button type="button" onclick="addnewpromption();"
+                                        class="btn btn-default  pull-right button-style">新增
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 id="section-8">支付设置</h3>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">支付设置</div>
+                        </div>
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 id="section-9">网络入住手续管理</h3>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title-set">网络入住手续管理</div>
+                        </div>
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--  <script type="text/javascript" src="js/validate.js"></script>  -->
+<!--  <script type="text/javascript" src="js/HotelInfo_validate.js"></script> -->
+<script type="text/javascript" src="../script/common.js"></script>
+    <script type="text/javascript" src="js/HotelInfo.js"></script>
+
+</body>
+</html>
